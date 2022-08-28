@@ -36,9 +36,10 @@
             <h3 class="panel-title">Input Pangkat dan Golongan</h3>
           </div>
           <div class="panel-body container-fluid">
-            <form autocomplete="off">
+            <form autocomplete="off" action="/create" method="post">
+            @csrf
               <div class="form-group form-material floating" data-plugin="formMaterial">
-                <input type="text" class="form-control" name="inputFloatingText" />
+                <input type="text" class="form-control" name="jenis_pangkat_golongan" />
                 <label class="floating-label">Pangkat dan Golongan</label>
                 <br>
               </div>

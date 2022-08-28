@@ -27,12 +27,18 @@ Route::get('/login', function () {
 Route::get('/', [LoginController::class, 'index'])->name('login');
 Route::get('/layout', [DashboardController::class, 'index'])->name('layout');
 
-//jabaran
+//jabatan
 Route::get('/formjabatan', [JabatanController::class, 'index'])->name('formjabatan');
 Route::post('/create-jabatan', [JabatanController::class, 'createJabatan']);
 
-
+// pangkat & golongan
 Route::get('/formpangkatgolongan', [PangkatGolonganController::class, 'index'])->name('formpangkatgolongan');
+Route::post('/create', [PangkatGolonganController::class, 'createPangkat']);
+
+
 Route::get('/formunitkerja', [UnitKerjaController::class, 'index'])->name('formunitkerja');
 Route::get('/formpegawai', [PegawaiController::class, 'index'])->name('formpegawai');
+
+// kegiatan
 Route::get('/formkegiatan', [KegiatanController::class, 'index'])->name('formkegiatan');
+Route::post('/create-kegiatan', [KegiatanController::class, 'createKegiatan']);

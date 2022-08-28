@@ -36,9 +36,10 @@
             <h3 class="panel-title">Input Kegiatan</h3>
           </div>
           <div class="panel-body container-fluid">
-            <form autocomplete="off">
+            <form autocomplete="off" action="/create-kegiatan" method="post">
+            @csrf
               <div class="form-group form-material floating" data-plugin="formMaterial">
-                <input type="text" class="form-control" name="inputFloatingText" />
+                <input type="text" class="form-control" name="nama_kegiatan" />
                 <label class="floating-label">Kegiatan</label>
                 <br>
               </div>
