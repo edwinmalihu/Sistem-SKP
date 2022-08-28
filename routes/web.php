@@ -26,7 +26,12 @@ Route::get('/login', function () {
 
 Route::get('/', [LoginController::class, 'index'])->name('login');
 Route::get('/layout', [DashboardController::class, 'index'])->name('layout');
+
+//jabaran
 Route::get('/formjabatan', [JabatanController::class, 'index'])->name('formjabatan');
+Route::post('/create-jabatan', [JabatanController::class, 'createJabatan']);
+
+
 Route::get('/formpangkatgolongan', [PangkatGolonganController::class, 'index'])->name('formpangkatgolongan');
 Route::get('/formunitkerja', [UnitKerjaController::class, 'index'])->name('formunitkerja');
 Route::get('/formpegawai', [PegawaiController::class, 'index'])->name('formpegawai');
