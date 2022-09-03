@@ -35,9 +35,14 @@ Route::post('/create-jabatan', [JabatanController::class, 'createJabatan']);
 Route::get('/formpangkatgolongan', [PangkatGolonganController::class, 'index'])->name('formpangkatgolongan');
 Route::post('/create', [PangkatGolonganController::class, 'createPangkat']);
 
-
+// unit kerja
 Route::get('/formunitkerja', [UnitKerjaController::class, 'index'])->name('formunitkerja');
+Route::post('/create-unit', [UnitKerjaController::class, 'createUnit']);
+
+
+// pegawai
 Route::get('/formpegawai', [PegawaiController::class, 'index'])->name('formpegawai');
+Route::post('/create-pegawai', [PegawaiController::class, 'registrasiPegawai']);
 
 // kegiatan
 Route::get('/formkegiatan', [KegiatanController::class, 'index'])->name('formkegiatan');

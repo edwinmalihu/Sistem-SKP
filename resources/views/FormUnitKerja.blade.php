@@ -36,9 +36,10 @@
             <h3 class="panel-title">Input Unit Kerja</h3>
           </div>
           <div class="panel-body container-fluid">
-            <form autocomplete="off">
+            <form autocomplete="off" action="/create-unit" method="post">
+              @csrf
               <div class="form-group form-material floating" data-plugin="formMaterial">
-                <input type="text" class="form-control" name="inputFloatingText" />
+                <input type="text" class="form-control" name="nama_units_kerja" />
                 <label class="floating-label">Unit Kerja</label>
                 <br>
               </div>
