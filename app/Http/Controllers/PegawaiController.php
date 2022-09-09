@@ -8,6 +8,9 @@ use App\Models\Kegiatan;
 use App\Models\Pangkat;
 use App\Models\Unit;
 use Illuminate\Http\Request;
+use App\Models\ReferralForgotPassword;
+use Illuminate\Support\Facades\Hash;
+use Session;
 
 class PegawaiController extends Controller
 {
@@ -42,6 +45,8 @@ class PegawaiController extends Controller
             'password' => 'required',
         ]);
         
+        $validated['password'] = bcrypt($validated['password']);
+
         User::create($validated);
 
         return redirect('/formpegawai')->with('success', 'Data Berhasil Di Tambahlan!');
