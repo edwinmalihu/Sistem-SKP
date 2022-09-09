@@ -24,8 +24,15 @@ class UnitKerjaController extends Controller
         return redirect('/formunitkerja')->with('Success', 'Data Berhasil Di Tambahkan!');
     }
 
+    // tabel
     public function daftarUnitKerja()
     {
         return view('tabelunitkerja');
+    }
+
+    // update
+    public function updateUnitKerja()
+    {
+        return view('updateunitkerja');
     }
 }

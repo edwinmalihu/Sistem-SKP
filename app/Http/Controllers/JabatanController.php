@@ -29,4 +29,9 @@ class JabatanController extends Controller
     {
         return view('tabeljabatan');
     }
+
+    public function updateJabatan()
+    {
+        return view('updatejabatan');
+    }
 }

@@ -47,8 +47,25 @@ class PegawaiController extends Controller
         return redirect('/formpegawai')->with('Success', 'Data Berhasil Di Tambahkan!');
     }
 
+    // tabel
     public function daftarPegawai()
     {
         return view('tabelpegawai');
+    }
+
+    // update
+    public function updatePegawai()
+    {
+        $jabatan = Jabatan::all();
+        $kegiatan = Kegiatan::all();
+        $pangkat = Pangkat::all();
+        $unit = Unit::all();
+
+        return view('updatepegawai', [
+            'jabatan' => $jabatan,
+            'kegiatan' => $kegiatan,
+            'pangkat' => $pangkat,
+            'unit' => $unit
+        ]);
     }
 }

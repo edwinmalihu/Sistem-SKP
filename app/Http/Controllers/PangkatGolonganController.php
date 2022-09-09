@@ -29,4 +29,9 @@ class PangkatGolonganController extends Controller
     {
         return view('tabelpangkatgolongan');
     }
+
+    public function updatePangkatGolongan()
+    {
+        return view('updatepangkatgolongan');
+    }
 }

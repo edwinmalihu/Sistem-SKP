@@ -30,4 +30,10 @@ class KegiatanController extends Controller
         return view('tabelkegiatan');
     }
 
+      
+    public function updateKegiatan()
+    {
+        return view('updatekegiatan');
+    }
+
 }
