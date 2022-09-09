@@ -21,6 +21,19 @@ class KegiatanController extends Controller
         
         Kegiatan::create($validated);
 
-        return redirect('/formkegiatan')->with('success', 'Data Berhasil Di Tambahlan!');
+        return redirect('/formkegiatan')->with('Success', 'Data Berhasil Di Tambahkan!');
     }
+
+  
+    public function daftarKegiatan()
+    {
+        return view('tabelkegiatan');
+    }
+
+      
+    public function updateKegiatan()
+    {
+        return view('updatekegiatan');
+    }
+
 }

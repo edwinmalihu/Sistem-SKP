@@ -21,6 +21,17 @@ class PangkatGolonganController extends Controller
         
         Pangkat::create($validated);
 
-        return redirect('/formpangkatgolongan')->with('success', 'Data Berhasil Di Tambahlan!');
+        return redirect('/formpangkatgolongan')->with('Success', 'Data Berhasil Di Tambahkan!');
+    }
+
+    // tabel pangkat golongan
+    public function daftarPangkatGolongan()
+    {
+        return view('tabelpangkatgolongan');
+    }
+
+    public function updatePangkatGolongan()
+    {
+        return view('updatepangkatgolongan');
     }
 }
