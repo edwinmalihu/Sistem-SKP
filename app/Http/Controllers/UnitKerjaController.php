@@ -21,6 +21,11 @@ class UnitKerjaController extends Controller
         
         Unit::create($validated);
 
-        return redirect('/formunitkerja')->with('success', 'Data Berhasil Di Tambahlan!');
+        return redirect('/formunitkerja')->with('Success', 'Data Berhasil Di Tambahkan!');
+    }
+
+    public function daftarUnitKerja()
+    {
+        return view('tabelunitkerja');
     }
 }

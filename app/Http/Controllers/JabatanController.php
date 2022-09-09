@@ -21,6 +21,12 @@ class JabatanController extends Controller
         
         Jabatan::create($validated);
 
-        return redirect('/formjabatan')->with('success', 'Data Berhasil Di Tambahlan!');
+        return redirect('/formjabatan')->with('Success', 'Data Berhasil Di Tambahkan!');
+    }
+
+    // view daftar jabatan
+    public function daftarJabatan()
+    {
+        return view('tabeljabatan');
     }
 }

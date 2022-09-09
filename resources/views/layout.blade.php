@@ -17,7 +17,9 @@
     <link rel="stylesheet" href="{{asset('classic/global/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('classic/global/css/bootstrap-extend.min.css')}}">
     <link rel="stylesheet" href="{{asset('classic/topbar/assets/css/site.min.css')}}">
-    
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"> -->
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css">
+      
     <!-- Plugins -->
     <link rel="stylesheet" href="{{asset('classic/global/vendor/animsition/animsition.css')}}">
     <link rel="stylesheet" href="{{asset('classic/global/vendor/asscrollable/asScrollable.css')}}">
@@ -25,8 +27,7 @@
     <link rel="stylesheet" href="{{asset('classic/global/vendor/intro-js/introjs.css')}}">
     <link rel="stylesheet" href="{{asset('classic/global/vendor/slidepanel/slidePanel.css')}}">
     <link rel="stylesheet" href="{{asset('classic/global/vendor/flag-icon-css/flag-icon.css')}}">
-    
-    
+  
     <!-- Fonts -->
     <link rel="stylesheet" href="{{asset('classic/global/fonts/web-icons/web-icons.min.css')}}">
     <link rel="stylesheet" href="{{asset('classic/global/fonts/brand-icons/brand-icons.min.css')}}">
@@ -110,7 +111,7 @@
           <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
             <li class="nav-item dropdown">
               <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false"
-                data-animation="scale-up" role="button">
+                data-animation="scale-up" role="button"> Admin
                 <span class="avatar avatar-online">
                   <img src="{{asset('classic/global/portraits/5.jpg')}}" alt="...">
                   <i></i>
@@ -162,12 +163,7 @@
                       <div>
                         <ul class="site-menu-sub site-menu-normal-list">
                           <li class="site-menu-item">
-                            <a class="animsition-link" href="../layouts/bordered-header.html">
-                              <span class="site-menu-title">Tambah Pegawai</span>
-                            </a>
-                          </li>
-                          <li class="site-menu-item">
-                            <a class="animsition-link" href="../layouts/bordered-header.html">
+                            <a class="animsition-link" href="/tabelpegawai">
                               <span class="site-menu-title">Daftar Pegawai</span>
                             </a>
                           </li>
@@ -189,42 +185,22 @@
                       <div>
                         <ul class="site-menu-sub site-menu-normal-list">
                           <li class="site-menu-item">
-                            <a class="animsition-link" href="../widgets/chart.html">
-                              <span class="site-menu-title">Tambah Jabatan</span>
-                            </a>
-                          </li>
-                          <li class="site-menu-item">
-                            <a class="animsition-link" href="../widgets/social.html">
-                              <span class="site-menu-title">Tambah Pangkat / Golongan</span>
-                            </a>
-                          </li>
-                          <li class="site-menu-item">
-                            <a class="animsition-link" href="../widgets/weather.html">
-                              <span class="site-menu-title">Tambah Unit Kerja</span>
-                            </a>
-                          </li>
-                          <li class="site-menu-item">
-                            <a class="animsition-link" href="../widgets/weather.html">
-                              <span class="site-menu-title">Tambah Kegiatan</span>
-                            </a>
-                          </li>
-                          <li class="site-menu-item">
-                            <a class="animsition-link" href="../widgets/chart.html">
+                            <a class="animsition-link" href="/tabeljabatan">
                               <span class="site-menu-title">Daftar Jabatan</span>
                             </a>
                           </li>
                           <li class="site-menu-item">
-                            <a class="animsition-link" href="../widgets/social.html">
+                            <a class="animsition-link" href="/tabelpangkatgolongan">
                               <span class="site-menu-title">Daftar Pangkat / Golongan</span>
                             </a>
                           </li>
                           <li class="site-menu-item">
-                            <a class="animsition-link" href="../widgets/weather.html">
+                            <a class="animsition-link" href="/tabelunitkerja">
                               <span class="site-menu-title">Daftar Unit Kerja</span>
                             </a>
                           </li>
                           <li class="site-menu-item">
-                            <a class="animsition-link" href="../widgets/weather.html">
+                            <a class="animsition-link" href="/tabelkegiatan">
                               <span class="site-menu-title">Daftar Kegiatan</span>
                             </a>
                           </li>
@@ -373,7 +349,9 @@
     <script src="{{asset('classic/global/vendor/intro-js/intro.js')}}"></script>
     <script src="{{asset('classic/global/vendor/screenfull/screenfull.js')}}"></script>
     <script src="{{asset('classic/global/vendor/slidepanel/jquery-slidePanel.js')}}"></script>
+    <script src="{{asset('classic/global/vendor/datatables.net/jquery.dataTables.js')}}"></script>
         <script src="{{asset('classic/global/vendor/jquery-placeholder/jquery.placeholder.js')}}"></script>
+
     
     <!-- Scripts -->
     <script src="{{asset('classic/global/js/Component.js')}}"></script>
@@ -398,7 +376,10 @@
     <script src="{{asset('classic/global/js/Plugin/switchery.js')}}"></script>
         <script src="{{asset('classic/global/js/Plugin/jquery-placeholder.js')}}"></script>
         <script src="{{asset('classic/global/js/Plugin/material.js')}}"></script>
-    
+
+        <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+        <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>    
     
     <script>
       (function(document, window, $){
@@ -409,6 +390,34 @@
           Site.run();
         });
       })(document, window, jQuery);
+    </script>
+
+    <!-- TABEL JABATAN -->
+    <script>
+        $(document).ready(function () {
+        $('#jabatan').DataTable();
+    });
+    </script>
+
+    <!-- TABEL PANGKAT GOLONGAN -->
+    <script>
+        $(document).ready(function () {
+        $('#pangkatgol').DataTable();
+    });
+    </script>
+
+    <!-- TABEL UNIT KERJA -->
+    <script>
+        $(document).ready(function () {
+        $('#unitkerja').DataTable();
+    });
+    </script>
+
+    <!-- TABEL KEGIATAN -->
+    <script>
+        $(document).ready(function () {
+        $('#kegiatan').DataTable();
+    });
     </script>
     
   </body>

@@ -44,8 +44,11 @@ class PegawaiController extends Controller
         
         User::create($validated);
 
-        return redirect('/formpegawai')->with('success', 'Data Berhasil Di Tambahlan!');
+        return redirect('/formpegawai')->with('Success', 'Data Berhasil Di Tambahkan!');
     }
 
-
+    public function daftarPegawai()
+    {
+        return view('tabelpegawai');
+    }
 }
