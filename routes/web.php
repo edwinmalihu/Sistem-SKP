@@ -20,12 +20,16 @@ use App\Http\Controllers\KegiatanController;
 |
 */
 
-Route::get('/login', function () {
-    // return view('login');
-});
-
-Route::get('/', [LoginController::class, 'index'])->name('login');
+// Layout
 Route::get('/layout', [DashboardController::class, 'index'])->name('layout');
+
+
+// Login
+Route::get('/', [LoginController::class, 'index'])->name('login');
+Route::post('/auth', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
+
+
 
 //jabatan
 Route::get('/formjabatan', [JabatanController::class, 'index'])->name('formjabatan');

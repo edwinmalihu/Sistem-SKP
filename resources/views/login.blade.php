@@ -63,9 +63,10 @@
               <img class="brand-img" src="{{asset('classic/topbar/assets//images/unmus.png')}}" width="50" alt="...">
               <h2 class="brand-text font-size-18">Universitas Musamus</h2>
             </div>
-            <form method="post" action="#">
+            <form method="post" action="/auth">
+              @csrf
               <div class="form-group form-material floating" data-plugin="formMaterial">
-                <input type="email" class="form-control" name="email" />
+                <input type="text" class="form-control" name="nip_pegawai" />
                 <label class="floating-label">Nomor Induk Pegawai</label>
               </div>
               <div class="form-group form-material floating" data-plugin="formMaterial">
