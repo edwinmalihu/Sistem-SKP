@@ -36,10 +36,11 @@
             <h3 class="panel-title">Edit Unit Kerja</h3>
           </div>
           <div class="panel-body container-fluid">
-            <form autocomplete="off" action="/create-unit" method="post">
+            <form autocomplete="off" action="/unit/{{$unit->id_units}}" method="post">
+              @method('patch')
               @csrf
               <div class="form-group form-material floating" data-plugin="formMaterial">
-                <input type="text" class="form-control" name="nama_units_kerja" />
+                <input type="text" class="form-control" name="nama_units_kerja" value="{{$unit->nama_units_kerja}}"/>
                 <label class="floating-label">Unit Kerja</label>
                 <br>
               </div>

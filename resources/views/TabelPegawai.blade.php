@@ -38,76 +38,25 @@
             </tr>
         </thead>
         <tbody>
+        @foreach( $user as $p )
             <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
+                <td>{{$p->nama_pegawai}}</td>
+                <td>{{$p->nip_pegawai}}</td>
+                <td>{{$p->jenis_jabatan}}</td>
+                <td>{{$p->jenis_pangkat_golongan}}</td>
+                <td>{{$p->nama_units_kerja}}</td>
+                @if ($p->hak_akses == 1)
+                <td>Dinilai</td>
+                @else
+                <td>Penilai</td>
+                @endif
                 <td class="actions">
-                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                    <a href="update/{{$p->id}}/pegawai" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
                       data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>
                 </td>
             </tr>
-            <tr>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td class="actions">
-                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
-                      data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>
-                </td>
-            <tr>
-                <td>Ashton Cox</td>
-                <td>Junior Technical Author</td>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td class="actions">
-                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
-                      data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>Cedric Kelly</td>
-                <td>Senior Javascript Developer</td>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td class="actions">
-                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
-                      data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>Airi Satou</td>
-                <td>Accountant</td>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td class="actions">
-                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
-                      data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>
-                </td>
-            </tr>
+        @endforeach
         </tbody>
-        <tfoot>
-            <tr>
-                <th>Nama Pegawai</th>
-                <th>Nomor Induk Pegawai</th>
-                <th>Jabatan</th>
-                <th>Pangkat / Golongan</th>
-                <th>Unit Kerja</th>
-                <th>Hak Akses</th>
-                <th>Action</th>
-            </tr>
         </tfoot>
     </table>
           </div>

@@ -36,10 +36,11 @@
             <h3 class="panel-title">Edit Jabatan</h3>
           </div>
           <div class="panel-body container-fluid">
-            <form autocomplete="off" method="post" action="/create-jabatan">
+            <form autocomplete="off" method="post" action="/jabatan/{{$jabatan->id_jabatan}}">
+              @method('patch')
                @csrf
               <div class="form-group form-material floating" data-plugin="formMaterial">
-                <input type="text" class="form-control" name="jenis_jabatan" />
+                <input type="text" class="form-control" name="jenis_jabatan" value="{{$jabatan->jenis_jabatan}}" />
                 <label class="floating-label">Jabatan</label>
                 <br>
               </div>

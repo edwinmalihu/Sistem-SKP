@@ -27,11 +27,27 @@ class PangkatGolonganController extends Controller
     // tabel pangkat golongan
     public function daftarPangkatGolongan()
     {
-        return view('tabelpangkatgolongan');
+        $pangkat = Pangkat::all();
+        return view('tabelpangkatgolongan',[
+            'pangkat' => $pangkat
+        ]);
     }
 
-    public function updatePangkatGolongan()
+    public function updatePangkatGolongan($id)
     {
-        return view('updatepangkatgolongan');
+        $pangkat = Pangkat::find($id);
+        return view('updatepangkatgolongan',[
+            'pangkat' => $pangkat
+        ]);
+    }
+
+    public function actEditPangkat(Request $request, $id)
+    {
+        $validated = $request->validate([
+            'jenis_pangkat_golongan' => 'required'
+        ]);
+
+        Pangkat::where('id_pangkat_golongan', $id)->update($validated);
+        return redirect('/tabelpangkatgolongan')->with('Success', 'Data Berhasil Di Edit!');
     }
 }

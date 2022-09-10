@@ -20,9 +20,6 @@ use App\Http\Controllers\KegiatanController;
 |
 */
 
-// Layout
-Route::get('/layout', [DashboardController::class, 'index'])->name('layout');
-
 
 // Login
 Route::get('/', [LoginController::class, 'index'])->name('login');
@@ -30,33 +27,46 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
 
+Route::group(['middleware' => 'auth'], function ()
+{
+    
 
-//jabatan
-Route::get('/formjabatan', [JabatanController::class, 'index'])->name('formjabatan');
-Route::post('/create-jabatan', [JabatanController::class, 'createJabatan']);
-Route::get('/tabeljabatan', [JabatanController::class, 'daftarJabatan'])->name('tabeljabatan');
-Route::get('/updatejabatan', [JabatanController::class, 'updateJabatan'])->name('updatejabatan');
+    // Layout
+    Route::get('/layout', [DashboardController::class, 'index'])->name('layout');
 
-// pangkat & golongan
-Route::get('/formpangkatgolongan', [PangkatGolonganController::class, 'index'])->name('formpangkatgolongan');
-Route::post('/create', [PangkatGolonganController::class, 'createPangkat']);
-Route::get('/tabelpangkatgolongan', [PangkatGolonganController::class, 'daftarPangkatGolongan'])->name('tabelpangkatgolongan');
-Route::get('/updatepangkatgolongan', [PangkatGolonganController::class, 'updatePangkatGolongan'])->name('updatepangkatgolongan');
+    //jabatan
+    Route::get('/formjabatan', [JabatanController::class, 'index'])->name('formjabatan');
+    Route::post('/create-jabatan', [JabatanController::class, 'createJabatan']);
+    Route::get('/tabeljabatan', [JabatanController::class, 'daftarJabatan'])->name('tabeljabatan');
+    Route::get('/updatejabatan/{id}/jabatan', [JabatanController::class, 'updateJabatan'])->name('updatejabatan');
+    Route::patch('/jabatan/{id}', [JabatanController::class, 'actEditJabatan']);
+    
+    // pangkat & golongan
+    Route::get('/formpangkatgolongan', [PangkatGolonganController::class, 'index'])->name('formpangkatgolongan');
+    Route::post('/create', [PangkatGolonganController::class, 'createPangkat']);
+    Route::get('/tabelpangkatgolongan', [PangkatGolonganController::class, 'daftarPangkatGolongan'])->name('tabelpangkatgolongan');
+    Route::get('/updatepangkatgolongan/{id}/pangkat', [PangkatGolonganController::class, 'updatePangkatGolongan'])->name('updatepangkatgolongan');
+    Route::patch('/pangkat/{id}', [PangkatGolonganController::class, 'actEditPangkat']);
+    
+    // unit kerja
+    Route::get('/formunitkerja', [UnitKerjaController::class, 'index'])->name('formunitkerja');
+    Route::post('/create-unit', [UnitKerjaController::class, 'createUnit']);
+    Route::get('/tabelunitkerja', [UnitKerjaController::class, 'daftarUnitKerja'])->name('tabelunitkerja');
+    Route::get('/updateunitkerja/{id}/unit', [UnitKerjaController::class, 'updateUnitKerja'])->name('updateUnitKerja');
+    Route::patch('/unit/{id}', [UnitKerjaController::class, 'actEditUnitKerja']);
 
-// unit kerja
-Route::get('/formunitkerja', [UnitKerjaController::class, 'index'])->name('formunitkerja');
-Route::post('/create-unit', [UnitKerjaController::class, 'createUnit']);
-Route::get('/tabelunitkerja', [UnitKerjaController::class, 'daftarUnitKerja'])->name('tabelunitkerja');
-Route::get('/updateunitkerja', [UnitKerjaController::class, 'updateUnitKerja'])->name('updateUnitKerja');
+    // pegawai
+    Route::get('/formpegawai', [PegawaiController::class, 'index'])->name('formpegawai');
+    Route::post('/create-pegawai', [PegawaiController::class, 'registrasiPegawai']);
+    Route::get('/tabelpegawai', [PegawaiController::class, 'daftarPegawai'])->name('tabelpegawai');
+    Route::get('/update/{id}/pegawai', [PegawaiController::class, 'updatePegawai'])->name('updatePegawai');
+    Route::patch('/edit/{id}', [PegawaiController::class, 'actUpdate']);
+    
+    // kegiatan
+    Route::get('/formkegiatan', [KegiatanController::class, 'index'])->name('formkegiatan');
+    Route::post('/create-kegiatan', [KegiatanController::class, 'createKegiatan']);
+    Route::get('/tabelkegiatan', [KegiatanController::class, 'daftarKegiatan'])->name('tabelkegiatan');
+    Route::get('/updatekegiatan/{id}/kegiatan', [KegiatanController::class, 'updateKegiatan'])->name('updateKegiatan');
+    Route::patch('/kegiatan/{id}', [KegiatanController::class, 'actKegiatan']);
 
-// pegawai
-Route::get('/formpegawai', [PegawaiController::class, 'index'])->name('formpegawai');
-Route::post('/create-pegawai', [PegawaiController::class, 'registrasiPegawai']);
-Route::get('/tabelpegawai', [PegawaiController::class, 'daftarPegawai'])->name('tabelpegawai');
-Route::get('/updatepegawai', [PegawaiController::class, 'updatePegawai'])->name('updatePegawai');
-
-// kegiatan
-Route::get('/formkegiatan', [KegiatanController::class, 'index'])->name('formkegiatan');
-Route::post('/create-kegiatan', [KegiatanController::class, 'createKegiatan']);
-Route::get('/tabelkegiatan', [KegiatanController::class, 'daftarKegiatan'])->name('tabelkegiatan');
-Route::get('/updatekegiatan', [KegiatanController::class, 'updateKegiatan'])->name('updateKegiatan');
+});

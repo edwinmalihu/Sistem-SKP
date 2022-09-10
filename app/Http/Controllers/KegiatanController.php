@@ -27,13 +27,29 @@ class KegiatanController extends Controller
   
     public function daftarKegiatan()
     {
-        return view('tabelkegiatan');
+        $kegiatan = Kegiatan::all();
+        return view('tabelkegiatan',[
+            'kegiatan' => $kegiatan
+        ]);
     }
 
       
-    public function updateKegiatan()
+    public function updateKegiatan($id)
     {
-        return view('updatekegiatan');
+        $kegiatan = Kegiatan::find($id);
+        return view('updatekegiatan',[
+            'kegiatan' => $kegiatan
+        ]);
+    }
+
+    public function actKegiatan(Request $request, $id)
+    {
+        $validated = $request->validate([
+            'nama_kegiatan' => 'required'
+        ]);
+
+        Kegiatan::where('id_kegiatan', $id)->update($validated);
+        return redirect('/tabelkegiatan')->with('Success', 'Data Berhasil Di Ubah!');
     }
 
 }

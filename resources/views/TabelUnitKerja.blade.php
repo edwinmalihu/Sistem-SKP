@@ -34,53 +34,17 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($unit as $u)
             <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
+                <td>{{$u->nama_units_kerja}}</td>
+                <td>{{$u->created_at}}</td>
                 <td class="actions">
-                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                    <a href="/updateunitkerja/{{$u->id_units}}/unit" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
                       data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>
                 </td>
             </tr>
-            <tr>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td class="actions">
-                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
-                      data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>
-                </td>
-            <tr>
-                <td>Ashton Cox</td>
-                <td>Junior Technical Author</td>
-                <td class="actions">
-                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
-                      data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>Cedric Kelly</td>
-                <td>Senior Javascript Developer</td>
-                <td class="actions">
-                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
-                      data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>Airi Satou</td>
-                <td>Accountant</td>
-                <td class="actions">
-                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
-                      data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>
-                </td>
-            </tr>
+            @endforeach
         </tbody>
-        <tfoot>
-            <tr>
-                <th>Unit Kerja</th>
-                <th>Tanggal Input</th>
-                <th>Action</th>
-            </tr>
-        </tfoot>
     </table>
           </div>
         </div>

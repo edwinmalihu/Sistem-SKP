@@ -55,12 +55,22 @@ class PegawaiController extends Controller
     // tabel
     public function daftarPegawai()
     {
-        return view('tabelpegawai');
+        
+        $pegawai = User::join('Jabatan', 'Jabatan.id_jabatan', '=', 'users.id_jabatan')
+        ->join('pangkat_golongan', 'pangkat_golongan.id_pangkat_golongan', '=', 'users.id_pangkat_golongan')
+        ->join('units', 'units.id_units', '=', 'users.id_unit_kerja')
+        ->get(['users.*', 'units.nama_units_kerja', 'pangkat_golongan.jenis_pangkat_golongan', 'Jabatan.jenis_jabatan']);
+
+    
+        return view('tabelpegawai', [
+            'user' => $pegawai
+        ]);
     }
 
-    // update
-    public function updatePegawai()
+    // update view
+    public function updatePegawai($id)
     {
+        $user = User::find($id);
         $jabatan = Jabatan::all();
         $kegiatan = Kegiatan::all();
         $pangkat = Pangkat::all();
@@ -70,7 +80,25 @@ class PegawaiController extends Controller
             'jabatan' => $jabatan,
             'kegiatan' => $kegiatan,
             'pangkat' => $pangkat,
-            'unit' => $unit
+            'unit' => $unit,
+            'pegawai' => $user
         ]);
+    }
+
+    public function actUpdate(Request $request, $id)
+    {
+        $validated = $request->validate([
+            'nama_pegawai' => 'required',
+            'nik_pegawai' => 'required',
+            'nip_pegawai' => 'required',
+            'id_pangkat_golongan' => 'required',
+            'id_jabatan' => 'required',
+            'id_unit_kerja' => 'required',
+            'jenis_pegawai' => 'required',
+            'hak_akses' => 'required',
+        ]);
+
+        User::where('id', $id)->update($validated);
+        return redirect('/tabelpegawai')->with('Success', 'Data Berhasil Di Ubah!');
     }
 }

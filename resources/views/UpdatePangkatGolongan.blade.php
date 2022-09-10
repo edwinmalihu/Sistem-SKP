@@ -36,10 +36,11 @@
             <h3 class="panel-title">Edit Pangkat dan Golongan</h3>
           </div>
           <div class="panel-body container-fluid">
-            <form autocomplete="off" action="/create" method="post">
+            <form autocomplete="off" action="/pangkat/{{$pangkat->id_pangkat_golongan}}" method="post">
+            @method('patch')
             @csrf
               <div class="form-group form-material floating" data-plugin="formMaterial">
-                <input type="text" class="form-control" name="jenis_pangkat_golongan" />
+                <input type="text" class="form-control" name="jenis_pangkat_golongan" value="{{$pangkat->jenis_pangkat_golongan}}"/>
                 <label class="floating-label">Pangkat dan Golongan</label>
                 <br>
               </div>

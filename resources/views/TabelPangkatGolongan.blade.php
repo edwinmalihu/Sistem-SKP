@@ -33,53 +33,17 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($pangkat as $g)
             <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
+                <td>{{$g->jenis_pangkat_golongan}}</td>
+                <td>{{$g->created_at}}</td>
                 <td class="actions">
-                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                    <a href="/updatepangkatgolongan/{{$g->id_pangkat_golongan}}/pangkat" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
                       data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>
                 </td>
             </tr>
-            <tr>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td class="actions">
-                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
-                      data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>
-                </td>
-            <tr>
-                <td>Ashton Cox</td>
-                <td>Junior Technical Author</td>
-                <td class="actions">
-                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
-                      data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>Cedric Kelly</td>
-                <td>Senior Javascript Developer</td>
-                <td class="actions">
-                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
-                      data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>
-                </td>
-            </tr>
-            <tr>
-                <td>Airi Satou</td>
-                <td>Accountant</td>
-                <td class="actions">
-                    <a href="#" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
-                      data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>
-                </td>
-            </tr>
+            @endforeach
         </tbody>
-        <tfoot>
-            <tr>
-                <th>Pangkat Golongan</th>
-                <th>Tanggal Input</th>
-                <th>Action</th>
-            </tr>
-        </tfoot>
     </table>
           </div>
         </div>

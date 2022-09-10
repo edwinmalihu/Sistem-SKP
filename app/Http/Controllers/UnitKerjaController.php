@@ -27,12 +27,31 @@ class UnitKerjaController extends Controller
     // tabel
     public function daftarUnitKerja()
     {
-        return view('tabelunitkerja');
+
+        $unit = Unit::all();
+        return view('tabelunitkerja',[
+            'unit' => $unit
+        ]);
     }
 
     // update
-    public function updateUnitKerja()
+    public function updateUnitKerja($id)
     {
-        return view('updateunitkerja');
+        $unit = Unit::find($id);
+        return view('updateunitkerja', [
+            'unit' => $unit
+        ]);
     }
+
+    public function actEditUnitKerja(Request $request, $id)
+    {
+        $validated = $request->validate([
+            'nama_units_kerja' => 'required'
+        ]);
+
+        Unit::where('id_units', $id)->update($validated);
+        return redirect('/tabelunitkerja')->with('Success', 'Data Berhasil Di Ubah!');
+    }
+
+
 }

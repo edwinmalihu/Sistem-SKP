@@ -109,6 +109,7 @@
     
           <!-- Navbar Toolbar Right -->
           <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+    
             <li class="nav-item dropdown">
               <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false"
                 data-animation="scale-up" role="button"> Admin
@@ -124,6 +125,7 @@
                 </form>
               </div>
             </li>
+   
           </ul>
           <!-- End Navbar Toolbar Right -->
         </div>
