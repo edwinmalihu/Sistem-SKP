@@ -215,7 +215,7 @@
               <li class="dropdown site-menu-item has-sub">
                 <a data-toggle="dropdown" href="javascript:void(0)" data-dropdown-toggle="false">
                         <i class="site-menu-icon wb-grid-4" aria-hidden="true"></i>
-                        <span class="site-menu-title">Nilai</span>
+                        <span class="site-menu-title">SKP</span>
                             <span class="site-menu-arrow"></span>
                     </a>
                 <div class="dropdown-menu">
@@ -223,89 +223,36 @@
                     <div>
                       <div>
                         <ul class="site-menu-sub site-menu-normal-list">
+                          <!-- <li class="site-menu-item">
+                            <a class="animsition-link" href="/tabelskp">
+                              <span class="site-menu-title">Daftar SKP</span>
+                            </a>
+                          </li> -->
                           <li class="site-menu-item">
-                            <a class="animsition-link" href="../apps/contacts/contacts.html">
-                              <span class="site-menu-title">Contacts</span>
+                            <a class="animsition-link" href="/tabeldataskp">
+                              <span class="site-menu-title">Daftar Data SKP</span>
                             </a>
                           </li>
-                          <li class="site-menu-item">
-                            <a class="animsition-link" href="../apps/calendar/calendar.html">
-                              <span class="site-menu-title">Calendar</span>
+                          <!-- <li class="site-menu-item">
+                            <a class="animsition-link" href="/tabelskp">
+                              <span class="site-menu-title">Cover SKP</span>
                             </a>
-                          </li>
-                          <li class="site-menu-item">
-                            <a class="animsition-link" href="../apps/notebook/notebook.html">
-                              <span class="site-menu-title">Notebook</span>
+                          </li> -->
+                          <!-- <li class="site-menu-item">
+                            <a class="animsition-link" href="/tabelskp">
+                              <span class="site-menu-title">Pengukuran SKP</span>
                             </a>
-                          </li>
-                          <li class="site-menu-item">
-                            <a class="animsition-link" href="../apps/taskboard/taskboard.html">
-                              <span class="site-menu-title">Taskboard</span>
+                          </li> -->
+                          <!-- <li class="site-menu-item">
+                            <a class="animsition-link" href="/tabelskp">
+                              <span class="site-menu-title">Perilaku Kerja</span>
                             </a>
-                          </li>
-                          <li class="site-menu-item has-sub">
-                            <a href="javascript:void(0)">
-                              <span class="site-menu-title">Documents</span>
-                              <span class="site-menu-arrow"></span>
+                          </li> -->
+                          <!-- <li class="site-menu-item">
+                            <a class="animsition-link" href="/tabelskp">
+                              <span class="site-menu-title">Penilaian</span>
                             </a>
-                            <ul class="site-menu-sub">
-                              <li class="site-menu-item">
-                                <a class="animsition-link" href="../apps/documents/articles.html">
-                                  <span class="site-menu-title">Articles</span>
-                                </a>
-                              </li>
-                              <li class="site-menu-item">
-                                <a class="animsition-link" href="../apps/documents/categories.html">
-                                  <span class="site-menu-title">Categories</span>
-                                </a>
-                              </li>
-                              <li class="site-menu-item">
-                                <a class="animsition-link" href="../apps/documents/article.html">
-                                  <span class="site-menu-title">Article</span>
-                                </a>
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="site-menu-item">
-                            <a class="animsition-link" href="../apps/forum/forum.html">
-                              <span class="site-menu-title">Forum</span>
-                            </a>
-                          </li>
-                          <li class="site-menu-item">
-                            <a class="animsition-link" href="../apps/message/message.html">
-                              <span class="site-menu-title">Message</span>
-                            </a>
-                          </li>
-                          <li class="site-menu-item">
-                            <a class="animsition-link" href="../apps/projects/projects.html">
-                              <span class="site-menu-title">Projects</span>
-                            </a>
-                          </li>
-                          <li class="site-menu-item">
-                            <a class="animsition-link" href="../apps/mailbox/mailbox.html">
-                              <span class="site-menu-title">Mailbox</span>
-                            </a>
-                          </li>
-                          <li class="site-menu-item">
-                            <a class="animsition-link" href="../apps/media/overview.html">
-                              <span class="site-menu-title">Media</span>
-                            </a>
-                          </li>
-                          <li class="site-menu-item">
-                            <a class="animsition-link" href="../apps/work/work.html">
-                              <span class="site-menu-title">Work</span>
-                            </a>
-                          </li>
-                          <li class="site-menu-item">
-                            <a class="animsition-link" href="../apps/location/location.html">
-                              <span class="site-menu-title">Location</span>
-                            </a>
-                          </li>
-                          <li class="site-menu-item">
-                            <a class="animsition-link" href="../apps/travel/travel.html">
-                              <span class="site-menu-title">Travel</span>
-                            </a>
-                          </li>
+                          </li> -->
                         </ul>
                       </div>
                     </div>
@@ -418,6 +365,13 @@
     <script>
         $(document).ready(function () {
         $('#kegiatan').DataTable();
+    });
+    </script>
+
+    <!-- TABEL SKP -->
+    <script>
+        $(document).ready(function () {
+        $('#skp').DataTable();
     });
     </script>
     

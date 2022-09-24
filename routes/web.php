@@ -8,6 +8,7 @@ use App\Http\Controllers\PangkatGolonganController;
 use App\Http\Controllers\UnitKerjaController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\KegiatanController;
+use App\Http\Controllers\SKPController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,8 +28,8 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
 
-Route::group(['middleware' => 'auth'], function ()
-{
+// Route::group(['middleware' => 'auth'], function ()
+// {
     
 
     // Layout
@@ -69,4 +70,10 @@ Route::group(['middleware' => 'auth'], function ()
     Route::get('/updatekegiatan/{id}/kegiatan', [KegiatanController::class, 'updateKegiatan'])->name('updateKegiatan');
     Route::patch('/kegiatan/{id}', [KegiatanController::class, 'actKegiatan']);
 
-});
+    // SKP
+    Route::get('/formskp',[SKPController::class, 'index'])->name('formskp');
+    Route::get('/tabeldataskp', [SKPController::class, 'index'])->name('tabeldataskp');
+    Route::get('/formdataskp',[SKPController::class, 'DataSKPView'])->name('formdataskp');
+    Route::get('/printdataskp', [SKPController::class, 'PrintDataSKP'])->name('printdataskp');
+    Route::get('/updatedataskp', [SKPController::class, 'UpdateDataSKP'])->name('updatedataskp');
+// });

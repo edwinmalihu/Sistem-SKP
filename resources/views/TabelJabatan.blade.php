@@ -32,6 +32,7 @@
             <tr>
                 <th>Jabatan</th>
                 <th>Tanggal Input</th>
+                <th>Tanggal Update</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -40,6 +41,7 @@
             <tr>
                 <td>{{$j->jenis_jabatan}}</td>
                 <td>{{$j->created_at}}</td>
+                <td>{{$j->updated_at}}</td>
                 <td class="actions">
                     <a href="/updatejabatan/{{$j->id_jabatan}}/jabatan" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
                       data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>

@@ -31,6 +31,7 @@
             <tr>
                 <th>Kegiatan</th>
                 <th>Tanggal Input</th>
+                <th>Tanggal Update</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -39,6 +40,7 @@
             <tr>
                 <td>{{$k->nama_kegiatan}}</td>
                 <td>{{$k->created_at}}</td>
+                <td>{{$k->updated_at}}</td>
                 <td class="actions">
                     <a href="/updatekegiatan/{{$k->id_kegiatan}}/kegiatan" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
                       data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>

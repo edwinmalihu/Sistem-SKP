@@ -29,6 +29,7 @@
             <tr>
                 <th>Pangkat Golongan</th>
                 <th>Tanggal Input</th>
+                <th>Tanggal Update</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -37,6 +38,7 @@
             <tr>
                 <td>{{$g->jenis_pangkat_golongan}}</td>
                 <td>{{$g->created_at}}</td>
+                <td>{{$g->updated_at}}</td>
                 <td class="actions">
                     <a href="/updatepangkatgolongan/{{$g->id_pangkat_golongan}}/pangkat" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
                       data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>

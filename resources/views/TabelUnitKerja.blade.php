@@ -30,6 +30,7 @@
             <tr>
                 <th>Unit Kerja</th>
                 <th>Tanggal Input</th>
+                <th>Tanggal Update</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -38,6 +39,7 @@
             <tr>
                 <td>{{$u->nama_units_kerja}}</td>
                 <td>{{$u->created_at}}</td>
+                <td>{{$u->updated_at}}</td>
                 <td class="actions">
                     <a href="/updateunitkerja/{{$u->id_units}}/unit" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
                       data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>
