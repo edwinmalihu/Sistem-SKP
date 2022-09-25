@@ -374,6 +374,7 @@
         $('#skp').DataTable();
     });
     </script>
+    @stack('scripts')
     
   </body>
 </html>

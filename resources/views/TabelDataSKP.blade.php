@@ -40,13 +40,14 @@
             </tr>
         </thead>
         <tbody>
+          @foreach ($dataSkp as $data)
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{$data->nama_dinilai}}</td>
+                <td>{{$data->nip_dinilai}}</td>
+                <td>{{$data->nama_penilai}}</td>
+                <td>{{$data->nama_pejabat}}</td>
+                <td>{{$data->semester}}</td>
+                <td>{{$data->tahun}}</td>
                 <td class="actions">
                     <a href="/updatedataskp" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
                       data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>
@@ -54,6 +55,7 @@
                       data-toggle="tooltip" data-original-title="Lihat"><i class="icon wb-eye" aria-hidden="true"></i></a>
                 </td>
             </tr>
+          @endforeach
         </tbody>
     </table>
           </div>

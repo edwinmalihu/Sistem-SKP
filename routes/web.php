@@ -25,13 +25,13 @@ use App\Http\Controllers\SKPController;
 // Login
 Route::get('/', [LoginController::class, 'index'])->name('login');
 Route::post('/auth', [LoginController::class, 'authenticate']);
-Route::post('/logout', [LoginController::class, 'logout']);
 
 
-// Route::group(['middleware' => 'auth'], function ()
-// {
+
+Route::group(['middleware' => 'auth'], function ()
+{
     
-
+    Route::post('/logout', [LoginController::class, 'logout']);
     // Layout
     Route::get('/layout', [DashboardController::class, 'index'])->name('layout');
 
@@ -72,8 +72,11 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
     // SKP
     Route::get('/formskp',[SKPController::class, 'index'])->name('formskp');
+    Route::get('/skpform/{id}',[SKPController::class, 'getList']);
+    Route::post('/create-data-skp',[SKPController::class, 'createData']);
+
     Route::get('/tabeldataskp', [SKPController::class, 'index'])->name('tabeldataskp');
     Route::get('/formdataskp',[SKPController::class, 'DataSKPView'])->name('formdataskp');
     Route::get('/printdataskp', [SKPController::class, 'PrintDataSKP'])->name('printdataskp');
     Route::get('/updatedataskp', [SKPController::class, 'UpdateDataSKP'])->name('updatedataskp');
-// });
+});
