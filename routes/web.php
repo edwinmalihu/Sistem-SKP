@@ -28,8 +28,8 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
 
 
 
-Route::group(['middleware' => 'auth'], function ()
-{
+// Route::group(['middleware' => 'auth'], function ()
+// {
     
     Route::post('/logout', [LoginController::class, 'logout']);
     // Layout
@@ -79,4 +79,4 @@ Route::group(['middleware' => 'auth'], function ()
     Route::get('/formdataskp',[SKPController::class, 'DataSKPView'])->name('formdataskp');
     Route::get('/printdataskp', [SKPController::class, 'PrintDataSKP'])->name('printdataskp');
     Route::get('/updatedataskp', [SKPController::class, 'UpdateDataSKP'])->name('updatedataskp');
-});
+// });
