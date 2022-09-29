@@ -46,16 +46,20 @@
                     <td>a. NAMA</td>
                     <td style="text-align: center;">:</td>
                     <td>
-                      <select class="form-control" id="select" name="">
-                        <option value=""></option>
+                    <select class="form-control" id="id_dinilai" name="id_dinilai">
+                        @foreach ($list as $skp)
+                        <option value="{{$skp->id}}">{{$skp->nama_pegawai}}</option>
+                        @endforeach
                       </select>
                     </td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td>b. NIK</td>
+                    <td>b. NIP</td>
                     <td style="text-align: center;">:</td>
-                    <td></td>
+                    <td><input type="hidden" name="nip_dinilai" id="nudi">
+                        <p id="label-nip"></p>
+                    </td>
                 </tr>
                 <tr>
                     <td></td>
@@ -91,7 +95,7 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td>b. NIP/NIK</td>
+                    <td>b. NIP</td>
                     <td style="text-align: center;">:</td>
                     <td></td>
                 </tr>
@@ -129,7 +133,7 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td>b. NIP/NIK</td>
+                    <td>b. NIP</td>
                     <td style="text-align: center;">:</td>
                     <td></td>
                 </tr>
@@ -163,3 +167,64 @@
 </div>
 <!-- End Page -->
 @endsection
+
+@push('scripts')
+<script>
+  $(document).ready( function () {
+      var id_data = $('#id_dinilai').find('option:selected', this).attr('value');
+    // console.log(id_data);
+
+    if (id_data != "") {
+      // $('#id_dinilai').on('change', function () {
+      // var id = $('#id_dinilai').find('option:selected', this).attr('value')
+      // console.log(id)
+      $.get('/skpform/'+ id_data, function (data) {
+            // console.log(data[0])
+            $('#nudi').val(data[0].nip_pegawai);
+            $('#label-nip').text(data[0].nip_pegawai)
+            $('#gudi').val(data[0].id_pangkat_golongan);
+            $('#label-golongan').text(data[0].jenis_pangkat_golongan)
+            $('#judi').val(data[0].id_jabatan);
+            $('#label-jabatan').text(data[0].jenis_jabatan)
+            $('#udi').val(data[0].id_unit_kerja);
+            $('#label-unit').text(data[0].nama_units_kerja)
+          });
+      // })
+      } 
+      $('#id_dinilai').on('change', function () {
+      var id = $('#id_dinilai').find('option:selected', this).attr('value')
+      console.log(id)
+      $.get('/skpform/'+ id, function (data) {
+            // console.log(data[0])
+            $('#nudi').val(data[0].nip_pegawai);
+            $('#label-nip').text(data[0].nip_pegawai)
+            $('#gudi').val(data[0].id_pangkat_golongan);
+            $('#label-golongan').text(data[0].jenis_pangkat_golongan)
+            $('#judi').val(data[0].id_jabatan);
+            $('#label-jabatan').text(data[0].jenis_jabatan)
+            $('#udi').val(data[0].id_unit_kerja);
+            $('#label-unit').text(data[0].nama_units_kerja)
+          });
+      })
+    
+   
+
+    // $('#id_dinilai').on('change', function () {
+    //   var id = $('#id_dinilai').find('option:selected', this).attr('value')
+    //   console.log(id);
+    //   $.get('/skpform/'+ id, function (data) {
+    //         // console.log(data[0])
+    //         $('#nudi').val(data[0].nip_pegawai);
+    //         $('#label-nip').text(data[0].nip_pegawai)
+    //         $('#gudi').val(data[0].id_pangkat_golongan);
+    //         $('#label-golongan').text(data[0].jenis_pangkat_golongan)
+    //         $('#judi').val(data[0].id_jabatan);
+    //         $('#label-jabatan').text(data[0].jenis_jabatan)
+    //         $('#udi').val(data[0].id_unit_kerja);
+    //         $('#label-unit').text(data[0].nama_units_kerja)
+    //       });
+    // })
+
+  });
+</script>
+@endpush

@@ -9,6 +9,7 @@ class DataSKP extends Model
 {
     use HasFactory;
     protected $table = 'data_skp';
+    protected $primaryKey = 'id_data_skp';
     protected $fillable = [
         'id_dinilai',
         'nip_dinilai',
