@@ -80,5 +80,8 @@ Route::group(['middleware' => 'auth'], function ()
     // Route::get('/printdataskp', [SKPController::class, 'PrintDataSKP'])->name('printdataskp');
     Route::get('/detail-skp/{id}', [SKPController::class, 'detailSkp']);
     Route::get('/updatedataskp/{id}/edit', [SKPController::class, 'UpdateDataSKP'])->name('updatedataskp');
+<<<<<<< HEAD
     Route::patch('/action/{id}/edit', [SKPController::class, 'actionUpdate']);
+=======
+>>>>>>> 8b90a0e458e6806638eef5185a6d466bf2ff215f
 });

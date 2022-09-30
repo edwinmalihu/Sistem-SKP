@@ -113,6 +113,7 @@ class SKPController extends Controller
     public function UpdateDataSKP($id)
     {
         $data = DataSKP::find($id);
+<<<<<<< HEAD
         $id_user = User::all();
         $list_dosen = User::where('status', 'pegawai')->get();
         return view('updatedataskp', [
@@ -146,5 +147,13 @@ class SKPController extends Controller
 
         DataSKP::where('id_data_skp', $id)->update($validated);
         return redirect('/tabeldataskp')->with('Success', 'Data Berhasil Di Ubah!');
+=======
+        $list_dosen = User::where('status', 'pegawai')->get();
+        return view('updatedataskp', [
+            'data' => $data,
+            'list' => $list_dosen
+        ]);
+        
+>>>>>>> 8b90a0e458e6806638eef5185a6d466bf2ff215f
     }
 }
