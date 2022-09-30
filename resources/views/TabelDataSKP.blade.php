@@ -34,7 +34,7 @@
                 <th>Nomor Induk Pegawai</th>
                 <th>Pejabat Penilai</th>
                 <th>Atasan Pejabat Penilai</th>
-                <th>Semester</th>
+                <th>Periode</th>
                 <th>Tahun</th>
                 <th>Action</th>
             </tr>
@@ -46,12 +46,12 @@
                 <td>{{$data->nip_dinilai}}</td>
                 <td>{{$data->nama_penilai}}</td>
                 <td>{{$data->nama_pejabat}}</td>
-                <td>{{$data->semester}}</td>
-                <td>{{$data->tahun}}</td>
+                <td>{{$data->periode}}</td>
+                <td>{{$data->thn}}</td>
                 <td class="actions">
-                    <a href="/updatedataskp" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                    <a href="/updatedataskp/{{$data->idData}}/edit" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
                       data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>
-                      <a href="/printdataskp" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                      <a href="/detail-skp/{{$data->idData}}" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
                       data-toggle="tooltip" data-original-title="Lihat"><i class="icon wb-eye" aria-hidden="true"></i></a>
                 </td>
             </tr>

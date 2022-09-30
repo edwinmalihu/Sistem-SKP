@@ -182,10 +182,10 @@
                     <td style="text-align: center;">:</td>
                     <!-- <td><input type="text" name="semester" placholder="contoh: ganjil - genap"> </td> -->
                     <td>
-                      <select class="form-control" id="" name="">
-                        <option value="">Januari - Desember</option>
-                        <option value="">Januari - Juni</option>
-                        <option value="">Juli - Desember</option>
+                      <select class="form-control" name="semester">
+                        <option value="Januari - Desember">Januari - Desember</option>
+                        <option value="Januari - Juni">Januari - Juni</option>
+                        <option value="Juli - Desember">Juli - Desember</option>
                       </select>
                     </td>
                 </tr>
@@ -195,9 +195,9 @@
                     <td style="text-align: center;">:</td>
                     <!-- <td><input type="text" name="tahun" placholder="contoh: 2018"> </td> -->
                     <td>
-                      <select class="form-control" id="" name="">
-                        <option value="">2021</option>
-                        <option value="">2022</option>
+                      <select class="form-control" name="tahun">
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
                       </select>
                     </td>
                 </tr>

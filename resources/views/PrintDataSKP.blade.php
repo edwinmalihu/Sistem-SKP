@@ -29,31 +29,31 @@
                     <td></td>
                     <td>a. NAMA</td>
                     <td style="text-align: center;">:</td>
-                    <td></td>
+                    <td>{{$data[0]->nama_dinilai}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>b. NIK</td>
                     <td style="text-align: center;">:</td>
-                    <td></td>
+                    <td>{{$data[0]->nip_dinilai}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>c. Pangkat/Gol. Ruang</td>
                     <td style="text-align: center;">:</td>
-                    <td></td>
+                    <td>{{$data[0]->jenis_godi}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>d. Jabatan</td>
                     <td style="text-align: center;">:</td>
-                    <td></td>
+                    <td>{{$data[0]->jenis_jadi}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>e. Unit Kerja</td>
                     <td style="text-align: center;">:</td>
-                    <td></td>
+                    <td>{{$data[0]->jenis_udi}}</td>
                 </tr>
                 <tr>
                     <td style="font-weight:bold; text-align: center;">2</td>
@@ -63,31 +63,31 @@
                     <td></td>
                     <td>a. NAMA</td>
                     <td style="text-align: center;">:</td>
-                    <td></td>
+                    <td>{{$data[0]->nama_penilai}}</td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td>b. NIP/NIK</td>
+                    <td>b. NIP</td>
                     <td style="text-align: center;">:</td>
-                    <td></td>
+                    <td>{{$data[0]->nip_penilai}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>c. Pangkat/Gol. Ruang</td>
                     <td style="text-align: center;">:</td>
-                    <td></td>
+                    <td>{{$data[0]->gope}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>d. Jabatan</td>
                     <td style="text-align: center;">:</td>
-                    <td></td>
+                    <td>{{$data[0]->jenis_jape}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>e. Unit Kerja</td>
                     <td style="text-align: center;">:</td>
-                    <td></td>
+                    <td>{{$data[0]->jenis_upe}}</td>
                 </tr>
                 <tr>
                     <td style="font-weight:bold; text-align: center;">3</td>
@@ -97,31 +97,31 @@
                     <td></td>
                     <td>a. NAMA</td>
                     <td style="text-align: center;">:</td>
-                    <td></td>
+                    <td>{{$data[0]->nama_pejabat}}</td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td>b. NIP/NIK</td>
+                    <td>b. NIP</td>
                     <td style="text-align: center;">:</td>
-                    <td></td>
+                    <td>{{$data[0]->nip_app}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>c. Pangkat/Gol. Ruang</td>
                     <td style="text-align: center;">:</td>
-                    <td></td>
+                    <td>{{$data[0]->jenis_gpp}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>d. Jabatan</td>
                     <td style="text-align: center;">:</td>
-                    <td></td>
+                    <td>{{$data[0]->jenis_jpp}}</td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>e. Unit Kerja</td>
                     <td style="text-align: center;">:</td>
-                    <td></td>
+                    <<td>{{$data[0]->jenis_upp}}</td>
                 </tr>
             </table>
           </div>
