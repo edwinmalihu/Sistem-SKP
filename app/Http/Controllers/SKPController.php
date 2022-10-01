@@ -18,7 +18,7 @@ class SKPController extends Controller
         $data = DataSKP::join('users as dinilai', 'dinilai.id', '=', 'data_skp.id_dinilai')
         ->join('users as penilai', 'penilai.id', '=', 'data_skp.id_penilai')
         ->join('users as pejabat', 'pejabat.id', '=', 'data_skp.id_app')
-        ->get(['data_skp.semester as periode', 'data_skp.tahun as thn', 'data_skp.id_data_skp as idData', 'dinilai.nama_pegawai as nama_dinilai', 'penilai.nama_pegawai as nama_penilai', 'pejabat.nama_pegawai as nama_pejabat']);
+        ->get(['data_skp.nip_dinilai as nip_dinilai', 'data_skp.semester as periode', 'data_skp.tahun as thn', 'data_skp.id_data_skp as idData', 'dinilai.nama_pegawai as nama_dinilai', 'penilai.nama_pegawai as nama_penilai', 'pejabat.nama_pegawai as nama_pejabat']);
         return view('tabeldataskp', [
             'dataSkp' => $data
         ]);
@@ -105,15 +105,15 @@ class SKPController extends Controller
     // Print data skp
     public function PrintDataSKP()
     {
-        return view('printdataskp');
+        return view('dataskppdf');
         
     }
 
-    // Update data skp
+//     // Update data skp
     public function UpdateDataSKP($id)
     {
         $data = DataSKP::find($id);
-<<<<<<< HEAD
+
         $id_user = User::all();
         $list_dosen = User::where('status', 'pegawai')->get();
         return view('updatedataskp', [
@@ -147,13 +147,13 @@ class SKPController extends Controller
 
         DataSKP::where('id_data_skp', $id)->update($validated);
         return redirect('/tabeldataskp')->with('Success', 'Data Berhasil Di Ubah!');
-=======
         $list_dosen = User::where('status', 'pegawai')->get();
         return view('updatedataskp', [
             'data' => $data,
             'list' => $list_dosen
         ]);
         
->>>>>>> 8b90a0e458e6806638eef5185a6d466bf2ff215f
+
     }
+
 }

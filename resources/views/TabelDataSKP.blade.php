@@ -49,10 +49,19 @@
                 <td>{{$data->periode}}</td>
                 <td>{{$data->thn}}</td>
                 <td class="actions">
+                  <!-- DATA SKP -->
                     <a href="/updatedataskp/{{$data->idData}}/edit" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
-                      data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>
-                      <a href="/detail-skp/{{$data->idData}}" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
-                      data-toggle="tooltip" data-original-title="Lihat"><i class="icon wb-eye" aria-hidden="true"></i></a>
+                      data-toggle="tooltip" data-original-title="Edit Data SKP"><i class="icon wb-edit" aria-hidden="true"></i></a>
+                    <a href="/detail-skp/{{$data->idData}}" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                      data-toggle="tooltip" data-original-title="Lihat Data SKP"><i class="icon wb-eye" aria-hidden="true"></i></a>
+                    
+                    <!-- NILAI SKP -->
+                    <a href="/forminputnilaiskp" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                      data-toggle="tooltip" data-original-title="Tambah Nilai SKP"><i class="icon wb-plus" aria-hidden="true"></i></a>
+                    <a href="/updateinputnilaiskp" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                      data-toggle="tooltip" data-original-title="Edit Nilai SKP"><i class="icon wb-edit" aria-hidden="true"></i></a>
+                    <a href="/detail-nilaiskp" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                      data-toggle="tooltip" data-original-title="Lihat Nilai SKP"><i class="icon wb-eye" aria-hidden="true"></i></a>
                 </td>
             </tr>
           @endforeach

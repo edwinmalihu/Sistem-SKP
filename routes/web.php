@@ -9,6 +9,7 @@ use App\Http\Controllers\UnitKerjaController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\SKPController;
+use App\Http\Controllers\NilaiSKPController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,8 +29,8 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
 
 
 
-Route::group(['middleware' => 'auth'], function ()
-{
+// Route::group(['middleware' => 'auth'], function ()
+// {
     
     Route::post('/logout', [LoginController::class, 'logout']);
     // Layout
@@ -70,18 +71,20 @@ Route::group(['middleware' => 'auth'], function ()
     Route::get('/updatekegiatan/{id}/kegiatan', [KegiatanController::class, 'updateKegiatan'])->name('updateKegiatan');
     Route::patch('/kegiatan/{id}', [KegiatanController::class, 'actKegiatan']);
 
-    // SKP
+    // DATA SKP
     Route::get('/formskp',[SKPController::class, 'index'])->name('formskp');
     Route::get('/skpform/{id}',[SKPController::class, 'getList']);
     Route::post('/create-data-skp',[SKPController::class, 'createData']);
 
     Route::get('/tabeldataskp', [SKPController::class, 'index'])->name('tabeldataskp');
     Route::get('/formdataskp',[SKPController::class, 'DataSKPView'])->name('formdataskp');
-    // Route::get('/printdataskp', [SKPController::class, 'PrintDataSKP'])->name('printdataskp');
+    Route::get('/printdataskp', [SKPController::class, 'PrintDataSKP'])->name('dataskppdf');
     Route::get('/detail-skp/{id}', [SKPController::class, 'detailSkp']);
     Route::get('/updatedataskp/{id}/edit', [SKPController::class, 'UpdateDataSKP'])->name('updatedataskp');
-<<<<<<< HEAD
     Route::patch('/action/{id}/edit', [SKPController::class, 'actionUpdate']);
-=======
->>>>>>> 8b90a0e458e6806638eef5185a6d466bf2ff215f
-});
+
+    // SKP NILAI
+    Route::get('/forminputnilaiskp', [NilaiSKPController::class, 'FormInputSKP'])->name('forminputnilaiskp');
+    Route::get('/updateinputnilaiskp', [NilaiSKPController::class, 'UpdateInputSKP'])->name('updateinputnilaiskp');
+    Route::get('/detail-nilaiskp', [NilaiSKPController::class, 'DetailSKP'])->name('detailnilaiskp');
+// });
