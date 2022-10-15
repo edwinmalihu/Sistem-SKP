@@ -58,7 +58,7 @@
                     <!-- NILAI SKP -->
                     <a href="/forminputnilaiskp/{{$data->idData}}" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
                       data-toggle="tooltip" data-original-title="Tambah Nilai SKP"><i class="icon wb-plus" aria-hidden="true"></i></a>
-                    <a href="/updateinputnilaiskp" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                    <a href="/updateinputnilaiskp/{{$data->idData}}" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
                       data-toggle="tooltip" data-original-title="Edit Nilai SKP"><i class="icon wb-edit" aria-hidden="true"></i></a>
                     <a href="/detail-nilaiskp/{{$data->idData}}" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
                       data-toggle="tooltip" data-original-title="Lihat Nilai SKP"><i class="icon wb-eye" aria-hidden="true"></i></a>

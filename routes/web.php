@@ -86,7 +86,8 @@ Route::group(['middleware' => 'auth'], function ()
 
     // SKP NILAI
     Route::get('/forminputnilaiskp/{id}', [NilaiSKPController::class, 'FormInputSKP'])->name('forminputnilaiskp');
-    Route::get('/updateinputnilaiskp', [NilaiSKPController::class, 'UpdateInputSKP'])->name('updateinputnilaiskp');
+    Route::get('/updateinputnilaiskp/{id}', [NilaiSKPController::class, 'UpdateInputSKP'])->name('updateinputnilaiskp');
     Route::get('/detail-nilaiskp/{id}', [NilaiSKPController::class, 'DetailSKP'])->name('detailnilaiskp');
     Route::post('/createNilai', [NilaiSKPController::class, 'createNilai']);
+    Route::patch('/update-nilai/{id}', [NilaiSKPController::class, 'ActionUpdate']);
 });

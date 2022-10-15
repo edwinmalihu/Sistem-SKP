@@ -64,7 +64,7 @@
               </div>
             </div>
             <!-- End Panel Floating Labels -->
-          </div>
+        </div>
       
     <div class="col-md-12">
         <!-- Panel Floating Labels -->
@@ -300,17 +300,17 @@
                 <tr>
                     <td align="center">11</td>
                     <td align="center" colspan="2">
-                    <select class="form-control" id="" name="kegiatan11">
+                    <select class="form-control" name="id_kk">
                         @foreach ($data as $k)
                         <option value="{{$k->id_kegiatan}}">{{$k->nama_kegiatan}}</option>
                         @endforeach
                     </select>
                     </td>
-                    <td align="center"><input type="text" class="form-control" name="" /></td>
-                    <td align="center"><input type="text" class="form-control" name="" /><input type="text" class="form-control" name="" /></td>
-                    <td align="center"><input type="text" class="form-control" name="" /></td>
-                    <td align="center"><input type="text" class="form-control" name="" /><input type="text" class="form-control" name="" /></td>
-                    <td align="center"><input type="text" class="form-control" name="" /></td>
+                    <td align="center"><input type="text" class="form-control" name="akk" /></td>
+                    <td align="center"><input type="text" class="form-control" name="kuk"/><input type="text" class="form-control" name="outk"/></td>
+                    <td align="center"><input type="text" class="form-control" name="mutk"/></td>
+                    <td align="center"><input type="text" class="form-control" name="timek"/><input type="text" class="form-control" name="tmdk"/></td>
+                    <td align="center"><input type="text" class="form-control" name="biayak"/></td>
                 </tr>
                 <tr>
                     <td align="center"></td>
@@ -323,22 +323,7 @@
                 </tr>
                 <tr>
                     <td align="center">12</td>
-                    <td align="center" colspan="2">
-                    <select class="form-control" name="id_kk">
-                        @foreach ($data as $k)
-                        <option value="{{$k->id_kegiatan}}">{{$k->nama_kegiatan}}</option>
-                        @endforeach
-                    </select>
-                    </td>
-                    <td align="center"><input type="text" class="form-control" name="akk" /></td>
-                    <td align="center"><input type="text" class="form-control" name="kuk" /><input type="text" class="form-control" name="outk" /></td>
-                    <td align="center"><input type="text" class="form-control" name="mutk" /></td>
-                    <td align="center"><input type="text" class="form-control" name="timek" /><input type="text" class="form-control" name="tmdk" /></td>
-                    <td align="center"><input type="text" class="form-control" name="biayak" /></td>
-                </tr>
-                <tr>
-                    <td align="center">13</td>
-                    <td align="center" colspan="2">
+                    td align="center" colspan="2">
                     <select class="form-control" name="id_kl">
                         @foreach ($data as $k)
                         <option value="{{$k->id_kegiatan}}">{{$k->nama_kegiatan}}</option>
@@ -351,16 +336,7 @@
                     <td align="center"><input type="text" class="form-control" name="biayal" /></td>
                 </tr>
                 <tr>
-                    <td align="center"></td>
-                    <td align="center" colspan="2" style="font-weight:bold;">III. PELAKSANAAN PENGABDIAN KEPADA MASYARAKAT</td>
-                    <td align="center"></td>
-                    <td align="center"></td>
-                    <td align="center"></td>
-                    <td align="center"></td>
-                    <td align="center"></td>
-                </tr>
-                <tr>
-                    <td align="center">14</td>
+                    <td align="center">13</td>
                     <td align="center" colspan="2">
                     <select class="form-control" id="" name="id_km">
                         @foreach ($data as $k)
@@ -375,7 +351,16 @@
                     <td align="center"><input type="text" class="form-control" name="biayam" /></td>
                 </tr>
                 <tr>
-                    <td align="center">15</td>
+                    <td align="center"></td>
+                    <td align="center" colspan="2" style="font-weight:bold;">III. PELAKSANAAN PENGABDIAN KEPADA MASYARAKAT</td>
+                    <td align="center"></td>
+                    <td align="center"></td>
+                    <td align="center"></td>
+                    <td align="center"></td>
+                    <td align="center"></td>
+                </tr>
+                <tr>
+                    <td align="center">14</td>
                     <td align="center" colspan="2">
                     <select class="form-control" id="" name="id_kn">
                         @foreach ($data as $k)
@@ -390,7 +375,7 @@
                     <td align="center"><input type="text" class="form-control" name="biayan" /></td>
                 </tr>
                 <tr>
-                    <td align="center">16</td>
+                    <td align="center">15</td>
                     <td align="center" colspan="2">
                     <select class="form-control" id="" name="id_ko">
                         @foreach ($data as $k)
@@ -403,6 +388,21 @@
                     <td align="center"><input type="text" class="form-control" name="muto" /></td>
                     <td align="center"><input type="text" class="form-control" name="timeo" /><input type="text" class="form-control" name="tmdo" /></td>
                     <td align="center"><input type="text" class="form-control" name="biayao" /></td>
+                </tr>
+                <tr>
+                    <td align="center">16</td>
+                    <td align="center" colspan="2">
+                    <select class="form-control" id="id_kp" name="id_kp">
+                        @foreach ($data as $k)
+                        <option value="{{$k->id_kegiatan}}">{{$k->nama_kegiatan}}</option>
+                        @endforeach
+                    </select>
+                    </td>
+                    <td align="center"><input type="text" class="form-control" name="akp" /></td>
+                    <td align="center"><input type="text" class="form-control" name="kup" /><input type="text" class="form-control" name="outp" /></td>
+                    <td align="center"><input type="text" class="form-control" name="mutp" /></td>
+                    <td align="center"><input type="text" class="form-control" name="timep" /><input type="text" class="form-control" name="tmdp" /></td>
+                    <td align="center"><input type="text" class="form-control" name="biayap" /></td>
                 </tr>
             </table>
             <br>
