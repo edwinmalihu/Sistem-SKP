@@ -52,4 +52,11 @@ class KegiatanController extends Controller
         return redirect('/tabelkegiatan')->with('Success', 'Data Berhasil Di Ubah!');
     }
 
+    // Kegiatan return json
+    public function KegiatanJson($id)
+    {
+        $data = Kegiatan::find($id);
+        return response()->json($data);
+    }
+
 }

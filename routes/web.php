@@ -29,8 +29,8 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
 
 
 
-// Route::group(['middleware' => 'auth'], function ()
-// {
+Route::group(['middleware' => 'auth'], function ()
+{
     
     Route::post('/logout', [LoginController::class, 'logout']);
     // Layout
@@ -70,6 +70,7 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
     Route::get('/tabelkegiatan', [KegiatanController::class, 'daftarKegiatan'])->name('tabelkegiatan');
     Route::get('/updatekegiatan/{id}/kegiatan', [KegiatanController::class, 'updateKegiatan'])->name('updateKegiatan');
     Route::patch('/kegiatan/{id}', [KegiatanController::class, 'actKegiatan']);
+    Route::get('/listkegiatan/{id}', [KegiatanController::class, 'KegiatanJson']);
 
     // DATA SKP
     Route::get('/formskp',[SKPController::class, 'index'])->name('formskp');
@@ -84,7 +85,8 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
     Route::patch('/action/{id}/edit', [SKPController::class, 'actionUpdate']);
 
     // SKP NILAI
-    Route::get('/forminputnilaiskp', [NilaiSKPController::class, 'FormInputSKP'])->name('forminputnilaiskp');
+    Route::get('/forminputnilaiskp/{id}', [NilaiSKPController::class, 'FormInputSKP'])->name('forminputnilaiskp');
     Route::get('/updateinputnilaiskp', [NilaiSKPController::class, 'UpdateInputSKP'])->name('updateinputnilaiskp');
-    Route::get('/detail-nilaiskp', [NilaiSKPController::class, 'DetailSKP'])->name('detailnilaiskp');
-// });
+    Route::get('/detail-nilaiskp/{id}', [NilaiSKPController::class, 'DetailSKP'])->name('detailnilaiskp');
+    Route::post('/createNilai', [NilaiSKPController::class, 'createNilai']);
+});

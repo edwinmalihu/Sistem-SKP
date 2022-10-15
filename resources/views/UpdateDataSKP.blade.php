@@ -49,16 +49,10 @@
                     <td>a. NAMA</td>
                     <td style="text-align: center;">:</td>
                     <td>
-<<<<<<< HEAD
                     <?php $id_dinilai = $data['id_dinilai'] ?>
                     <select class="form-control" id="id_dinilai" name="id_dinilai">
                         @foreach ($list as $skp)
                         <option value="{{$skp->id}}" {{ $id_dinilai == $skp->id ? 'selected' : '' }}>{{$skp->nama_pegawai}}</option>
-=======
-                    <select class="form-control" id="id_dinilai" name="id_dinilai">
-                        @foreach ($list as $skp)
-                        <option value="{{$skp->id}}">{{$skp->nama_pegawai}}</option>
->>>>>>> 8b90a0e458e6806638eef5185a6d466bf2ff215f
                         @endforeach
                       </select>
                     </td>
@@ -228,7 +222,6 @@
 @push('scripts')
 <script>
   $(document).ready( function () {
-<<<<<<< HEAD
 
     // List Pilihan pegawai dinilai
     var id_dinilai = $('#id_dinilai').find('option:selected', this).attr('value');
@@ -238,17 +231,6 @@
 
     if (id_dinilai != "") {
       $.get('/skpform/'+ id_dinilai, function (data) {
-=======
-      var id_data = $('#id_dinilai').find('option:selected', this).attr('value');
-    // console.log(id_data);
-
-    if (id_data != "") {
-      // $('#id_dinilai').on('change', function () {
-      // var id = $('#id_dinilai').find('option:selected', this).attr('value')
-      // console.log(id)
-      $.get('/skpform/'+ id_data, function (data) {
-            // console.log(data[0])
->>>>>>> 8b90a0e458e6806638eef5185a6d466bf2ff215f
             $('#nudi').val(data[0].nip_pegawai);
             $('#label-nip').text(data[0].nip_pegawai)
             $('#gudi').val(data[0].id_pangkat_golongan);
@@ -258,20 +240,11 @@
             $('#udi').val(data[0].id_unit_kerja);
             $('#label-unit').text(data[0].nama_units_kerja)
           });
-<<<<<<< HEAD
     } 
-=======
-      // })
-      } 
->>>>>>> 8b90a0e458e6806638eef5185a6d466bf2ff215f
       $('#id_dinilai').on('change', function () {
       var id = $('#id_dinilai').find('option:selected', this).attr('value')
       console.log(id)
       $.get('/skpform/'+ id, function (data) {
-<<<<<<< HEAD
-=======
-            // console.log(data[0])
->>>>>>> 8b90a0e458e6806638eef5185a6d466bf2ff215f
             $('#nudi').val(data[0].nip_pegawai);
             $('#label-nip').text(data[0].nip_pegawai)
             $('#gudi').val(data[0].id_pangkat_golongan);
@@ -282,7 +255,6 @@
             $('#label-unit').text(data[0].nama_units_kerja)
           });
       })
-<<<<<<< HEAD
 
       // List Dosen Penilai
 
@@ -346,26 +318,6 @@
           });
     })
 
-=======
-    
-   
-
-    // $('#id_dinilai').on('change', function () {
-    //   var id = $('#id_dinilai').find('option:selected', this).attr('value')
-    //   console.log(id);
-    //   $.get('/skpform/'+ id, function (data) {
-    //         // console.log(data[0])
-    //         $('#nudi').val(data[0].nip_pegawai);
-    //         $('#label-nip').text(data[0].nip_pegawai)
-    //         $('#gudi').val(data[0].id_pangkat_golongan);
-    //         $('#label-golongan').text(data[0].jenis_pangkat_golongan)
-    //         $('#judi').val(data[0].id_jabatan);
-    //         $('#label-jabatan').text(data[0].jenis_jabatan)
-    //         $('#udi').val(data[0].id_unit_kerja);
-    //         $('#label-unit').text(data[0].nama_units_kerja)
-    //       });
-    // })
->>>>>>> 8b90a0e458e6806638eef5185a6d466bf2ff215f
 
   });
 </script>
