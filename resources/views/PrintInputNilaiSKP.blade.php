@@ -66,7 +66,7 @@
     <div class="col-md-12">
         <!-- Panel Floating Labels -->
         <div class="text-right">
-          <button type="submit" class="btn btn-primary col-md-1 wb-download"> PDF brum</button>   
+          <button type="submit" class="btn btn-primary col-md-1 wb-download"> PDF</button>   
         </div>
         <br>
         <div class="panel">

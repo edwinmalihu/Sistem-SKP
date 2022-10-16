@@ -152,7 +152,7 @@ class NilaiSKPController extends Controller
 
         $nilai_target->save();
 
-        $skp_nilait = New NilaiTarget;
+        $skp_nilait = New NilaiSKP;
 
         $skp_nilait->id_nt = $nilai_target->id_nt;
         $skp_nilait->id_skp = $data['id_skpnt'];
