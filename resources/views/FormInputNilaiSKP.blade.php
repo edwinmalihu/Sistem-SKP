@@ -323,7 +323,7 @@
                 </tr>
                 <tr>
                     <td align="center">12</td>
-                    td align="center" colspan="2">
+                    <td align="center" colspan="2">
                     <select class="form-control" name="id_kl">
                         @foreach ($data as $k)
                         <option value="{{$k->id_kegiatan}}">{{$k->nama_kegiatan}}</option>

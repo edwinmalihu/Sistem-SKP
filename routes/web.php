@@ -10,6 +10,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\SKPController;
 use App\Http\Controllers\NilaiSKPController;
+use App\Http\Controllers\PerhitunganSKPController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,8 +30,8 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
 
 
 
-Route::group(['middleware' => 'auth'], function ()
-{
+// Route::group(['middleware' => 'auth'], function ()
+// {
     
     Route::post('/logout', [LoginController::class, 'logout']);
     // Layout
@@ -90,4 +91,10 @@ Route::group(['middleware' => 'auth'], function ()
     Route::get('/detail-nilaiskp/{id}', [NilaiSKPController::class, 'DetailSKP'])->name('detailnilaiskp');
     Route::post('/createNilai', [NilaiSKPController::class, 'createNilai']);
     Route::patch('/update-nilai/{id}', [NilaiSKPController::class, 'ActionUpdate']);
-});
+
+    // SKP PERHITUNGAN
+    Route::get('/formperhitunganskp', [PerhitunganSKPController::class, 'index'])->name('formperhitunganskp');
+    Route::get('/updateperhitunganskp', [PerhitunganSKPController::class, 'updatePerhitungan'])->name('updateerhitunganskp');
+    Route::get('/printperhitunganskp', [PerhitunganSKPController::class, 'detailPerhitungan'])->name('printperhitunganskp'); 
+    Route::get('/perhitunganskppdf', [PerhitunganSKPController::class, 'PDFPerhitungan'])->name('perhitunganskppdf');
+    // });
