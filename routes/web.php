@@ -30,8 +30,8 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
 
 
 
-// Route::group(['middleware' => 'auth'], function ()
-// {
+Route::group(['middleware' => 'auth'], function ()
+{
     
     Route::post('/logout', [LoginController::class, 'logout']);
     // Layout
@@ -93,8 +93,9 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
     Route::patch('/update-nilai/{id}', [NilaiSKPController::class, 'ActionUpdate']);
 
     // SKP PERHITUNGAN
-    Route::get('/formperhitunganskp', [PerhitunganSKPController::class, 'index'])->name('formperhitunganskp');
+    Route::get('/formperhitunganskp/{id}', [PerhitunganSKPController::class, 'index'])->name('formperhitunganskp');
+    Route::post('/add-realisasi', [PerhitunganSKPController::class, 'add']);
     Route::get('/updateperhitunganskp', [PerhitunganSKPController::class, 'updatePerhitungan'])->name('updateerhitunganskp');
     Route::get('/printperhitunganskp', [PerhitunganSKPController::class, 'detailPerhitungan'])->name('printperhitunganskp'); 
     Route::get('/perhitunganskppdf', [PerhitunganSKPController::class, 'PDFPerhitungan'])->name('perhitunganskppdf');
-    // });
+    });

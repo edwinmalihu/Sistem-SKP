@@ -62,6 +62,10 @@
                       data-toggle="tooltip" data-original-title="Edit Nilai SKP"><i class="icon wb-edit" aria-hidden="true"></i></a>
                     <a href="/detail-nilaiskp/{{$data->idData}}" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
                       data-toggle="tooltip" data-original-title="Lihat Nilai SKP"><i class="icon wb-eye" aria-hidden="true"></i></a>
+
+                    <!-- Realisasi -->
+                    <a href="/formperhitunganskp/{{$data->idData}}" class="btn btn-sm"
+                      data-toggle="tooltip" data-original-title="Isi Nilai">Nilai Realisasi</i></a>
                 </td>
             </tr>
           @endforeach
