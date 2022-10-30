@@ -95,7 +95,8 @@ Route::group(['middleware' => 'auth'], function ()
     // SKP PERHITUNGAN
     Route::get('/formperhitunganskp/{id}', [PerhitunganSKPController::class, 'index'])->name('formperhitunganskp');
     Route::post('/add-realisasi', [PerhitunganSKPController::class, 'add']);
-    Route::get('/updateperhitunganskp', [PerhitunganSKPController::class, 'updatePerhitungan'])->name('updateerhitunganskp');
+    Route::get('/updateperhitunganskp/{id}', [PerhitunganSKPController::class, 'updatePerhitungan'])->name('updateerhitunganskp');
+    Route::patch('/update-realisasi/{id}', [PerhitunganSKPController::class, 'updateRealisasi']);
     Route::get('/printperhitunganskp', [PerhitunganSKPController::class, 'detailPerhitungan'])->name('printperhitunganskp'); 
     Route::get('/perhitunganskppdf', [PerhitunganSKPController::class, 'PDFPerhitungan'])->name('perhitunganskppdf');
     });
