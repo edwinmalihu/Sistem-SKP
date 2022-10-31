@@ -121,12 +121,12 @@
                             
                             <!-- REALISASI -->
                             <td align="center"><input type="text" class="form-control" name="rakb" value="{{$realisasi->rakb}}" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rkub" id="rkb" value="{{$realisasi->rkub}}" /><input type="text" class="form-control" name="routb" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rmutb" id="rmutb" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rtimeb" id="rtimeb" /><input type="text" class="form-control" name="rtmdb" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rbiayab" id="rbiayab" /></td>
-                            <td align="center"> <input type="text" class="form-control" name="perhitungan_b" id="perhitungan_b" readonly /></td>
-                            <td align="center"><input type="text" class="form-control" name="skp_b" id="skp_b" readonly/></td>
+                            <td align="center"><input type="text" class="form-control" name="rkub" id="rkb" value="{{$realisasi->rkub}}" /><input type="text" class="form-control" name="routb" value="{{$realisasi->routb}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rmutb" id="rmutb" value="{{$realisasi->rmutb}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rtimeb" id="rtimeb" value="{{$realisasi->rtimeb}}" /><input type="text" class="form-control" name="rtmdb" value="{{$realisasi->rtmdb}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rbiayab" id="rbiayab" value="{{$realisasi->rbiayab}}" /></td>
+                            <td align="center"> <input type="text" class="form-control" name="perhitungan_b"  value="{{$realisasi->perhitungan_b}}" id="perhitungan_b" readonly /></td>
+                            <td align="center"><input type="text" class="form-control" name="skp_b" value="{{$realisasi->skp_b}}" id="skp_b" readonly/></td>
                         </tr>
                         <tr>
                             <!-- TARGET -->
@@ -142,13 +142,13 @@
                             <td align="center" id="nilaibiayac">{{$nilai->biayac}}</td>
                             
                             <!-- REALISASI -->
-                            <td align="center"><input type="text" class="form-control" name="rakc" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rkuc" id="rkc" /><input type="text" class="form-control" name="routc" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rmutc" id="rmutc" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rtimec" id="rtimec" /><input type="text" class="form-control" name="rtmdc" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rbiayac" id="rbiayac" /></td>
-                            <td align="center"> <input type="text" class="form-control" name="perhitungan_c" id="perhitungan_c" readonly /></td>
-                            <td align="center"><input type="text" class="form-control" name="skp_c" id="skp_c" readonly/></td>
+                            <td align="center"><input type="text" class="form-control" name="rakc" value="{{$realisasi->rakc}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rkuc" id="rkc" value="{{$realisasi->rkuc}}" /><input type="text" class="form-control" name="routc" value="{{$realisasi->routc}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rmutc" id="rmutc"  value="{{$realisasi->rmutc}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rtimec" id="rtimec" value="{{$realisasi->rtimec}}" /><input type="text" class="form-control" name="rtmdc" value="{{$realisasi->rtmdc}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rbiayac" id="rbiayac" value="{{$realisasi->rbiayac}}" /></td>
+                            <td align="center"> <input type="text" class="form-control" name="perhitungan_c"  value="{{$realisasi->perhitungan_c}}" id="perhitungan_c" readonly /></td>
+                            <td align="center"><input type="text" class="form-control" name="skp_c" value="{{$realisasi->skp_c}}" id="skp_c" readonly/></td>
                         </tr>
                         <tr>
                             <!-- TARGET -->
@@ -164,13 +164,13 @@
                             <td align="center" id="nilaibiayad">{{$nilai->biayad}}</td>
                             
                             <!-- REALISASI -->
-                            <td align="center"><input type="text" class="form-control" name="rakd" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rkud" id="rkd" /><input type="text" class="form-control" name="routd" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rmutd" id="rmutd" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rtimed" id="rtimed" /><input type="text" class="form-control" name="rtmdd" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rbiayad" id="rbiayad" /></td>
-                            <td align="center"> <input type="text" class="form-control" name="perhitungan_d" id="perhitungan_d" readonly /></td>
-                            <td align="center"><input type="text" class="form-control" name="skp_d" id="skp_d" readonly/></td>
+                            <td align="center"><input type="text" class="form-control" name="rakd" value="{{$realisasi->rakd}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rkud" id="rkd" value="{{$realisasi->rkud}}" /><input type="text" class="form-control" name="routd" value="{{$realisasi->routd}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rmutd" id="rmutd" value="{{$realisasi->rmutd}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rtimed" id="rtimed" value="{{$realisasi->rtimed}}" /><input type="text" class="form-control" name="rtmdd" value="{{$realisasi->rtmdd}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rbiayad" id="rbiayad" value="{{$realisasi->rbiayad}}" /></td>
+                            <td align="center"> <input type="text" class="form-control" name="perhitungan_d" value="{{$realisasi->perhitungan_d}}" id="perhitungan_d" readonly /></td>
+                            <td align="center"><input type="text" class="form-control" name="skp_d" value="{{$realisasi->skp_d}}" id="skp_d" readonly/></td>
                         </tr>
                         <tr>
                             <!-- TARGET -->
@@ -186,13 +186,13 @@
                             <td align="center" id="nilaibiayae">{{$nilai->biayae}}</td>
                             
                             <!-- REALISASI -->
-                            <td align="center"><input type="text" class="form-control" name="rake" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rkue" id="rke" /><input type="text" class="form-control" name="route" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rmute" id="rmute" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rtimee" id="rtimee" /><input type="text" class="form-control" name="rtmde" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rbiayae" id="rbiayae" /></td>
-                            <td align="center"> <input type="text" class="form-control" name="perhitungan_e" id="perhitungan_e" readonly /></td>
-                            <td align="center"><input type="text" class="form-control" name="skp_e" id="skp_e" readonly/></td>
+                            <td align="center"><input type="text" class="form-control" name="rake" value="{{$realisasi->rake}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rkue" id="rke" value="{{$realisasi->rkue}}" /><input type="text" class="form-control" name="route" value="{{$realisasi->route}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rmute" id="rmute" value="{{$realisasi->rmute}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rtimee" id="rtimee" value="{{$realisasi->rtimee}}" /><input type="text" class="form-control" name="rtmde" value="{{$realisasi->rtmde}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rbiayae" id="rbiayae" value="{{$realisasi->rbiayae}}" /></td>
+                            <td align="center"> <input type="text" class="form-control" name="perhitungan_e" value="{{$realisasi->perhitungan_e}}" id="perhitungan_e" readonly /></td>
+                            <td align="center"><input type="text" class="form-control" name="skp_e" value="{{$realisasi->skp_e}}" id="skp_e" readonly/></td>
                         </tr>
                         <tr>
                             <!-- TARGET -->
@@ -208,13 +208,13 @@
                             <td align="center" id="nilaibiayaf">{{$nilai->biayaf}}</td>
                             
                             <!-- REALISASI -->
-                            <td align="center"><input type="text" class="form-control" name="rakf" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rkuf" id="rkf" /><input type="text" class="form-control" name="routf" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rmutf" id="rmutf" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rtimef" id="rtimef" /><input type="text" class="form-control" name="rtmdf" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rbiayaf" id="rbiayaf" /></td>
-                            <td align="center"> <input type="text" class="form-control" name="perhitungan_f" id="perhitungan_f" readonly /></td>
-                            <td align="center"><input type="text" class="form-control" name="skp_f" id="skp_f" readonly/></td>
+                            <td align="center"><input type="text" class="form-control" name="rakf" value="{{$realisasi->rakf}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rkuf" id="rkf" value="{{$realisasi->rkuf}}" /><input type="text" class="form-control" name="routf" value="{{$realisasi->routf}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rmutf" id="rmutf" value="{{$realisasi->rmutf}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rtimef" id="rtimef" value="{{$realisasi->rtimef}}" /><input type="text" class="form-control" name="rtmdf" value="{{$realisasi->rtmdf}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rbiayaf" id="rbiayaf" value="{{$realisasi->rbiayaf}}" /></td>
+                            <td align="center"> <input type="text" class="form-control" name="perhitungan_f" value="{{$realisasi->perhitungan_f}}" id="perhitungan_f" readonly /></td>
+                            <td align="center"><input type="text" class="form-control" name="skp_f" value="{{$realisasi->skp_f}}" id="skp_f" readonly/></td>
                         </tr>
                         </tr>
                         <tr>
@@ -231,13 +231,13 @@
                             <td align="center" id="nilaibiayag">{{$nilai->biayag}}</td>
                             
                             <!-- REALISASI -->
-                            <td align="center"><input type="text" class="form-control" name="rakg" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rkug" id="rkg" /><input type="text" class="form-control" name="routg" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rmutg" id="rmutg" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rtimeg" id="rtimeg" /><input type="text" class="form-control" name="rtmdg" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rbiayag" id="rbiayag" /></td>
-                            <td align="center"> <input type="text" class="form-control" name="perhitungan_g" id="perhitungan_g" readonly /></td>
-                            <td align="center"><input type="text" class="form-control" name="skp_g" id="skp_g" readonly/></td>
+                            <td align="center"><input type="text" class="form-control" name="rakg" value="{{$realisasi->rakg}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rkug" id="rkg" value="{{$realisasi->rkug}}" /><input type="text" class="form-control" name="routg" value="{{$realisasi->routg}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rmutg" id="rmutg" value="{{$realisasi->rmutg}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rtimeg" id="rtimeg" value="{{$realisasi->rtimeg}}" /><input type="text" class="form-control" name="rtmdg" value="{{$realisasi->rtmdg}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rbiayag" id="rbiayag" value="{{$realisasi->rbiayag}}" /></td>
+                            <td align="center"> <input type="text" class="form-control" name="perhitungan_g" value="{{$realisasi->perhitungan_g}}" id="perhitungan_g" readonly /></td>
+                            <td align="center"><input type="text" class="form-control" name="skp_g" value="{{$realisasi->skp_g}}" id="skp_g" readonly/></td>
                         </tr>
                         <tr>
                             <!-- TARGET -->
@@ -253,13 +253,13 @@
                             <td align="center" id="nilaibiayah">{{$nilai->biayah}}</td>
                             
                             <!-- REALISASI -->
-                            <td align="center"><input type="text" class="form-control" name="rakh" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rkuh" id="rkh" /><input type="text" class="form-control" name="routh" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rmuth" id="rmuth" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rtimeh" id="rtimeh" /><input type="text" class="form-control" name="rtmdh" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rbiayah" id="rbiayah" /></td>
-                            <td align="center"> <input type="text" class="form-control" name="perhitungan_h" id="perhitungan_h" readonly /></td>
-                            <td align="center"><input type="text" class="form-control" name="skp_h" id="skp_h" readonly/></td>
+                            <td align="center"><input type="text" class="form-control" name="rakh" value="{{$realisasi->rakh}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rkuh" id="rkh" value="{{$realisasi->rkuh}}" /><input type="text" class="form-control" name="routh" value="{{$realisasi->routh}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rmuth" id="rmuth" value="{{$realisasi->rmuth}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rtimeh" id="rtimeh" value="{{$realisasi->rtimeh}}" /><input type="text" class="form-control" name="rtmdh" value="{{$realisasi->rtmdh}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rbiayah" id="rbiayah" value="{{$realisasi->rbiayah}}" /></td>
+                            <td align="center"> <input type="text" class="form-control" name="perhitungan_h" value="{{$realisasi->perhitungan_h}}" id="perhitungan_h" readonly /></td>
+                            <td align="center"><input type="text" class="form-control" name="skp_h" value="{{$realisasi->skp_h}}" id="skp_h" readonly/></td>
                         </tr>
                         <tr>
                             <!-- TARGET -->
@@ -275,13 +275,13 @@
                             <td align="center" id="nilaibiayai">{{$nilai->biayai}}</td>
                             
                             <!-- REALISASI -->
-                            <td align="center"><input type="text" class="form-control" name="raki" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rkui" id="rki" /><input type="text" class="form-control" name="routi" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rmuti" id="rmuti" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rtimei" id="rtimei" /><input type="text" class="form-control" name="rtmdi" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rbiayai" id="rbiayai" /></td>
-                            <td align="center"> <input type="text" class="form-control" name="perhitungan_i" id="perhitungan_i" readonly /></td>
-                            <td align="center"><input type="text" class="form-control" name="skp_i" id="skp_i" readonly/></td>
+                            <td align="center"><input type="text" class="form-control" name="raki" value="{{$realisasi->raki}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rkui" id="rki" value="{{$realisasi->rkui}}" /><input type="text" class="form-control" name="routi" value="{{$realisasi->routi}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rmuti" id="rmuti" value="{{$realisasi->rmuti}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rtimei" id="rtimei" value="{{$realisasi->rtimei}}" /><input type="text" class="form-control" name="rtmdi" value="{{$realisasi->rtmdi}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rbiayai" id="rbiayai" value="{{$realisasi->rbiayai}}" /></td>
+                            <td align="center"> <input type="text" class="form-control" name="perhitungan_i" value="{{$realisasi->perhitungan_i}}" id="perhitungan_i" readonly /></td>
+                            <td align="center"><input type="text" class="form-control" name="skp_i" value="{{$realisasi->skp_i}}" id="skp_i" readonly/></td>
                         </tr>
                         <tr>
                             <!-- TARGET -->
@@ -297,13 +297,13 @@
                             <td align="center" id="nilaibiayaj">{{$nilai->biayaj}}</td>
                             
                             <!-- REALISASI -->
-                            <td align="center"><input type="text" class="form-control" name="rakj" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rkuj" id="rkj" /><input type="text" class="form-control" name="routj" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rmutj" id="rmutj" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rtimej" id="rtimej" /><input type="text" class="form-control" name="rtmdj" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rbiayaj" id="rbiayaj" /></td>
-                            <td align="center"> <input type="text" class="form-control" name="perhitungan_j" id="perhitungan_j" readonly /></td>
-                            <td align="center"><input type="text" class="form-control" name="skp_j" id="skp_j" readonly/></td>
+                            <td align="center"><input type="text" class="form-control" name="rakj" value="{{$realisasi->rakj}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rkuj" id="rkj" value="{{$realisasi->rkuj}}" /><input type="text" class="form-control" name="routj" value="{{$realisasi->routj}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rmutj" id="rmutj" value="{{$realisasi->rmutj}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rtimej" id="rtimej" value="{{$realisasi->rtimej}}" /><input type="text" class="form-control" name="rtmdj" value="{{$realisasi->rtmdj}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rbiayaj" id="rbiayaj" value="{{$realisasi->rbiayaj}}" /></td>
+                            <td align="center"> <input type="text" class="form-control" name="perhitungan_j" value="{{$realisasi->perhitungan_j}}" id="perhitungan_j" readonly /></td>
+                            <td align="center"><input type="text" class="form-control" name="skp_j" value="{{$realisasi->skp_j}}" id="skp_j" readonly/></td>
                         </tr>
                         <tr>
                             <!-- TARGET -->
@@ -319,13 +319,13 @@
                             <td align="center" id="nilaibiayak">{{$nilai->biayak}}</td>
                             
                             <!-- REALISASI -->
-                            <td align="center"><input type="text" class="form-control" name="rakk" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rkuk" id="rkk" /><input type="text" class="form-control" name="routk" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rmutk" id="rmutk" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rtimek" id="rtimek" /><input type="text" class="form-control" name="rtmdk" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rbiayak" id="rbiayak" /></td>
-                            <td align="center"> <input type="text" class="form-control" name="perhitungan_k" id="perhitungan_k" readonly /></td>
-                            <td align="center"><input type="text" class="form-control" name="skp_k" id="skp_k" readonly/></td>
+                            <td align="center"><input type="text" class="form-control" name="rakk" value="{{$realisasi->rakk}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rkuk" id="rkk" value="{{$realisasi->rkuk}}" /><input type="text" class="form-control" name="routk" value="{{$realisasi->routk}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rmutk" id="rmutk" value="{{$realisasi->rmutk}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rtimek" id="rtimek" value="{{$realisasi->rtimek}}" /><input type="text" class="form-control" name="rtmdk" value="{{$realisasi->rtmdk}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rbiayak" id="rbiayak" value="{{$realisasi->rbiayak}}" /></td>
+                            <td align="center"> <input type="text" class="form-control" name="perhitungan_k" value="{{$realisasi->perhitungan_k}}" id="perhitungan_k" readonly /></td>
+                            <td align="center"><input type="text" class="form-control" name="skp_k" value="{{$realisasi->skp_k}}" id="skp_k" readonly/></td>
                         </tr>
                         <tr>
                             <!-- TARGET -->
@@ -341,13 +341,13 @@
                             <td align="center" id="nilaibiayal">{{$nilai->biayal}}</td>
                             
                             <!-- REALISASI -->
-                            <td align="center"><input type="text" class="form-control" name="rakl" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rkul" id="rkl" /><input type="text" class="form-control" name="routl" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rmutl" id="rmutl" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rtimel" id="rtimel" /><input type="text" class="form-control" name="rtmdl" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rbiayal" id="rbiayal" /></td>
-                            <td align="center"> <input type="text" class="form-control" name="perhitungan_l" id="perhitungan_l" readonly /></td>
-                            <td align="center"><input type="text" class="form-control" name="skp_l" id="skp_l" readonly/></td>
+                            <td align="center"><input type="text" class="form-control" name="rakl" value="{{$realisasi->rakl}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rkul" id="rkl" value="{{$realisasi->rkul}}" /><input type="text" class="form-control" name="routl" value="{{$realisasi->routl}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rmutl" id="rmutl" value="{{$realisasi->rmutl}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rtimel" id="rtimel" value="{{$realisasi->rtimel}}" /><input type="text" class="form-control" name="rtmdl" value="{{$realisasi->rtmdl}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rbiayal" id="rbiayal" value="{{$realisasi->rbiayal}}" /></td>
+                            <td align="center"> <input type="text" class="form-control" name="perhitungan_l" value="{{$realisasi->perhitungan_l}}" id="perhitungan_l" readonly /></td>
+                            <td align="center"><input type="text" class="form-control" name="skp_l" value="{{$realisasi->skp_l}}" id="skp_l" readonly/></td>
                         </tr>
                         <tr>
                             <!-- TARGET -->
@@ -363,13 +363,13 @@
                             <td align="center" id="nilaibiayam">{{$nilai->biayam}}</td>
                             
                             <!-- REALISASI -->
-                            <td align="center"><input type="text" class="form-control" name="rakm" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rkum" id="rkm" /><input type="text" class="form-control" name="routm" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rmutm" id="rmutm" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rtimem" id="rtimem" /><input type="text" class="form-control" name="rtmdm" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rbiayam" id="rbiayam" /></td>
-                            <td align="center"> <input type="text" class="form-control" name="perhitungan_m" id="perhitungan_m" readonly /></td>
-                            <td align="center"><input type="text" class="form-control" name="skp_m" id="skp_m" readonly/></td>
+                            <td align="center"><input type="text" class="form-control" name="rakm" value="{{$realisasi->rakm}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rkum" id="rkm" value="{{$realisasi->rkum}}" /><input type="text" class="form-control" name="routm" value="{{$realisasi->routm}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rmutm" id="rmutm" value="{{$realisasi->rmutm}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rtimem" id="rtimem" value="{{$realisasi->rtimem}}" /><input type="text" class="form-control" name="rtmdm" value="{{$realisasi->rtmdm}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rbiayam" id="rbiayam" value="{{$realisasi->rbiayam}}" /></td>
+                            <td align="center"> <input type="text" class="form-control" name="perhitungan_m" value="{{$realisasi->perhitungan_m}}" id="perhitungan_m" readonly /></td>
+                            <td align="center"><input type="text" class="form-control" name="skp_m" value="{{$realisasi->skp_m}}" id="skp_m" readonly/></td>
                         </tr>
 
                         <!-- TUGAS TAMBAHAN -->
@@ -386,7 +386,7 @@
                             <!-- input -->
                             <td></td>
                             <td colspan="5"></td>
-                            <td rowspan="2"></td>
+                            <td rowspan="2"><input type="text" class="form-control" name="nilai_tugas_tambahan" /></td>
                         </tr>
                         <tr>
                             <td></td>
@@ -407,7 +407,7 @@
                             <!-- input -->
                             <td></td>
                             <td colspan="5"></td>
-                            <td rowspan="2"></td>
+                            <td rowspan="2"><input type="text" class="form-control" name="nilai_kreativitas" /></td>
                         </tr>
                         <tr>
                             <td></td>

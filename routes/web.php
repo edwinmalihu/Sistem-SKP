@@ -30,8 +30,8 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
 
 
 
-Route::group(['middleware' => 'auth'], function ()
-{
+// Route::group(['middleware' => 'auth'], function ()
+//  {
     
     Route::post('/logout', [LoginController::class, 'logout']);
     // Layout
@@ -99,4 +99,4 @@ Route::group(['middleware' => 'auth'], function ()
     Route::patch('/update-realisasi/{id}', [PerhitunganSKPController::class, 'updateRealisasi']);
     Route::get('/printperhitunganskp', [PerhitunganSKPController::class, 'detailPerhitungan'])->name('printperhitunganskp'); 
     Route::get('/perhitunganskppdf', [PerhitunganSKPController::class, 'PDFPerhitungan'])->name('perhitunganskppdf');
-    });
+    // });

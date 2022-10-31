@@ -422,7 +422,7 @@
                             <!-- input -->
                             <td></td>
                             <td colspan="5"></td>
-                            <td rowspan="2"></td>
+                            <td rowspan="2"><input type="text" class="form-control" name="nilai_tugas_tambahan" /></td>
                         </tr>
                         <tr>
                             <td></td>
@@ -443,7 +443,7 @@
                             <!-- input -->
                             <td></td>
                             <td colspan="5"></td>
-                            <td rowspan="2"></td>
+                            <td rowspan="2"><input type="text" class="form-control" name="nilai_kreativitas" /></td>
                         </tr>
                         <tr>
                             <td></td>
