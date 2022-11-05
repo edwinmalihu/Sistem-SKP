@@ -191,7 +191,7 @@ class NilaiSKPController extends Controller
             'id_ka' => 'nullable',
             'aka' => 'nullable',
             'kua' => 'nullable',
-            'kua' => 'nullable',
+            'outa' => 'nullable',
             'muta' => 'nullable',
             'timea' => 'nullable',
             'tmda' => 'nullable',
