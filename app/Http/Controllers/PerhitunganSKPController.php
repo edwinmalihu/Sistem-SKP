@@ -8,6 +8,7 @@ use App\Models\DataSKP;
 use App\Models\NilaiSKP;
 use App\Models\NilaiTarget;
 use App\Models\NilaiRealisasi;
+use PDF;
 
 class PerhitunganSKPController extends Controller
 {
@@ -180,18 +181,43 @@ class PerhitunganSKPController extends Controller
             'rbiayam' => 'nullable',
             'perhitungan_m' => 'nullable',
             'skp_m' => 'nullable',
+            'tnr' => 'nullable',
+            'snr' => 'nullable',
 
         ]);
         NilaiRealisasi::where('id_skpnr', $id)->update($validated);
+        return redirect('/tabeldataskp')->with('Success', 'Data Berhasil Di Ubah!');
     }
 
-    public function detailPerhitungan()
+    public function detailPerhitungan($id)
     {
-        return view('printperhitunganskp');
+        $realisasi = NilaiRealisasi::where('id_skpnr', $id)->first();
+        $data = Kegiatan::all();
+        $skp = DataSKP::find($id);
+        $nilai = NilaiTarget::where('id_skpnt', $id)->first();
+        return view('printperhitunganskp', [
+            'data' => $data,
+            'skp' => $skp,
+            'nilai' => $nilai,
+            'realisasi' => $realisasi
+        ]);
     }
 
-    public function PDFPerhitungan()
+    public function PDFPerhitungan($id)
     {
-        return view('perhitunganskppdf');
+        $realisasi = NilaiRealisasi::where('id_skpnr', $id)->first();
+        $data = Kegiatan::all();
+        $skp = DataSKP::find($id);
+        $nilai = NilaiTarget::where('id_skpnt', $id)->first();
+        $all = [
+            'data' => $data,
+            'skp' => $skp,
+            'nilai' => $nilai,
+            'realisasi' => $realisasi
+        ];
+
+        $pdf = PDF::loadView('PerhitunganSkpPDF', $all);
+     
+        return $pdf->download('Nilai-SKP.pdf');
     }
 }

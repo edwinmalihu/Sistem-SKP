@@ -373,24 +373,25 @@
                         </tr>
 
                         <!-- TUGAS TAMBAHAN -->
+                        <!-- TUGAS TAMBAHAN -->
                         <tr>
                             <td></td>
                             <td colspan="14" style="font-weight:bold">II. TUGAS TAMBAHAN DAN KREATIVITAS</td>
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td colspan="2"><input type="text" class="form-control" name="dnta" /></td>
+                            <td colspan="2"><input type="text" class="form-control" name="name_dnta" id="name_dnta" /></td>
                             <!-- input -->
                             <td></td> 
                             <td colspan="4"></td>
                             <!-- input -->
                             <td></td>
                             <td colspan="5"></td>
-                            <td rowspan="2"><input type="text" class="form-control" name="nilai_tugas_tambahan" /></td>
+                            <td rowspan="2"><input type="text" class="form-control" name="dnta" id="dnta" /></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td colspan="2"><input type="text" class="form-control" name="dntb" /></td>
+                            <td colspan="2"><input type="text" class="form-control" /></td>
                             <!-- input -->
                             <td></td> 
                             <td colspan="4"></td>
@@ -400,18 +401,18 @@
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td colspan="2"><input type="text" class="form-control" name="dntc" /></td>
+                            <td colspan="2"><input type="text" class="form-control" name="name_dntb" id="name_dntb" /></td>
                             <!-- input -->
                             <td></td> 
                             <td colspan="4"></td>
                             <!-- input -->
                             <td></td>
                             <td colspan="5"></td>
-                            <td rowspan="2"><input type="text" class="form-control" name="nilai_kreativitas" /></td>
+                            <td rowspan="2"><input type="text" class="form-control" name="dntb" id="dntb" /></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td colspan="2"><input type="text" class="form-control" name="dntd" /></td>
+                            <td colspan="2"><input type="text" class="form-control"/></td>
                             <!-- input -->
                             <td></td> 
                             <td colspan="4"></td>
@@ -427,7 +428,7 @@
 
                         <tr>
                             <td rowspan="2" colspan="14" align="center" style="font-weight:bold"></br>Nilai Capaian SKP</td>
-                            <td><input type="text" class="form-control" id="tnr" name="tnr" /><input type="text" class="form-control" id="snr" name="snr" /></td>
+                            <td><input type="text" class="form-control" value="{{$realisasi->tnr}}" id="tnr" name="tnr" /><input type="text" class="form-control" value="{{$realisasi->snr}}" id="snr" name="snr" /></td>
                         </tr>
                     </table>
                     <br>
@@ -1378,7 +1379,7 @@
     });	
 
      // ----------------------------Kegiatan 13-----------------------------------------
-     $('#rkm, #rmutm, #rtimem, #rbiayam').keyup(function(){
+    $('#rkm, #rmutm, #rtimem, #rbiayam').keyup(function(){
 
         // nilai kuantitatif 
         var rkm = $('#rkm').val()
@@ -1440,6 +1441,138 @@
         var skp_a = skp.toFixed(2)
         $('#skp_m').val(skp_a) // benar hasilnya
     });	
+
+    // cek nilai kuantitas != 0
+    if (nilaikua != 0){
+       var a = 1
+    }
+    else{
+        a = 0
+    }
+    //------------------
+    if (nilaikub != 0){
+        var b = 1
+    }else{
+        b = 0
+    }
+    //------------------
+    if (nilaikuc != 0){
+        var c = 1
+    }else{
+        c = 0
+    }
+    // -----------------
+    if (nilaikud != 0){
+        var d = 1
+    }else{
+        d = 0
+    }
+    // -----------------
+    if (nilaikue != 0){
+        var e = 1
+    }else{
+        e = 0
+    }
+    // -----------------
+    if (nilaikuf != 0){
+        var f = 1
+    }else{
+        f = 0
+    }
+    // -----------------
+    if (nilaikug != 0){
+        var g = 1
+    }else{
+        g = 0
+    }
+    // -----------------
+    if (nilaikuh != 0){
+        var h = 1
+    }else{
+        h = 0
+    }
+    // -----------------
+    if (nilaikui != 0){
+        var i = 1
+    }else{
+        i = 0
+    }
+     // -----------------
+     if (nilaikuj != 0){
+        var j = 1
+    }else{
+        j = 0
+    }
+     // -----------------
+    if (nilaikuk != 0){
+        var k = 1
+    }else{
+        k = 0
+    }
+     // -----------------
+    if (nilaikul != 0){
+        var l = 1
+    }else{
+        l = 0
+    }
+    // -----------------
+    if (nilaikum != 0){
+        var m = 1
+    }else{
+        m = 0
+    }
+    var sumNilai = a+b+c+d+e+f+g+h+i+j+k+l+m
+    console.log("ini nilai Sum Nilai : " + sumNilai);
+
+    // ===========================================================
+
+    $('#rka, #rkb, #rkc, #rkd, #rkd, #rke, #rkf, #rkg, #rkh, #rki, #rkj, #rkk, #rkl, #rkm').keyup(function(){
+        var skp_1 = $('#skp_a').val()
+        var skp_2 = $('#skp_b').val()
+        var skp_3 = $('#skp_c').val()
+        var skp_4 = $('#skp_d').val()
+        var skp_5 = $('#skp_e').val()
+        var skp_6 = $('#skp_f').val()
+        var skp_7 = $('#skp_g').val()
+        var skp_8 = $('#skp_h').val()
+        var skp_9 = $('#skp_i').val()
+        var skp_10 = $('#skp_j').val()
+        var skp_11 = $('#skp_k').val()
+        var skp_12 = $('#skp_l').val()
+        var skp_13 = $('#skp_m').val()
+        var dnta = $('#dnta').val()
+        var dntb = $('#dntb').val()
+        var buruk = "Buruk"
+        var sedang = "Sedang"
+        var cukup = "Cukup"
+        var baik = "Baik"
+        var sb = "Sangat Baik"
+
+        console.log(skp_1);
+            
+        var sumSKP = skp_1+skp_2+skp_3+skp_4+skp_5+skp_6+skp_7+skp_8+skp_9+skp_10+skp_11+skp_12+skp_13
+        var sumNilaiTambahan = dnta+dntb
+
+        var nilaiTotal = (sumSKP/sumNilai) + sumNilaiTambahan
+        $('#tnr').val(nilaiTotal)
+
+        if (nilaiTotal <= 50){
+            $('#snr').val(buruk)
+        }
+        else if (nilaiTotal <= 60){
+            $('#snr').val(sedang)
+        }
+        else if(nilaiTotal <= 75){
+            $('#snr').val(cukup)
+        }
+        else if (nilaiTotal <= 90){
+            $('#snr').val(baik)
+        }
+        else{
+            $('#snr').val(sb)
+        }
+
+    })
 
 });
 </script>

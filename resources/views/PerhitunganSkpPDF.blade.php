@@ -57,21 +57,24 @@
                         <tr>
                             <!-- TARGET -->
                             <td align="center">1</td>
-                            <td align="center" colspan="2"></td>
-                            <td align="center"></td>
-                            <td align="center"></td>
-                            <td align="center"></td>
-                            <td align="center"></td>
-                            <td align="center"></td>
+                            <td align="center" colspan="2">
+                            <input type="hidden" value="{{$nilai->id_ka}}" id="id_ka" name="id_ka">
+                                <p id="lebel-k-a"></p>
+                            </td>
+                            <td align="center">{{$nilai->aka}}</td>
+                            <td align="center">{{$nilai->kua}}</td>
+                            <td align="center">{{$nilai->muta}}</td>
+                            <td align="center">{{$nilai->timea}}</td>
+                            <td align="center">{{$nilai->biayaa}}</td>
                             
                             <!-- REALISASI -->
-                            <td align="center"></td>
-                            <td align="center"></td>
-                            <td align="center"></td>
-                            <td align="center"></td>
-                            <td align="center"></td>
-                            <td align="center"></td>
-                            <td align="center"></td>
+                            <td align="center">{{$realisasi->raka}}</td>
+                            <td align="center">{{$realisasi->rkua}}</td>
+                            <td align="center">{{$realisasi->routa}}</td>
+                            <td align="center">{{$realisasi->rmuta}}</td>
+                            <td align="center">{{$realisasi->rtimea}}</td>
+                            <td align="center">{{$realisasi->rtmda}}</td>
+                            <td align="center">{{$realisasi->rbiayaa}}</td>
                         </tr>
                         <tr>
                             <!-- TARGET -->
@@ -369,3 +372,89 @@
       </div>
     </div>
   </div>
+
+<script>
+  $(document).ready( function () {
+    
+
+    var id_ka = $('#id_ka').attr('value')
+    $.get('/listkegiatan/'+ id_ka, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#lebel-k-a').text(data.nama_kegiatan)
+    });
+    
+    var id_kb = $('#id_kb').attr('value')
+    $.get('/listkegiatan/'+ id_kb, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-b').text(data.nama_kegiatan)
+    });
+
+    var id_kc = $('#id_kc').attr('value')
+    $.get('/listkegiatan/'+ id_kc, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-c').text(data.nama_kegiatan)
+    });
+
+    var id_kd = $('#id_kd').attr('value')
+    $.get('/listkegiatan/'+ id_kd, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-d').text(data.nama_kegiatan)
+    });
+
+    var id_ke = $('#id_ke').attr('value')
+    $.get('/listkegiatan/'+ id_ke, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-e').text(data.nama_kegiatan)
+    });
+
+    var id_kf = $('#id_kf').attr('value')
+    $.get('/listkegiatan/'+ id_kf, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-f').text(data.nama_kegiatan)
+    });
+
+    var id_kg = $('#id_kg').attr('value')
+    $.get('/listkegiatan/'+ id_kg, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-g').text(data.nama_kegiatan)
+    });
+    
+    var id_kh = $('#id_kh').attr('value')
+    $.get('/listkegiatan/'+ id_kh, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-h').text(data.nama_kegiatan)
+    });
+
+    var id_ki = $('#id_ki').attr('value')
+    $.get('/listkegiatan/'+ id_ki, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-i').text(data.nama_kegiatan)
+    });
+
+    var id_kj = $('#id_kj').attr('value')
+    $.get('/listkegiatan/'+ id_kj, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-j').text(data.nama_kegiatan)
+    });
+
+    var id_kk = $('#id_kk').attr('value')
+    $.get('/listkegiatan/'+ id_kk, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-k').text(data.nama_kegiatan)
+    });
+
+    var id_kl = $('#id_kl').attr('value')
+    $.get('/listkegiatan/'+ id_kl, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-l').text(data.nama_kegiatan)
+    });
+
+    var id_km = $('#id_km').attr('value')
+    $.get('/listkegiatan/'+ id_km, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-m').text(data.nama_kegiatan)
+    });
+
+});
+
+</script>

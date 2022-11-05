@@ -30,8 +30,8 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
 
 
 
-// Route::group(['middleware' => 'auth'], function ()
-//  {
+Route::group(['middleware' => 'auth'], function ()
+{
     
     Route::post('/logout', [LoginController::class, 'logout']);
     // Layout
@@ -94,9 +94,9 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
 
     // SKP PERHITUNGAN
     Route::get('/formperhitunganskp/{id}', [PerhitunganSKPController::class, 'index'])->name('formperhitunganskp');
-    Route::post('/add-realisasi', [PerhitunganSKPController::class, 'add']);
+    Route::post( '/add-realisasi', [PerhitunganSKPController::class, 'add']);
     Route::get('/updateperhitunganskp/{id}', [PerhitunganSKPController::class, 'updatePerhitungan'])->name('updateerhitunganskp');
     Route::patch('/update-realisasi/{id}', [PerhitunganSKPController::class, 'updateRealisasi']);
-    Route::get('/printperhitunganskp', [PerhitunganSKPController::class, 'detailPerhitungan'])->name('printperhitunganskp'); 
-    Route::get('/perhitunganskppdf', [PerhitunganSKPController::class, 'PDFPerhitungan'])->name('perhitunganskppdf');
-    // });
+    Route::get('/printperhitunganskp/{id}', [PerhitunganSKPController::class, 'detailPerhitungan'])->name('printperhitunganskp'); 
+    Route::get('/perhitunganskppdf/{id}', [PerhitunganSKPController::class, 'PDFPerhitungan'])->name('perhitunganskppdf');
+    });

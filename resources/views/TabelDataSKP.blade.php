@@ -68,6 +68,8 @@
                       data-toggle="tooltip" data-original-title="Isi Nilai">Nilai Realisasi</i></a>
                       <a href="/updateperhitunganskp/{{$data->idData}}" class="btn btn-sm"
                       data-toggle="tooltip" data-original-title="Isi Nilai">Update Realisasi</i></a>
+                      <a href="/printperhitunganskp/{{$data->idData}}" class="btn btn-sm"
+                      data-toggle="tooltip" data-original-title="Isi Nilai">Detail Realisasi</i></a>
                       
                 </td>
             </tr>
