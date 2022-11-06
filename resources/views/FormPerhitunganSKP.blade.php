@@ -27,7 +27,7 @@
                 <form action="/add-realisasi" method="post">
                 @csrf
                     <h5>Jangka Waktu Penilaian</h5>
-                    <h5>{{$periode->periode}} {{$periode->tahun}}</h5>
+                    <h5>{{$skp->semester}} {{$skp->tahun}}</h5>
                     <input type="hidden" value="{{$nilai->id_skpnt}}" id="id_skpnr" name="id_skpnr">
                     <table border="1" class="table table-striped table-bordered">
                         <tr>
