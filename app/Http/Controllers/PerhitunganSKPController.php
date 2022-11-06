@@ -18,11 +18,13 @@ class PerhitunganSKPController extends Controller
     {
         $data = Kegiatan::all();
         $skp = DataSKP::find($id);
+        $periode = NilaiSKP::where('id_skp', $id)->first();
         $nilai = NilaiTarget::where('id_skpnt', $id)->first();
         return view('formperhitunganskp', [
             'data' => $data,
             'skp' => $skp,
-            'nilai' => $nilai
+            'nilai' => $nilai,
+            'periode' => $periode
         ]);
     }
 
@@ -37,6 +39,7 @@ class PerhitunganSKPController extends Controller
     public function updatePerhitungan($id)
     {
         $realisasi = NilaiRealisasi::where('id_skpnr', $id)->first();
+        $periode = NilaiSKP::where('id_skp', $id)->first();
         $data = Kegiatan::all();
         $skp = DataSKP::find($id);
         $nilai = NilaiTarget::where('id_skpnt', $id)->first();
@@ -44,7 +47,8 @@ class PerhitunganSKPController extends Controller
             'data' => $data,
             'skp' => $skp,
             'nilai' => $nilai,
-            'realisasi' => $realisasi
+            'realisasi' => $realisasi,
+            'periode' => $periode
         ]);
     }
 
@@ -180,7 +184,34 @@ class PerhitunganSKPController extends Controller
             'rtmdm' => 'nullable',
             'rbiayam' => 'nullable',
             'perhitungan_m' => 'nullable',
-            'skp_m' => 'nullable',
+            'id_kn' => 'nullable',
+            'rakn' => 'nullable',
+            'rkun' => 'nullable',
+            'routn' => 'nullable',
+            'rmutn' => 'nullable',
+            'rtimen' => 'nullable',
+            'rtmdn' => 'nullable',
+            'rbiayan' => 'nullable',
+            'perhitungan_n' => 'nullable',
+            'id_ko' => 'nullable',
+            'rako' => 'nullable',
+            'rkuo' => 'nullable',
+            'routo' => 'nullable',
+            'rmuto' => 'nullable',
+            'rtimeo' => 'nullable',
+            'rtmdo' => 'nullable',
+            'rbiayao' => 'nullable',
+            'perhitungan_o' => 'nullable',
+            'id_kp' => 'nullable',
+            'rakp' => 'nullable',
+            'rkup' => 'nullable',
+            'routp' => 'nullable',
+            'rmutp' => 'nullable',
+            'rtimep' => 'nullable',
+            'rtmdp' => 'nullable',
+            'rbiayap' => 'nullable',
+            'perhitungan_p' => 'nullable',
+            'skp_p' => 'nullable',
             'tnr' => 'nullable',
             'snr' => 'nullable',
 
@@ -193,13 +224,15 @@ class PerhitunganSKPController extends Controller
     {
         $realisasi = NilaiRealisasi::where('id_skpnr', $id)->first();
         $data = Kegiatan::all();
+        $periode = NilaiSKP::where('id_skp', $id)->first();
         $skp = DataSKP::find($id);
         $nilai = NilaiTarget::where('id_skpnt', $id)->first();
         return view('printperhitunganskp', [
             'data' => $data,
             'skp' => $skp,
             'nilai' => $nilai,
-            'realisasi' => $realisasi
+            'realisasi' => $realisasi,
+            'periode' => $periode
         ]);
     }
 
@@ -207,13 +240,15 @@ class PerhitunganSKPController extends Controller
     {
         $realisasi = NilaiRealisasi::where('id_skpnr', $id)->first();
         $data = Kegiatan::all();
+        $periode = NilaiSKP::where('id_skp', $id)->first();
         $skp = DataSKP::find($id);
         $nilai = NilaiTarget::where('id_skpnt', $id)->first();
         $all = [
             'data' => $data,
             'skp' => $skp,
             'nilai' => $nilai,
-            'realisasi' => $realisasi
+            'realisasi' => $realisasi,
+            'periode' => $periode
         ];
 
         $pdf = PDF::loadView('PerhitunganSkpPDF', $all);

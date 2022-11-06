@@ -42,7 +42,7 @@
                     @method('patch')
                     @csrf
                     <h5>Jangka Waktu Penilaian</h5>
-                    <h5>Januari s/d Desember 2018</h5>
+                    <h5>{{$periode->periode}} {{$periode->tahun}}</h5>
                     <input type="hidden" value="{{$nilai->id_skpnt}}" id="id_skpnr" name="id_skpnr">
                     <table border="1" class="table table-striped table-bordered">
                         <tr>
@@ -378,7 +378,7 @@
                             <!-- TARGET -->
                             <td align="center">14</td>
                             <td align="center" colspan="2">
-                            <input type="hidden" value="{{$nilai->id_kn}}" id="id_km" name="id_kn">
+                            <input type="hidden" value="{{$nilai->id_kn}}" id="id_kn" name="id_kn">
                             <p id="label-k-n"></p>
                             </td>
                             <td align="center" id="nilalikn">{{$nilai->akn}}</td>
@@ -433,7 +433,7 @@
                             
                             <!-- REALISASI -->
                             <td align="center"><input type="text" class="form-control" name="rakp" value="{{$realisasi->rakp}}"/></td>
-                            <td align="center"><input type="text" class="form-control" name="rkup" id="rkp" value="{{$realisasi->rkup}}/><input type="text" class="form-control" name="routp" value="{{$realisasi->routo}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rkup" id="rkp" value="{{$realisasi->rkup}}"/><input type="text" class="form-control" name="routp" value="{{$realisasi->routo}}"/></td>
                             <td align="center"><input type="text" class="form-control" name="rmutp" id="rmutp" value="{{$realisasi->rmutp}}" /></td>
                             <td align="center"><input type="text" class="form-control" name="rtimep" id="rtimep" value="{{$realisasi->rtimep}}" /><input type="text" class="form-control" name="rtmdp"  value="{{$realisasi->rtmdo}}"/></td>
                             <td align="center"><input type="text" class="form-control" name="rbiayap" id="rbiayap" value="{{$realisasi->rbiayap}}" /></td>
@@ -596,6 +596,24 @@
             $('#label-k-m').text(data.nama_kegiatan)
     });
 
+    var id_kn = $('#id_kn').attr('value')
+    $.get('/listkegiatan/'+ id_kn, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-n').text(data.nama_kegiatan)
+    });
+
+    var id_ko = $('#id_ko').attr('value')
+    $.get('/listkegiatan/'+ id_ko, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-o').text(data.nama_kegiatan)
+    });
+
+    var id_kp = $('#id_kp').attr('value')
+    $.get('/listkegiatan/'+ id_kp, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-p').text(data.nama_kegiatan)
+    });
+
 // --------------------Declarasi-----------------------
     var ketentuan = 24;   
    
@@ -664,6 +682,21 @@
     var nilaimutm = $('#nilaimutm').text()
     var nilaitimem = $('#nilaitimem').text()
     var nilaibiayam = $('#nilaibiayam').text()
+    // ----------------kegiatan 14----------------------
+    var nilaikun = $('#nilaikun').text()
+    var nilaimutn = $('#nilaimutn').text()
+    var nilaitimen = $('#nilaitimen').text()
+    var nilaibiayan = $('#nilaibiayan').text()
+    // ----------------kegiatan 15----------------------
+    var nilaikuo = $('#nilaikuo').text()
+    var nilaimuto = $('#nilaimuto').text()
+    var nilaitimeo = $('#nilaitimeo').text()
+    var nilaibiayao = $('#nilaibiayao').text()
+    // ----------------kegiatan 16----------------------
+    var nilaikup = $('#nilaikup').text()
+    var nilaimutp = $('#nilaimutp').text()
+    var nilaitimep = $('#nilaitimep').text()
+    var nilaibiayap = $('#nilaibiayap').text()
     // ----------------end declare----------------------
     // -----------------------------Kegiatan 1-----------------------------
     $('#rka, #rmuta, #rtimea, #rbiayaa').keyup(function(){
@@ -1511,6 +1544,199 @@
         $('#skp_m').val(skp_a) // benar hasilnya
     });	
 
+    // ----------------------------Kegiatan 14-----------------------------------------
+
+    $('#rkn, #rmutn, #rtimen, #rbiayan').keyup(function(){
+
+        // nilai kuantitatif 
+        var rkm = $('#rkn').val()
+        var kuantitatif = (rkm / nilaikun) * 100
+
+        // Nilai Kualitatif 
+        var rmutm = $('#rmutn').val()
+        var Kualitatif = (rmutm / nilaimutn) * 100
+
+        // Nilai time
+        var rtimem = $('#rtimen').val()
+        var waktu = 100 - (rtimem / nilaitimen * 100)
+        if (waktu < ketentuan){
+            var step_one = 1.76 * nilaitimen - rtimem
+            var step_two = step_one / nilaitimen
+            var result_waktu = step_two * 100
+
+        }else {
+            step_one = 1.76 * nilaitimen - rtimem
+            step_two = (step_one / nilaitimen) * 100
+            var step_tri = step_two - 100
+            var result_waktu = 76 - step_tri
+        }
+
+        // nilai biaya
+        if (nilaibiayan != 0 ){
+            var rbiayam = $('#rbiayan').val()
+            var biayaa = 100 - (rbiayam / nilaibiayan * 100)
+            if (biayaa >= ketentuan)
+            {   
+                var set_one = 1.76 * nilaibiayan - rbiayam 
+                var set_two = (set_one / nilaibiayan) * 100
+                var set_tri = set_two - 100
+                var result_biayaa = 76 - set_tri
+            }else {
+                set_one = 1.76 * (nilaibiayan - rbiayam)
+                result_biayaa =  set_one / nilaibiayan * 100
+                
+            }
+        }else{
+            nilaibiayan = 0
+        }
+
+
+        // perhitungan tanpa biaya 
+        if (nilaibiayan != 0){
+            var perhitungan = kuantitatif + Kualitatif + result_waktu + result_biayaa
+            var pertitungan_a = perhitungan.toFixed(0);
+            $('#perhitungan_n').val(pertitungan_a)
+
+        }else{
+            perhitungan = kuantitatif + Kualitatif + result_waktu 
+            pertitungan_a = perhitungan.toFixed(0);
+            $('#perhitungan_n').val(pertitungan_a) // benar hasilnya
+        }
+
+        //skp 
+        var skp = perhitungan / 3
+        var skp_a = skp.toFixed(2)
+        $('#skp_n').val(skp_a) // benar hasilnya
+    });	
+
+    // ----------------------------Kegiatan 15-----------------------------------------
+    $('#rko, #rmuto, #rtimeo, #rbiayao').keyup(function(){
+
+        // nilai kuantitatif 
+        var rkm = $('#rko').val()
+        var kuantitatif = (rkm / nilaikuo) * 100
+
+        // Nilai Kualitatif 
+        var rmutm = $('#rmuto').val()
+        var Kualitatif = (rmutm / nilaimuto) * 100
+
+        // Nilai time
+        var rtimem = $('#rtimeo').val()
+        var waktu = 100 - (rtimem / nilaitimeo * 100)
+        if (waktu < ketentuan){
+            var step_one = 1.76 * nilaitimeo - rtimem
+            var step_two = step_one / nilaitimeo
+            var result_waktu = step_two * 100
+
+        }else {
+            step_one = 1.76 * nilaitimeo - rtimem
+            step_two = (step_one / nilaitimeo) * 100
+            var step_tri = step_two - 100
+            var result_waktu = 76 - step_tri
+        }
+
+        // nilai biaya
+        if (nilaibiayao != 0 ){
+            var rbiayam = $('#rbiayao').val()
+            var biayaa = 100 - (rbiayam / nilaibiayao * 100)
+            if (biayaa >= ketentuan)
+            {   
+                var set_one = 1.76 * nilaibiayao - rbiayam 
+                var set_two = (set_one / nilaibiayao) * 100
+                var set_tri = set_two - 100
+                var result_biayaa = 76 - set_tri
+            }else {
+                set_one = 1.76 * (nilaibiayao - rbiayam)
+                result_biayaa =  set_one / nilaibiayao * 100
+                
+            }
+        }else{
+            nilaibiayao = 0
+        }
+
+
+        // perhitungan tanpa biaya 
+        if (nilaibiayao != 0){
+            var perhitungan = kuantitatif + Kualitatif + result_waktu + result_biayaa
+            var pertitungan_a = perhitungan.toFixed(0);
+            $('#perhitungan_o').val(pertitungan_a)
+
+        }else{
+            perhitungan = kuantitatif + Kualitatif + result_waktu 
+            pertitungan_a = perhitungan.toFixed(0);
+            $('#perhitungan_o').val(pertitungan_a) // benar hasilnya
+        }
+
+        //skp 
+        var skp = perhitungan / 3
+        var skp_a = skp.toFixed(2)
+        $('#skp_o').val(skp_a) // benar hasilnya
+    });	
+
+    // ----------------------------Kegiatan 16-----------------------------------------
+    $('#rkp, #rmutp, #rtimep, #rbiayap').keyup(function(){
+
+        // nilai kuantitatif 
+        var rkm = $('#rkp').val()
+        var kuantitatif = (rkm / nilaikup) * 100
+
+        // Nilai Kualitatif 
+        var rmutm = $('#rmutp').val()
+        var Kualitatif = (rmutm / nilaimutp) * 100
+
+        // Nilai time
+        var rtimem = $('#rtimep').val()
+        var waktu = 100 - (rtimem / nilaitimep * 100)
+        if (waktu < ketentuan){
+            var step_one = 1.76 * nilaitimep - rtimem
+            var step_two = step_one / nilaitimep
+            var result_waktu = step_two * 100
+
+        }else {
+            step_one = 1.76 * nilaitimep - rtimem
+            step_two = (step_one / nilaitimep) * 100
+            var step_tri = step_two - 100
+            var result_waktu = 76 - step_tri
+        }
+
+        // nilai biaya
+        if (nilaibiayap != 0 ){
+            var rbiayam = $('#rbiayap').val()
+            var biayaa = 100 - (rbiayam / nilaibiayap * 100)
+            if (biayaa >= ketentuan)
+            {   
+                var set_one = 1.76 * nilaibiayap - rbiayam 
+                var set_two = (set_one / nilaibiayap) * 100
+                var set_tri = set_two - 100
+                var result_biayaa = 76 - set_tri
+            }else {
+                set_one = 1.76 * (nilaibiayap - rbiayam)
+                result_biayaa =  set_one / nilaibiayap * 100
+                
+            }
+        }else{
+            nilaibiayap = 0
+        }
+
+
+        // perhitungan tanpa biaya 
+        if (nilaibiayap != 0){
+            var perhitungan = kuantitatif + Kualitatif + result_waktu + result_biayaa
+            var pertitungan_a = perhitungan.toFixed(0);
+            $('#perhitungan_p').val(pertitungan_a)
+
+        }else{
+            perhitungan = kuantitatif + Kualitatif + result_waktu 
+            pertitungan_a = perhitungan.toFixed(0);
+            $('#perhitungan_p').val(pertitungan_a) // benar hasilnya
+        }
+
+        //skp 
+        var skp = perhitungan / 3
+        var skp_a = skp.toFixed(2)
+        $('#skp_p').val(skp_a) // benar hasilnya
+    });	
+
     // cek nilai kuantitas != 0
     if (nilaikua != 0){
        var a = 1
@@ -1595,25 +1821,25 @@
 
     // ===========================================================
 
-    $('#rka, #rkb, #rkc, #rkd, #rkd, #rke, #rkf, #rkg, #rkh, #rki, #rkj, #rkk, #rkl, #rkm').keyup(function(){
-        var skp_1 = $('#skp_a').val()
-        var skp_2 = $('#skp_b').val()
-        var skp_3 = $('#skp_c').val()
-        var skp_4 = $('#skp_d').val()
-        var skp_5 = $('#skp_e').val()
-        var skp_6 = $('#skp_f').val()
-        var skp_7 = $('#skp_g').val()
-        var skp_8 = $('#skp_h').val()
-        var skp_9 = $('#skp_i').val()
-        var skp_10 = $('#skp_j').val()
-        var skp_11 = $('#skp_k').val()
-        var skp_12 = $('#skp_l').val()
-        var skp_13 = $('#skp_m').val()
-        var skp_14 = $('#skp_n').val()
-        var skp_15 = $('#skp_o').val()
-        var skp_16 = $('#skp_p').val()
-        var dnta = $('#dnta').val()
-        var dntb = $('#dntb').val()
+    $('#rka, #rkb, #rkc, #rkd, #rkd, #rke, #rkf, #rkg, #rkh, #rki, #rkj, #rkk, #rkl, #rkm, #rkn, #rko, #rkp').keyup(function(){
+        var skp_1 = $('#skp_a').val() * 1
+        var skp_2 = $('#skp_b').val() * 1
+        var skp_3 = $('#skp_c').val() * 1
+        var skp_4 = $('#skp_d').val() * 1
+        var skp_5 = $('#skp_e').val() * 1
+        var skp_6 = $('#skp_f').val() * 1
+        var skp_7 = $('#skp_g').val() * 1
+        var skp_8 = $('#skp_h').val() * 1
+        var skp_9 = $('#skp_i').val() * 1
+        var skp_10 = $('#skp_j').val() * 1
+        var skp_11 = $('#skp_k').val() * 1
+        var skp_12 = $('#skp_l').val() * 1
+        var skp_13 = $('#skp_m').val() * 1
+        var skp_14 = $('#skp_n').val() * 1
+        var skp_15 = $('#skp_o').val() * 1
+        var skp_16 = $('#skp_p').val() * 1
+        var dnta = $('#dnta').val() * 1
+        var dntb = $('#dntb').val() * 1
         var buruk = "Buruk"
         var sedang = "Sedang"
         var cukup = "Cukup"

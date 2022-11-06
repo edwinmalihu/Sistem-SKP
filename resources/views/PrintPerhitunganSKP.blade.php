@@ -42,7 +42,7 @@
 
           <div class="panel-body container-fluid">
           <h5>Jangka Waktu Penilaian</h5>
-                    <h5>Januari s/d Desember 2018</h5>
+          <h5>{{$periode->periode}} {{$periode->tahun}}</h5>
                     <table border="1" class="table table-striped table-bordered">
                         <tr>
                             <td rowspan="2" style="font-weight:bold">NO</td>
