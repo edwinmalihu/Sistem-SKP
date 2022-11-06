@@ -4,11 +4,11 @@
 <!-- Page -->
 <div class="page">
   <div class="page-header">
-    <h1 class="page-title">Form Perhitungan SKP</h1>
+    <h1 class="page-title">Form Edit Perhitungan SKP</h1>
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
       <li class="breadcrumb-item"><a href="javascript:void(0)">Kategori</a></li>
-      <li class="breadcrumb-item active">Tambah Perhitungan SKP</li>
+      <li class="breadcrumb-item active">Edit Perhitungan SKP</li>
     </ol>
     <!-- <div class="page-header-actions">
       <button type="button" class="btn btn-sm btn-icon btn-default btn-outline btn-round"
@@ -370,6 +370,75 @@
                             <td align="center"><input type="text" class="form-control" name="rbiayam" id="rbiayam" value="{{$realisasi->rbiayam}}" /></td>
                             <td align="center"> <input type="text" class="form-control" name="perhitungan_m" value="{{$realisasi->perhitungan_m}}" id="perhitungan_m" readonly /></td>
                             <td align="center"><input type="text" class="form-control" name="skp_m" value="{{$realisasi->skp_m}}" id="skp_m" readonly/></td>
+                        </tr>
+
+                        
+                        <!-- TERBARU TAMBAHAN -->
+                        <tr>
+                            <!-- TARGET -->
+                            <td align="center">14</td>
+                            <td align="center" colspan="2">
+                            <input type="hidden" value="{{$nilai->id_kn}}" id="id_km" name="id_kn">
+                            <p id="label-k-n"></p>
+                            </td>
+                            <td align="center" id="nilalikn">{{$nilai->akn}}</td>
+                            <td align="center" id="nilaikun">{{$nilai->kun}}</td>
+                            <td align="center" id="nilaimutn">{{$nilai->mutn}}</td>
+                            <td align="center" id="nilaitimen">{{$nilai->timen}}</td>
+                            <td align="center" id="nilaibiayan">{{$nilai->biayan}}</td>
+                            
+                            <!-- REALISASI -->
+                            <td align="center"><input type="text" class="form-control" name="rakn" value="{{$realisasi->rakn}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rkun" id="rkn" value="{{$realisasi->rkun}}" /><input type="text" class="form-control" name="routn" value="{{$realisasi->routn}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rmutn" id="rmutn" value="{{$realisasi->rmutn}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rtimen" id="rtimen" value="{{$realisasi->rtimen}}" /><input type="text" class="form-control" name="rtmdn" value="{{$realisasi->rtmdn}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rbiayan" id="rbiayan" value="{{$realisasi->rbiayan}}"/></td>
+                            <td align="center"> <input type="text" class="form-control" name="perhitungan_n" value="{{$realisasi->perhitungan_n}}" id="perhitungan_n" readonly /></td>
+                            <td align="center"><input type="text" class="form-control" name="skp_n" value="{{$realisasi->skp_n}}" id="skp_n" readonly/></td>
+                        </tr>
+                        <tr>
+                            <!-- TARGET -->
+                            <td align="center">15</td>
+                            <td align="center" colspan="2">
+                            <input type="hidden" value="{{$nilai->id_ko}}" id="id_ko" name="id_ko">
+                            <p id="label-k-o"></p>
+                            </td>
+                            <td align="center" id="nilaliko">{{$nilai->ako}}</td>
+                            <td align="center" id="nilaikuo">{{$nilai->kuo}}</td>
+                            <td align="center" id="nilaimuto">{{$nilai->muto}}</td>
+                            <td align="center" id="nilaitimeo">{{$nilai->timeo}}</td>
+                            <td align="center" id="nilaibiayao">{{$nilai->biayao}}</td>
+                            
+                            <!-- REALISASI -->
+                            <td align="center"><input type="text" class="form-control" name="rako" value="{{$realisasi->rako}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rkuo" id="rko" value="{{$realisasi->rkuo}}" /><input type="text" class="form-control" name="routo" value="{{$realisasi->routo}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rmuto" id="rmuto" value="{{$realisasi->rmuto}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rtimeo" id="rtimeo" value="{{$realisasi->rtimeo}}" /><input type="text" class="form-control" name="rtmdo" value="{{$realisasi->rtmdo}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rbiayao" id="rbiayao" value="{{$realisasi->rbiayao}}"/></td>
+                            <td align="center"> <input type="text" class="form-control" name="perhitungan_o" value="{{$realisasi->perhitungan_o}}" id="perhitungan_o" readonly /></td>
+                            <td align="center"><input type="text" class="form-control" name="skp_o" value="{{$realisasi->skp_o}}" id="skp_o" readonly/></td>
+                        </tr>
+                        <tr>
+                            <!-- TARGET -->
+                            <td align="center">16</td>
+                            <td align="center" colspan="2">
+                            <input type="hidden" value="{{$nilai->id_kp}}" id="id_kp" name="id_kp">
+                            <p id="label-k-p"></p>
+                            </td>
+                            <td align="center" id="nilalikp">{{$nilai->akp}}</td>
+                            <td align="center" id="nilaikup">{{$nilai->kup}}</td>
+                            <td align="center" id="nilaimutp">{{$nilai->mutp}}</td>
+                            <td align="center" id="nilaitimep">{{$nilai->timep}}</td>
+                            <td align="center" id="nilaibiayap">{{$nilai->biayap}}</td>
+                            
+                            <!-- REALISASI -->
+                            <td align="center"><input type="text" class="form-control" name="rakp" value="{{$realisasi->rakp}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rkup" id="rkp" value="{{$realisasi->rkup}}/><input type="text" class="form-control" name="routp" value="{{$realisasi->routo}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rmutp" id="rmutp" value="{{$realisasi->rmutp}}" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rtimep" id="rtimep" value="{{$realisasi->rtimep}}" /><input type="text" class="form-control" name="rtmdp"  value="{{$realisasi->rtmdo}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rbiayap" id="rbiayap" value="{{$realisasi->rbiayap}}" /></td>
+                            <td align="center"> <input type="text" class="form-control" name="perhitungan_p"  value="{{$realisasi->perhitungan_p}}" id="perhitungan_p" readonly /></td>
+                            <td align="center"><input type="text" class="form-control" name="skp_p" value="{{$realisasi->skp_p}}" id="skp_p" readonly/></td>
                         </tr>
 
                         <!-- TUGAS TAMBAHAN -->
@@ -1540,6 +1609,9 @@
         var skp_11 = $('#skp_k').val()
         var skp_12 = $('#skp_l').val()
         var skp_13 = $('#skp_m').val()
+        var skp_14 = $('#skp_n').val()
+        var skp_15 = $('#skp_o').val()
+        var skp_16 = $('#skp_p').val()
         var dnta = $('#dnta').val()
         var dntb = $('#dntb').val()
         var buruk = "Buruk"
@@ -1550,7 +1622,7 @@
 
         console.log(skp_1);
             
-        var sumSKP = skp_1+skp_2+skp_3+skp_4+skp_5+skp_6+skp_7+skp_8+skp_9+skp_10+skp_11+skp_12+skp_13
+        var sumSKP = skp_1+skp_2+skp_3+skp_4+skp_5+skp_6+skp_7+skp_8+skp_9+skp_10+skp_11+skp_12+skp_13+skp_14+skp_15+skp_16
         var sumNilaiTambahan = dnta+dntb
 
         var nilaiTotal = (sumSKP/sumNilai) + sumNilaiTambahan

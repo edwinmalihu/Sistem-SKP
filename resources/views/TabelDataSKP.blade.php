@@ -64,13 +64,24 @@
                       data-toggle="tooltip" data-original-title="Lihat Nilai SKP"><i class="icon wb-eye" aria-hidden="true"></i></a>
 
                     <!-- Realisasi -->
-                    <a href="/formperhitunganskp/{{$data->idData}}" class="btn btn-sm"
-                      data-toggle="tooltip" data-original-title="Isi Nilai">Nilai Realisasi</i></a>
-                      <a href="/updateperhitunganskp/{{$data->idData}}" class="btn btn-sm"
-                      data-toggle="tooltip" data-original-title="Isi Nilai">Update Realisasi</i></a>
-                      <a href="/printperhitunganskp/{{$data->idData}}" class="btn btn-sm"
-                      data-toggle="tooltip" data-original-title="Isi Nilai">Detail Realisasi</i></a>
+                    <a href="/formperhitunganskp/{{$data->idData}}" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                      data-toggle="tooltip" data-original-title="Tambah Nilai Realisasi"><i class="icon wb-plus" aria-hidden="true"></i></a>
+                    <a href="/updateperhitunganskp/{{$data->idData}}" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                      data-toggle="tooltip" data-original-title="Edit Nilai Realisasi"><i class="icon wb-edit" aria-hidden="true"></i></a>
+                    <a href="/printperhitunganskp/{{$data->idData}}" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                      data-toggle="tooltip" data-original-title="Lihat Nilai Realisasi"><i class="icon wb-eye" aria-hidden="true"></i></a>
                       
+                    <!-- Perilaku Kerja -->
+                    <a href="/formperilakukerja" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                      data-toggle="tooltip" data-original-title="Tambah Perilaku Kerja"><i class="icon wb-plus" aria-hidden="true"></i></a>
+                    <a href="/updateperilakukerja" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                      data-toggle="tooltip" data-original-title="Edit Perilaku Kerja"><i class="icon wb-edit" aria-hidden="true"></i></a>
+                    <a href="/detail-perilakukerja" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                      data-toggle="tooltip" data-original-title="Lihat Perilaku Kerja"><i class="icon wb-eye" aria-hidden="true"></i></a>
+
+                    <!-- Penilaian Kerja -->
+                    <a href="/detailpenilaian" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                      data-toggle="tooltip" data-original-title="Lihat Penilaian Kerja"><i class="icon wb-eye" aria-hidden="true"></i></a>
                 </td>
             </tr>
           @endforeach

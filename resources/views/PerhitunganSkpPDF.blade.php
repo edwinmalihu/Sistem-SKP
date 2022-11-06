@@ -304,6 +304,63 @@
                             <td align="center"></td>
                             <td align="center"></td>
                         </tr>
+                        <tr>
+                            <!-- TARGET -->
+                            <td align="center">14</td>
+                            <td align="center" colspan="2"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            
+                            <!-- REALISASI -->
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                        </tr>
+                        <tr>
+                            <!-- TARGET -->
+                            <td align="center">15</td>
+                            <td align="center" colspan="2"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            
+                            <!-- REALISASI -->
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                        </tr>
+                        <tr>
+                            <!-- TARGET -->
+                            <td align="center">16</td>
+                            <td align="center" colspan="2"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            
+                            <!-- REALISASI -->
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                            <td align="center"></td>
+                        </tr>
 
                         <!-- TUGAS TAMBAHAN -->
                         <tr>

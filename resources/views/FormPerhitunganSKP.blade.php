@@ -371,6 +371,74 @@
                             <td align="center"><input type="text" class="form-control" name="skp_m" id="skp_m" readonly/></td>
                         </tr>
 
+                        <!-- TERBARU TAMBAHAN -->
+                        <tr>
+                            <!-- TARGET -->
+                            <td align="center">14</td>
+                            <td align="center" colspan="2">
+                            <input type="hidden" value="{{$nilai->id_kn}}" id="id_km" name="id_kn">
+                            <p id="label-k-n"></p>
+                            </td>
+                            <td align="center" id="nilalikn">{{$nilai->akn}}</td>
+                            <td align="center" id="nilaikun">{{$nilai->kun}}</td>
+                            <td align="center" id="nilaimutn">{{$nilai->mutn}}</td>
+                            <td align="center" id="nilaitimen">{{$nilai->timen}}</td>
+                            <td align="center" id="nilaibiayan">{{$nilai->biayan}}</td>
+                            
+                            <!-- REALISASI -->
+                            <td align="center"><input type="text" class="form-control" name="rakn" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rkun" id="rkn" /><input type="text" class="form-control" name="routn" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rmutn" id="rmutn" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rtimen" id="rtimen" /><input type="text" class="form-control" name="rtmdn" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rbiayan" id="rbiayan" /></td>
+                            <td align="center"> <input type="text" class="form-control" name="perhitungan_n" id="perhitungan_n" readonly /></td>
+                            <td align="center"><input type="text" class="form-control" name="skp_n" id="skp_n" readonly/></td>
+                        </tr>
+                        <tr>
+                            <!-- TARGET -->
+                            <td align="center">15</td>
+                            <td align="center" colspan="2">
+                            <input type="hidden" value="{{$nilai->id_ko}}" id="id_ko" name="id_ko">
+                            <p id="label-k-o"></p>
+                            </td>
+                            <td align="center" id="nilaliko">{{$nilai->ako}}</td>
+                            <td align="center" id="nilaikuo">{{$nilai->kuo}}</td>
+                            <td align="center" id="nilaimuto">{{$nilai->muto}}</td>
+                            <td align="center" id="nilaitimeo">{{$nilai->timeo}}</td>
+                            <td align="center" id="nilaibiayao">{{$nilai->biayao}}</td>
+                            
+                            <!-- REALISASI -->
+                            <td align="center"><input type="text" class="form-control" name="rako" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rkuo" id="rko" /><input type="text" class="form-control" name="routo" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rmuto" id="rmuto" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rtimeo" id="rtimeo" /><input type="text" class="form-control" name="rtmdo" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rbiayao" id="rbiayao" /></td>
+                            <td align="center"> <input type="text" class="form-control" name="perhitungan_o" id="perhitungan_o" readonly /></td>
+                            <td align="center"><input type="text" class="form-control" name="skp_o" id="skp_o" readonly/></td>
+                        </tr>
+                        <tr>
+                            <!-- TARGET -->
+                            <td align="center">16</td>
+                            <td align="center" colspan="2">
+                            <input type="hidden" value="{{$nilai->id_kp}}" id="id_kp" name="id_kp">
+                            <p id="label-k-p"></p>
+                            </td>
+                            <td align="center" id="nilalikp">{{$nilai->akp}}</td>
+                            <td align="center" id="nilaikup">{{$nilai->kup}}</td>
+                            <td align="center" id="nilaimutp">{{$nilai->mutp}}</td>
+                            <td align="center" id="nilaitimep">{{$nilai->timep}}</td>
+                            <td align="center" id="nilaibiayap">{{$nilai->biayap}}</td>
+                            
+                            <!-- REALISASI -->
+                            <td align="center"><input type="text" class="form-control" name="rakp" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rkup" id="rkp" /><input type="text" class="form-control" name="routp" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rmutp" id="rmutp" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rtimep" id="rtimep" /><input type="text" class="form-control" name="rtmdp" /></td>
+                            <td align="center"><input type="text" class="form-control" name="rbiayap" id="rbiayap" /></td>
+                            <td align="center"> <input type="text" class="form-control" name="perhitungan_p" id="perhitungan_p" readonly /></td>
+                            <td align="center"><input type="text" class="form-control" name="skp_p" id="skp_p" readonly/></td>
+                        </tr>
+
                         <!-- TUGAS TAMBAHAN -->
                         <tr>
                             <td></td>
@@ -1531,6 +1599,9 @@
         var skp_11 = $('#skp_k').val()
         var skp_12 = $('#skp_l').val()
         var skp_13 = $('#skp_m').val()
+        var skp_14 = $('#skp_n').val()
+        var skp_15 = $('#skp_o').val()
+        var skp_16 = $('#skp_p').val()
         var dnta = $('#dnta').val()
         var dntb = $('#dntb').val()
         var buruk = "Buruk"
@@ -1541,7 +1612,7 @@
 
         console.log(skp_1);
             
-        var sumSKP = skp_1+skp_2+skp_3+skp_4+skp_5+skp_6+skp_7+skp_8+skp_9+skp_10+skp_11+skp_12+skp_13
+        var sumSKP = skp_1+skp_2+skp_3+skp_4+skp_5+skp_6+skp_7+skp_8+skp_9+skp_10+skp_11+skp_12+skp_13+skp_14+skp_15+skp_16
         var sumNilaiTambahan = dnta+dntb
 
         var nilaiTotal = (sumSKP/sumNilai) + sumNilaiTambahan

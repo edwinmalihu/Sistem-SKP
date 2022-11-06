@@ -48,7 +48,7 @@
                 <label class="floating-label">Nomor Induk Kependudukan</label>
               </div>
               <div class="form-group form-material floating" data-plugin="formMaterial">
-                <input type="text" class="form-control" name="nip_pegawai" value="{{$pegawai->nip_pegawai}}" readonly />
+                <input type="text" class="form-control" name="nip_pegawai" value="{{$pegawai->nip_pegawai}}" />
                 <label class="floating-label">Nomor Induk Pegawai</label>
               </div>
               <div class="form-group form-material" data-plugin="formMaterial">

@@ -84,6 +84,7 @@
                     <td style="text-align: center;">:</td>
                     <td>
                       <select class="form-control" id="id_dinilai" name="id_dinilai">
+                        <option value="">- Pilih -</option>
                         @foreach ($user as $skp)
                         <option value="{{$skp->id}}">{{$skp->nama_pegawai}}</option>
                         @endforeach
@@ -129,6 +130,7 @@
                     <td style="text-align: center;">:</td>
                     <td>
                       <select class="form-control" id="id_penilai" name="id_penilai">
+                        <option value="">- Pilih -</option>
                         @foreach ($user as $s)
                         <option value="{{$s->id}}">{{$s->nama_pegawai}}</option>
                         @endforeach
@@ -177,6 +179,7 @@
                     <td style="text-align: center;">:</td>
                     <td>
                     <select class="form-control" id="id_app" name="id_app">
+                        <option value="">- Pilih -</option>
                         @foreach ($user as $app)
                         <option value="{{$app->id}}">{{$app->nama_pegawai}}</option>
                         @endforeach

@@ -53,6 +53,7 @@
               <div class="form-group form-material" data-plugin="formMaterial">
                     <label class="form-control-label" for="select">Pilih Pangkat dan Golongan</label>
                     <select class="form-control" id="select" name="id_pangkat_golongan">
+                    <option value="">- Pilih -</option>
                     @foreach($pangkat as $p)
                        <option value="{{$p->id_pangkat_golongan}}">{{$p->jenis_pangkat_golongan}}</option>
                     @endforeach
@@ -61,6 +62,7 @@
               <div class="form-group form-material" data-plugin="formMaterial">
                     <label class="form-control-label" for="select">Pilih Jabatan</label>
                     <select class="form-control" id="select" name="id_jabatan">
+                    <option value="">- Pilih -</option>
                     @foreach($jabatan as $j)
                        <option value="{{$j->id_jabatan}}">{{$j->jenis_jabatan}}</option>
                     @endforeach
@@ -69,6 +71,7 @@
               <div class="form-group form-material" data-plugin="formMaterial">
                     <label class="form-control-label" for="select">Pilih Unit Kerja</label>
                     <select class="form-control" id="select" name="id_unit_kerja">
+                    <option value="">- Pilih -</option>
                     @foreach($unit as $u)
                        <option value="{{$u->id_units}}">{{$u->nama_units_kerja}}</option>
                     @endforeach
@@ -77,6 +80,7 @@
               <div class="form-group form-material" data-plugin="formMaterial">
                     <label class="form-control-label" for="select">Jenis User / Pegawai</label>
                     <select class="form-control" id="select" name="jenis_pegawai">
+                      <option value="">- Pilih -</option>
                       <option value="admin">Admin</option>
                       <option value="Dosen">Dosen</option>
                       <option value="Kajur">Ketua Jurusan</option>
@@ -86,6 +90,7 @@
               <div class="form-group form-material" data-plugin="formMaterial">
                     <label class="form-control-label" for="select">Hak Akses</label>
                     <select class="form-control" id="select" name="hak_akses">
+                      <option value="">- Pilih -</option>
                       <option value="1">Dinilai</option>
                       <option value="2">Penilai</option>
                     </select>

@@ -98,7 +98,7 @@
                       <?php $id_penilai = $data['id_penilai'] ?>
                       <select class="form-control" id="id_penilai" name="id_penilai">
                         @foreach ($list as $s)
-                        <option value="{{$s->id}}" {{ $id_penilai == $skp->id ? 'selected' : '' }}>{{$s->nama_pegawai}}</option>
+                        <option value="{{$s->id}}" {{ $id_penilai == $s->id ? 'selected' : '' }}>{{$s->nama_pegawai}}</option>
                         @endforeach
                       </select>
                     </td>
@@ -147,7 +147,7 @@
                     <?php $id_app = $data['id_app'] ?>
                     <select class="form-control" id="id_app" name="id_app">
                         @foreach ($list as $app)
-                        <option value="{{$app->id}}" {{ $id_app == $skp->id ? 'selected' : '' }}>{{$app->nama_pegawai}}</option>
+                        <option value="{{$app->id}}" {{ $id_app == $app->id ? 'selected' : '' }}>{{$app->nama_pegawai}}</option>
                         @endforeach
                       </select>
                     </td>

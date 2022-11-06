@@ -11,6 +11,8 @@ use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\SKPController;
 use App\Http\Controllers\NilaiSKPController;
 use App\Http\Controllers\PerhitunganSKPController;
+use App\Http\Controllers\PerilakuKerjaController;
+use App\Http\Controllers\PenilaianController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,8 +32,8 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
 
 
 
-Route::group(['middleware' => 'auth'], function ()
-{
+// Route::group(['middleware' => 'auth'], function ()
+// {
     
     Route::post('/logout', [LoginController::class, 'logout']);
     // Layout
@@ -99,4 +101,13 @@ Route::group(['middleware' => 'auth'], function ()
     Route::patch('/update-realisasi/{id}', [PerhitunganSKPController::class, 'updateRealisasi']);
     Route::get('/printperhitunganskp/{id}', [PerhitunganSKPController::class, 'detailPerhitungan'])->name('printperhitunganskp'); 
     Route::get('/perhitunganskppdf/{id}', [PerhitunganSKPController::class, 'PDFPerhitungan'])->name('perhitunganskppdf');
-    });
+
+    // SKP PERILAKU KERJA
+    Route::get('/formperilakukerja', [PerilakuKerjaController::class, 'index'])->name('formperilakukerja');
+    Route::get('/updateperilakukerja', [PerilakuKerjaController::class, 'updatePerilakuKerja'])->name('updateperilakukerja');
+    Route::get('/detail-perilakukerja', [PerilakuKerjaController::class, 'detailPerilakuKerja'])->name('detail-perilakukerja');
+
+    // PENILAIAN
+    Route::get('/detailpenilaian', [PenilaianController::class, 'detailPenilaian'])->name('detailpenilaian');
+
+    // });
