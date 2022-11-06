@@ -10,20 +10,6 @@
       <li class="breadcrumb-item"><a href="javascript:void(0)">Kategori</a></li>
       <li class="breadcrumb-item active">Tambah Perhitungan SKP</li>
     </ol>
-    <!-- <div class="page-header-actions">
-      <button type="button" class="btn btn-sm btn-icon btn-default btn-outline btn-round"
-        data-toggle="tooltip" data-original-title="Edit">
-        <i class="icon wb-pencil" aria-hidden="true"></i>
-      </button>
-      <button type="button" class="btn btn-sm btn-icon btn-default btn-outline btn-round"
-        data-toggle="tooltip" data-original-title="Refresh">
-        <i class="icon wb-refresh" aria-hidden="true"></i>
-      </button>
-      <button type="button" class="btn btn-sm btn-icon btn-default btn-outline btn-round"
-        data-toggle="tooltip" data-original-title="Setting">
-        <i class="icon wb-settings" aria-hidden="true"></i>
-      </button>
-    </div> -->
   </div>
   
   <div class="page-content container-fluid">
@@ -376,7 +362,7 @@
                             <!-- TARGET -->
                             <td align="center">14</td>
                             <td align="center" colspan="2">
-                            <input type="hidden" value="{{$nilai->id_kn}}" id="id_km" name="id_kn">
+                            <input type="hidden" value="{{$nilai->id_kn}}" id="id_kn" name="id_kn">
                             <p id="label-k-n"></p>
                             </td>
                             <td align="center" id="nilalikn">{{$nilai->akn}}</td>
@@ -590,6 +576,24 @@
     $.get('/listkegiatan/'+ id_km, function (data) {
         console.log(data.nama_kegiatan);
             $('#label-k-m').text(data.nama_kegiatan)
+    });
+
+    var id_kn = $('#id_kn').attr('value')
+    $.get('/listkegiatan/'+ id_kn, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-n').text(data.nama_kegiatan)
+    });
+
+    var id_ko = $('#id_ko').attr('value')
+    $.get('/listkegiatan/'+ id_ko, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-o').text(data.nama_kegiatan)
+    });
+
+    var id_kp = $('#id_kp').attr('value')
+    $.get('/listkegiatan/'+ id_kp, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-p').text(data.nama_kegiatan)
     });
 
 // --------------------Declarasi-----------------------
@@ -1586,33 +1590,34 @@
     // ===========================================================
 
     $('#rka, #rkb, #rkc, #rkd, #rkd, #rke, #rkf, #rkg, #rkh, #rki, #rkj, #rkk, #rkl, #rkm').keyup(function(){
-        var skp_1 = $('#skp_a').val()
-        var skp_2 = $('#skp_b').val()
-        var skp_3 = $('#skp_c').val()
-        var skp_4 = $('#skp_d').val()
-        var skp_5 = $('#skp_e').val()
-        var skp_6 = $('#skp_f').val()
-        var skp_7 = $('#skp_g').val()
-        var skp_8 = $('#skp_h').val()
-        var skp_9 = $('#skp_i').val()
-        var skp_10 = $('#skp_j').val()
-        var skp_11 = $('#skp_k').val()
-        var skp_12 = $('#skp_l').val()
-        var skp_13 = $('#skp_m').val()
-        var skp_14 = $('#skp_n').val()
-        var skp_15 = $('#skp_o').val()
-        var skp_16 = $('#skp_p').val()
-        var dnta = $('#dnta').val()
-        var dntb = $('#dntb').val()
+        var skp_1 = $('#skp_a').val() * 1
+        var skp_2 = $('#skp_b').val() * 1
+        var skp_3 = $('#skp_c').val() * 1
+        var skp_4 = $('#skp_d').val() * 1
+        var skp_5 = $('#skp_e').val() * 1
+        var skp_6 = $('#skp_f').val() * 1
+        var skp_7 = $('#skp_g').val() * 1
+        var skp_8 = $('#skp_h').val() * 1
+        var skp_9 = $('#skp_i').val() * 1
+        var skp_10 = $('#skp_j').val() * 1
+        var skp_11 = $('#skp_k').val() * 1
+        var skp_12 = $('#skp_l').val() * 1
+        var skp_13 = $('#skp_m').val() * 1
+        var skp_14 = $('#skp_n').val() * 1
+        var skp_15 = $('#skp_o').val() * 1
+        var skp_16 = $('#skp_p').val() * 1
+        var dnta = $('#dnta').val() * 1
+        var dntb = $('#dntb').val() * 1
         var buruk = "Buruk"
         var sedang = "Sedang"
         var cukup = "Cukup"
         var baik = "Baik"
         var sb = "Sangat Baik"
 
-        console.log(skp_1);
+        // console.log(skp_1);
             
         var sumSKP = skp_1+skp_2+skp_3+skp_4+skp_5+skp_6+skp_7+skp_8+skp_9+skp_10+skp_11+skp_12+skp_13+skp_14+skp_15+skp_16
+        console.log("ini adalah nilai SUM SKP : " +sumSKP);
         var sumNilaiTambahan = dnta+dntb
 
         var nilaiTotal = (sumSKP/sumNilai) + sumNilaiTambahan
