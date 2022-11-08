@@ -106,8 +106,9 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
     // SKP PERILAKU KERJA
     Route::get('/formperilakukerja/{id}', [PerilakuKerjaController::class, 'index'])->name('formperilakukerja');
     Route::post('/action-perilaku', [PerilakuKerjaController::class, 'AddPerilaku']);
-    Route::get('/updateperilakukerja', [PerilakuKerjaController::class, 'updatePerilakuKerja'])->name('updateperilakukerja');
-    Route::get('/detail-perilakukerja', [PerilakuKerjaController::class, 'detailPerilakuKerja'])->name('detail-perilakukerja');
+    Route::get('/updateperilakukerja/{id}', [PerilakuKerjaController::class, 'updatePerilakuKerja'])->name('updateperilakukerja');
+    Route::patch('/update-perilaku/{id}', [PerilakuKerjaController::class, 'ActionUpdate']);
+    Route::get('/detail-perilakukerja/{id}', [PerilakuKerjaController::class, 'detailPerilakuKerja'])->name('detail-perilakukerja');
 
     // PENILAIAN
     Route::get('/detailpenilaian', [PenilaianController::class, 'detailPenilaian'])->name('detailpenilaian');

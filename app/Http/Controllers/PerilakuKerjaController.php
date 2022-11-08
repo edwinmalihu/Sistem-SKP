@@ -30,13 +30,51 @@ class PerilakuKerjaController extends Controller
     }
 
 
-    public function updatePerilakuKerja()
+    public function updatePerilakuKerja($id)
     {
-        return view('updateperilakukerja');
+        $skp = DataSKP::find($id);
+        $nilaiverikal = NilaiRealisasi::where('id_skpnr', $id)->first();
+        $perilaku = PerilakuKerja::where('id_skp', $id)->first();
+        return view('updateperilakukerja', [
+            'skp' => $skp,
+            'nilai_r' => $nilaiverikal,
+            'perilaku' => $perilaku
+        ]);
     }
 
-    public function detailPerilakuKerja()
+    public function ActionUpdate(Request $request, $id)
     {
-        return view('printperilakukerja');
+        $validated = $request->validate([
+            'n_op' => 'nullable',
+            's_op' => 'nullable',
+            'n_i' => 'nullable',
+            's_i' => 'nullable',
+            'n_k' => 'nullable',
+            's_k' => 'nullable',
+            'n_d' => 'nullable',
+            's_d' => 'nullable',
+            'n_ks' => 'nullable',
+            's_ks' => 'nullable',
+            'n_kp' => 'nullable',
+            's_kp' => 'nullable',
+            'n_jml' => 'nullable',
+            's_jml' => 'nullable',
+            'n_rr' => 'nullable',
+            's_rr' => 'nullable',
+        ]);
+        PerilakuKerja::where('id_skp', $id)->update($validated);
+        return redirect('/tabeldataskp')->with('Success', 'Data Berhasil Di Ubah!');
+    }
+
+    public function detailPerilakuKerja($id)
+    {
+        $skp = DataSKP::find($id);
+        $nilaiverikal = NilaiRealisasi::where('id_skpnr', $id)->first();
+        $perilaku = PerilakuKerja::where('id_skp', $id)->first();
+        return view('printperilakukerja', [
+            'skp' => $skp,
+            'nilai_r' => $nilaiverikal,
+            'perilaku' => $perilaku
+        ]);
     }
 }

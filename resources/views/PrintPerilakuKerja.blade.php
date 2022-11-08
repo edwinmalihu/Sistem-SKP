@@ -4,26 +4,12 @@
 <!-- Page -->
 <div class="page">
   <div class="page-header">
-    <h1 class="page-title">Detail Perilaku Kerja</h1>
+    <h1 class="page-title">Form Perilaku Kerja</h1>
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
       <li class="breadcrumb-item"><a href="javascript:void(0)">Kategori</a></li>
-      <li class="breadcrumb-item active">Detail Perilaku Kerja</li>
+      <li class="breadcrumb-item active">Tambah Perilaku Kerja</li>
     </ol>
-    <!-- <div class="page-header-actions">
-      <button type="button" class="btn btn-sm btn-icon btn-default btn-outline btn-round"
-        data-toggle="tooltip" data-original-title="Edit">
-        <i class="icon wb-pencil" aria-hidden="true"></i>
-      </button>
-      <button type="button" class="btn btn-sm btn-icon btn-default btn-outline btn-round"
-        data-toggle="tooltip" data-original-title="Refresh">
-        <i class="icon wb-refresh" aria-hidden="true"></i>
-      </button>
-      <button type="button" class="btn btn-sm btn-icon btn-default btn-outline btn-round"
-        data-toggle="tooltip" data-original-title="Setting">
-        <i class="icon wb-settings" aria-hidden="true"></i>
-      </button>
-    </div> -->
   </div>
 
   <div class="page-content container-fluid">
@@ -31,10 +17,6 @@
       
         <div class="col-md-12">
             <!-- Panel Floating Labels -->
-            <div class="text-right">
-                <a href="" class="btn btn-primary col-md-1 wb-download">PDF</a>  
-            </div>
-            <br>
             <div class="panel">
             <div class="panel-heading">
                 <h3 class="panel-title" style="text-align:center">BUKU CATATAN PENILAIAN PERILAKU PEGAWAI UNMUS</h3>
@@ -45,17 +27,16 @@
                 <tr>
                     <td>Nama</td>
                     <td> :</td>
-                    <td>GET NAMA PEGAWAI</td>
+                    <input type="hidden" value="{{$skp->id_dinilai}}" id="id_dinilai">
+                    <td id="nama-dinilai"></td>
                 </tr>
                 <tr>
                     <td>NIP/NIDN/NIK</td>
                     <td> :</td>
-                    <td>GET NIP/NIK/NIDN PEGAWAI</td>
+                    <td id="nip_dinilai">{{$skp->nip_dinilai}}</td>
                 </tr>
             </table>
             <br>
-    <form action="/" method="post">
-    @csrf
         <table border="1" class="table table-striped table-bordered">
             <tr>
                 <td style="text-align:center">No.</td>
@@ -86,74 +67,74 @@
             </tr> -->
             <tr>
                 <td style="text-align:center" rowspan="9">1</td>
-                <td style="text-align:center" rowspan="9">Januari s/d Desember 2021 (GET JANGKA WAKTU)</td>
+                <td style="text-align:center" rowspan="9">{{$skp->semester}} {{$skp->tahun}}</td>
                 <td colspan="4">
-                    Penilaian SKP sampai dengan akhir Desember 2016 = GET NILAI 
+                    Penilaian SKP sampai dengan akhir Desember 2016 = 
                     NILAI DARI PERHITUNGAN VERTIKAL <br>
                     sedangkan penilaian perilaku kerjanya adalah <br>
                     sebagai berikut :
                 </td>
                 <td style="text-align:center" colspan="5" rowspan="9">
+                <input type="hidden" name="id_skp" id="id_skp" value="{{$skp->id_data_skp}}">
                 <br><br><br><br><br><br><br><br><br><br>
-                    GET JABATAN PEJABAT PENILAI Dekan Fakultas Teknik
+                    DEKAN FAKULTAS TEKNIK
+                    <input type="hidden" value="{{$skp->id_penilai}}" id="id_penilai"> 
                     <br><br><br><br>
-                    GET NAMA PEJABAT PENILAI NAMA DEKAN
+                    <p id="nama-penilai"></p>
                     <br>
-                    GET NIP PEJABAT PENILAI DEKAN
+                    {{$skp->nip_penilai}}
                 </td> 
                 <tr>
                     <td>Orientasi Pelayanan</td>
                     <td>=</td>
-                    <td><input type="text" class="form-control" name="" /></td>
-                    <td>(BAIK)</td>
+                    <td><input type="text" class="form-control" name="n_op" id="n_op" value="{{$perilaku->n_op}}" readonly/></td>
+                    <td><input type="text" class="form-control" name="s_op" id="s_op" value="{{$perilaku->s_op}}" readonly></td>
                 </tr>
                 <tr>
                     <td>Integritas</td>
                     <td>=</td>
-                    <td><input type="text" class="form-control" name="" /></td>
-                    <td>(BAIK)</td>
+                    <td><input type="text" class="form-control" name="n_i" id="n_i" value="{{$perilaku->n_i}}" readonly/></td>
+                    <td><input type="text" class="form-control" name="s_i" id="s_i" value="{{$perilaku->s_i}}" readonly></td>
                 </tr>
                 <tr>
                     <td>Komitmen</td>
                     <td>=</td>
-                    <td><input type="text" class="form-control" name="" /></td>
-                    <td>(BAIK)</td>
+                    <td><input type="text" class="form-control" name="n_k" id="n_k" value="{{$perilaku->n_k}}" readonly/></td>
+                    <td><input type="text" class="form-control" name="s_k" id="s_k" value="{{$perilaku->s_k}}" readonly></td>
                 </tr>
                 <tr>
                     <td>Disiplin</td>
                     <td>=</td>
-                    <td><input type="text" class="form-control" name="" /></td>
-                    <td>(BAIK)</td>
+                    <td><input type="text" class="form-control" name="n_d" id="n_d" value="{{$perilaku->n_d}}" readonly/></td>
+                    <td><input type="text" class="form-control" name="s_d" id="s_d" value="{{$perilaku->s_d}}" readonly></td>
                 </tr>
                 <tr>
                     <td>Kerjasama</td>
                     <td>=</td>
-                    <td><input type="text" class="form-control" name="" /></td>
-                    <td>(BAIK)</td>
+                    <td><input type="text" class="form-control" name="n_ks" id="n_ks" value="{{$perilaku->n_ks}}" readonly/></td>
+                    <td><input type="text" class="form-control" name="s_ks" id="s_ks" value="{{$perilaku->s_ks}}" readonly></td>
                 </tr>
                 <tr>
                     <td>Kepemimpinan</td>
                     <td>=</td>
-                    <td><input type="text" class="form-control" name="" /></td>
-                    <td>(BAIK)</td>
+                    <td><input type="text" class="form-control" name="n_kp" id="n_kp" value="{{$perilaku->n_kp}}" readonly/></td>
+                    <td><input type="text" class="form-control" name="s_kp" id="s_kp" value="{{$perilaku->s_kp}}" readonly></td>
                 </tr>
                 <tr>
                     <td>Jumlah</td>
                     <td>=</td>
-                    <td><input type="text" class="form-control" name="" /></td>
-                    <td>(BAIK)</td>
+                    <td><input type="text" class="form-control" name="n_jml" id="n_jml" value="{{$perilaku->n_jml}}" readonly/></td>
+                    <td><input type="hidden" class="form-control" name="s_jml" value="-"></td>
                 </tr>
                 <tr>
                     <td>Nilai Rata-rata</td>
                     <td>=</td>
-                    <td><input type="text" class="form-control" name="" /></td>
-                    <td>(BAIK)</td>
+                    <td><input type="text" class="form-control" name="n_rr" id="n_rr" value="{{$perilaku->n_rr}}" readonly/></td>
+                    <td><input type="text" class="form-control" name="s_rr" id="s_rr" value="{{$perilaku->s_rr}}" readonly></td>
                 </tr>
             </tr>
         </table>
-            <br>
-           <button type="submit" class="btn btn-primary col-md-12">Submit</button>
-    </form>   
+   
           </div>
         </div>
         <!-- End Panel Floating Labels -->
@@ -165,5 +146,25 @@
 @endsection
 
 @push('scripts')
+
+<script>
+    $(document).ready( function () {
+        var id_dinilai = $('#id_dinilai').val()
+        $.get('/listuser/'+ id_dinilai, function (data) {
+            console.log(data.nama_pegawai);
+            $('#nama-dinilai').text(data.nama_pegawai)
+        });
+
+        var id_penilai = $('#id_penilai').val()
+        $.get('/listuser/'+ id_penilai, function (data) {
+            console.log(data.nama_pegawai);
+            $('#nama-penilai').text(data.nama_pegawai)
+        });
+
+
+    })
+</script>
+
+
 
 @endpush

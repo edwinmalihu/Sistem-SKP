@@ -77,7 +77,7 @@
                     sebagai berikut :
                 </td>
                 <td style="text-align:center" colspan="5" rowspan="9">
-                <input type="text" name="id_skp" id="id_skp" value="{{$skp->id_data_skp}}">
+                <input type="hidden" name="id_skp" id="id_skp" value="{{$skp->id_data_skp}}">
                 <br><br><br><br><br><br><br><br><br><br>
                     DEKAN FAKULTAS TEKNIK
                     <input type="hidden" value="{{$skp->id_penilai}}" id="id_penilai"> 
