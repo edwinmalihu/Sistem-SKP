@@ -101,4 +101,10 @@ class PegawaiController extends Controller
         User::where('id', $id)->update($validated);
         return redirect('/tabelpegawai')->with('Success', 'Data Berhasil Di Ubah!');
     }
+
+    public function ListUser($id)
+    {
+        $data = User::find($id);
+        return response()->json($data);
+    }
 }

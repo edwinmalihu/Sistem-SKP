@@ -72,7 +72,7 @@
                       data-toggle="tooltip" data-original-title="Lihat Nilai Realisasi"><i class="icon wb-eye" aria-hidden="true"></i></a>
                       
                     <!-- Perilaku Kerja -->
-                    <a href="/formperilakukerja" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                    <a href="/formperilakukerja/{{$data->idData}}" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
                       data-toggle="tooltip" data-original-title="Tambah Perilaku Kerja"><i class="icon wb-plus" aria-hidden="true"></i></a>
                     <a href="/updateperilakukerja" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
                       data-toggle="tooltip" data-original-title="Edit Perilaku Kerja"><i class="icon wb-edit" aria-hidden="true"></i></a>

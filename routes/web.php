@@ -66,6 +66,7 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
     Route::get('/tabelpegawai', [PegawaiController::class, 'daftarPegawai'])->name('tabelpegawai');
     Route::get('/update/{id}/pegawai', [PegawaiController::class, 'updatePegawai'])->name('updatePegawai');
     Route::patch('/edit/{id}', [PegawaiController::class, 'actUpdate']);
+    Route::get('/listuser/{id}', [PegawaiController::class, 'ListUser']);
     
     // kegiatan
     Route::get('/formkegiatan', [KegiatanController::class, 'index'])->name('formkegiatan');
@@ -103,7 +104,8 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
     Route::get('/perhitunganskppdf/{id}', [PerhitunganSKPController::class, 'PDFPerhitungan'])->name('perhitunganskppdf');
 
     // SKP PERILAKU KERJA
-    Route::get('/formperilakukerja', [PerilakuKerjaController::class, 'index'])->name('formperilakukerja');
+    Route::get('/formperilakukerja/{id}', [PerilakuKerjaController::class, 'index'])->name('formperilakukerja');
+    Route::post('/action-perilaku', [PerilakuKerjaController::class, 'AddPerilaku']);
     Route::get('/updateperilakukerja', [PerilakuKerjaController::class, 'updatePerilakuKerja'])->name('updateperilakukerja');
     Route::get('/detail-perilakukerja', [PerilakuKerjaController::class, 'detailPerilakuKerja'])->name('detail-perilakukerja');
 
