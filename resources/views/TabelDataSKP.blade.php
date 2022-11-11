@@ -80,7 +80,7 @@
                       data-toggle="tooltip" data-original-title="Lihat Perilaku Kerja"><i class="icon wb-eye" aria-hidden="true"></i></a>
 
                     <!-- Penilaian Kerja -->
-                    <a href="/detailpenilaian" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
+                    <a href="/detailpenilaian/{{$data->idData}}" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
                       data-toggle="tooltip" data-original-title="Lihat Penilaian Kerja"><i class="icon wb-eye" aria-hidden="true"></i></a>
                 </td>
             </tr>

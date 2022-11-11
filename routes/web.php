@@ -111,6 +111,6 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
     Route::get('/detail-perilakukerja/{id}', [PerilakuKerjaController::class, 'detailPerilakuKerja'])->name('detail-perilakukerja');
 
     // PENILAIAN
-    Route::get('/detailpenilaian', [PenilaianController::class, 'detailPenilaian'])->name('detailpenilaian');
+    Route::get('/detailpenilaian/{id}', [PenilaianController::class, 'detailPenilaian'])->name('detailpenilaian');
 
     // });

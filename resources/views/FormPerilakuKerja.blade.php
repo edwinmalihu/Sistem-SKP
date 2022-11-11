@@ -72,7 +72,7 @@
                 <td style="text-align:center" rowspan="9">{{$skp->semester}} {{$skp->tahun}}</td>
                 <td colspan="4">
                     Penilaian SKP sampai dengan akhir Desember 2016 = 
-                    NILAI DARI PERHITUNGAN VERTIKAL <br>
+                    {{$nilai_r->tnr}} <br>
                     sedangkan penilaian perilaku kerjanya adalah <br>
                     sebagai berikut :
                 </td>

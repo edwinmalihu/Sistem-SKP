@@ -53,7 +53,7 @@
                         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                     </td>
-                    <td style="text-align:right">JANGKA WAKTU PENILAIAN <br> GET JANGKA WAKTU </td>                  
+                    <td style="text-align:right">JANGKA WAKTU PENILAIAN <br> {{$skp->semester}} {{$skp->tahun}} </td>                  
                 </tr>
             </table>
             <br>
@@ -67,24 +67,25 @@
                 </tr>
                 <tr>
                     <td rowspan="5"></td>
+                    <input type="hidden" value="{{$skp->id_dinilai}}" id="id_dinilai">
                     <td>a. NAMA</td>
-                    <td colspan="3">Nama Dosen</td>
+                    <td colspan="3" id="nama-dinilai"></td>
                 </tr>
                 <tr>
-                    <td>b. NIK</td>
-                    <td colspan="3">NIK Dosen</td>
+                    <td>b. NIP</td>
+                    <td colspan="3" id="nip-dinilai"></td>
                 </tr>
                 <tr>
                     <td>c. Pangkat/Gol. Ruang</td>
-                    <td colspan="3">Pangkat/Gol Dosen</td>
+                    <td colspan="3" id="pangkat-dinilai"></td>
                 </tr>
                 <tr>
                     <td>d. Jabatan</td>
-                    <td colspan="3">Jabatan Dosen</td>
+                    <td colspan="3" id="jabatan-dinilai"></td>
                 </tr>
                 <tr>
                     <td>e. Unit Kerja</td>
-                    <td colspan="3">Unit Kerja Dosen</td>
+                    <td colspan="3" id="unit-dinilai"></td>
                 </tr>
 
                 <!-- PEJABAT PENILAI -->
@@ -94,24 +95,25 @@
                 </tr>
                 <tr>
                     <td rowspan="5"></td>
+                    <input type="hidden" value="{{$skp->id_penilai}}" id="id_penilai">
                     <td>a. NAMA</td>
-                    <td colspan="3">Nama Dosen</td>
+                    <td colspan="3" id="nama-penilai"></td>
                 </tr>
                 <tr>
                     <td>b. NIP/NIK</td>
-                    <td colspan="3">NIK Dosen</td>
+                    <td colspan="3" id="nip-penilai"></td>
                 </tr>
                 <tr>
                     <td>c. Pangkat/Gol. Ruang</td>
-                    <td colspan="3">Pangkat/Gol Dosen</td>
+                    <td colspan="3" id="pangkat-penilai"></td>
                 </tr>
                 <tr>
                     <td>d. Jabatan</td>
-                    <td colspan="3">Jabatan Dosen</td>
+                    <td colspan="3" id="jabatan-penilai"></td>
                 </tr>
                 <tr>
                     <td>e. Unit Kerja</td>
-                    <td colspan="3">Unit Kerja Dosen</td>
+                    <td colspan="3" id="unit-penilai"></td>
                 </tr>
                 <tr>
                     <td style=" text-align: center;">3</td>
@@ -119,24 +121,25 @@
                 </tr>
                 <tr>
                     <td rowspan="5"></td>
+                    <input type="hidden" value="{{$skp->id_app}}" id="id_app">
                     <td>a. NAMA</td>
-                    <td colspan="3">Nama Dosen</td>
+                    <td colspan="3" id="nama-app"></td>
                 </tr>
                 <tr>
                     <td>b. NIP/NIK</td>
-                    <td colspan="3">NIK Dosen</td>
+                    <td colspan="3" id="nip-app"></td>
                 </tr>
                 <tr>
                     <td>c. Pangkat/Gol. Ruang</td>
-                    <td colspan="3">Pangkat/Gol Dosen</td>
+                    <td colspan="3" id="pangkat-app"></td>
                 </tr>
                 <tr>
                     <td>d. Jabatan</td>
-                    <td colspan="3">Jabatan Dosen</td>
+                    <td colspan="3" id="jabatan-app"></td>
                 </tr>
                 <tr>
                     <td>e. Unit Kerja</td>
-                    <td colspan="3">Unit Kerja Dosen</td>
+                    <td colspan="3" id="unit-app"></td>
                 </tr>
 
                 <!-- UNSUR YANG DINILAI -->
@@ -148,65 +151,67 @@
                 <tr>
                     <td colspan="2" >a. Sasaran Kerja Pegawai (SKP)</td>
                     <td style="text-align:right"> NILAI </td>
+                    <input type="hidden" id="tnr" value="{{$nilai_r->tnr}}">
                     <td>x 60%</td>
-                    <td>Nilai SKP * 0,06 </td>
+                    <td id="labal-tnr"></td>
                 </tr>
                 <tr>
                     <td rowspan="10" style="text-align:center">b. Perilaku Kerja</td>
                 </tr>
                 <tr>
                     <td>1. Orientasi Pelayanan</td>
-                    <td style="text-align:center">NILAI</td>
-                    <td style="text-align:center">(Baik)</td>
+                    <td style="text-align:center">{{$perilaku->n_op}}</td>
+                    <td style="text-align:center">{{$perilaku->s_op}}</td>
                     <td rowspan="8"></td>
                 </tr>
                 <tr>
                     <td>2. Integritas</td>
-                    <td style="text-align:center">NILAI</td>
-                    <td style="text-align:center">(Baik)</td>
+                    <td style="text-align:center">{{$perilaku->n_i}}</td>
+                    <td style="text-align:center">{{$perilaku->s_i}}</td>
                 </tr>
                 <tr>
                     <td>3. Komitmen</td>
-                    <td style="text-align:center">NILAI</td>
-                    <td style="text-align:center">(Baik)</td>
+                    <<td style="text-align:center">{{$perilaku->n_k}}</td>
+                    <td style="text-align:center">{{$perilaku->s_k}}</td>
                 </tr>
                 <tr>
                     <td>4. Disiplin</td>
-                    <td style="text-align:center">NILAI</td>
-                    <td style="text-align:center">(Baik)</td>
+                    <td style="text-align:center">{{$perilaku->n_d}}</td>
+                    <td style="text-align:center">{{$perilaku->s_d}}</td>
                 </tr>
                 <tr>
                     <td>5. Kerjasama</td>
-                    <td style="text-align:center">NILAI</td>
-                    <td style="text-align:center">(Baik)</td>
+                    <td style="text-align:center">{{$perilaku->n_ks}}</td>
+                    <td style="text-align:center">{{$perilaku->s_ks}}</td>
                 </tr>
                 <tr>
                     <td>6. Kepemimpinan</td>
-                    <td style="text-align:center">NILAI</td>
-                    <td style="text-align:center">(Baik)</td>
+                    <td style="text-align:center">{{$perilaku->n_kp}}</td>
+                    <td style="text-align:center">{{$perilaku->s_kp}}</td>
                 </tr>
                 <tr>
                     <td>Jumlah</td>
-                    <td>NILAI</td>
+                    <td style="text-align:center">{{$perilaku->n_jml}}</td>
                     <td></td>
                 </tr>
                 <tr>
                     <td>Nilai Rata-rata</td>
-                    <td style="text-align:center">NILAI</td>
-                    <td style="text-align:center">(Baik)</td>
+                    <input type="hidden" id="n_rr" value="{{$perilaku->n_rr}}">
+                    <td style="text-align:center">{{$perilaku->n_rr}}</td>
+                    <td style="text-align:center">{{$perilaku->s_rr}}</td>
                 </tr>
                 <tr>
                     <td>Nilai Perilaku Kerja</td>
                     <td  style="text-align:right">NILAI</td>
                     <td>x 40%</td>
-                    <td style="text-align:center">NILAI PERILAKU KERJA * 0,04</td>
+                    <td style="text-align:center" id="nilai_perilaku"></td>
                 </tr>
                 <tr>
                     <td colspan="4" rowspan="2" style="text-align:center">NILAI PRESTASI KERJA</td>
-                    <td style="text-align:center">NILAI</td>
+                    <td style="text-align:center" id="nilai_prestasi">NILAI</td>
                 </tr>
                 <tr>
-                    <td style="text-align:center">(Sangat Baik)</td>
+                    <td style="text-align:center" id="label_prestasi">(Sangat Baik)</td>
                 </tr>
                 <tr>
                     <td colspan="5">5. KEBERATAN DARI PEGAWAI NEGERI SIPIL
@@ -260,8 +265,8 @@
                         <br>
                         <br>
                         <br>
-                        <p style="text-align:right">NAMA PEJABAT PENILAI</p>  
-                        <p style="text-align:right">NIP PEJABAT PENILAI</p>         
+                        <p style="text-align:right" id="nama-pp"></p>  
+                        <p style="text-align:right" id="nip-pp"></p>         
                     </td>
                 </tr>
                 <tr>       
@@ -274,8 +279,8 @@
                         <br>
                         <br>
                         <br>
-                        <p style="text-align:left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NAMA PNS DINILAI</p>  
-                        <p style="text-align:left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NIP PNS DINILAI</p>         
+                        <p style="text-align:left" id="nama-dn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>  
+                        <p style="text-align:left" id="nip-dn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>         
                     </td> 
                 </tr>
                 <tr>       
@@ -287,8 +292,8 @@
                         <br>
                         <br>
                         <br>
-                        <p style="text-align:right">&nbsp;&nbsp;NAMA ATASAN PEJABAT YANG MENILAI	</p>  
-                        <p style="text-align:right">&nbsp;&nbsp; NIP ATASAN PEJABAT YANG MENILAI	</p>         
+                        <p style="text-align:right" id="nama-ap"></p>  
+                        <p style="text-align:right" id="nip-ap"></p>         
                     </td> 
                 </tr>
             </table>
@@ -306,5 +311,85 @@
 @endsection
 
 @push('scripts')
+<script>
+  $(document).ready( function () {
+    
+    var buruk = 50
+    var sedang = 60
+    var cukup = 75  
+    var baik = 90
+    var good = 91
 
+    var id = $('#id_dinilai').val()
+    console.log(id);
+    $.get('/skpform/'+ id, function (data) {
+        $('#nama-dinilai').text(data[0].nama_pegawai)
+        $('#nip-dinilai').text(data[0].nip_pegawai)
+        $('#pangkat-dinilai').text(data[0].jenis_pangkat_golongan)
+        $('#jabatan-dinilai').text(data[0].jenis_jabatan)
+        $('#unit-dinilai').text(data[0].nama_units_kerja)
+        $('#nama-dn').text(data[0].nama_pegawai);
+        $('#nip-dn').text(data[0].nip_pegawai)
+    });
+
+    
+    var id_penilai = $('#id_penilai').val()
+    console.log(id_penilai);
+    $.get('/skpform/'+ id_penilai, function (data) {
+        $('#nama-penilai').text(data[0].nama_pegawai);
+        $('#nip-penilai').text(data[0].nip_pegawai)
+        $('#pangkat-penilai').text(data[0].jenis_pangkat_golongan)
+        $('#jabatan-penilai').text(data[0].jenis_jabatan)
+        $('#unit-penilai').text(data[0].nama_units_kerja)
+        $('#nama-pp').text(data[0].nama_pegawai);
+        $('#nip-pp').text(data[0].nip_pegawai)
+    });
+
+    
+    var id_app = $('#id_app').val()
+    console.log(id_app);
+    $.get('/skpform/'+ id_app, function (data) {
+        $('#nama-app').text(data[0].nama_pegawai);
+        $('#nip-app').text(data[0].nip_pegawai)
+        $('#pangkat-app').text(data[0].jenis_pangkat_golongan)
+        $('#jabatan-app').text(data[0].jenis_jabatan)
+        $('#unit-app').text(data[0].nama_units_kerja)
+        $('#nama-ap').text(data[0].nama_pegawai);
+        $('#nip-ap').text(data[0].nip_pegawai)
+    });
+    
+    var nilai_tnr = $('#tnr').val() * 1
+    var total = nilai_tnr * 0.06
+    $('#labal-tnr').text(total.toFixed(2));
+
+    var nilai_rr = $('#n_rr').val() * 1
+    var nilai_perilaku = nilai_rr * 0.04
+    $('#nilai_perilaku').text(nilai_perilaku.toFixed(2));
+
+    var nilai_prestasi = total + nilai_perilaku
+    $('#nilai_prestasi').text(nilai_prestasi.toFixed(2));
+
+    
+    if(nilai_prestasi <= buruk){
+        $('#label_prestasi').text("Buruk");
+    }
+    else if(nilai_prestasi <= sedang){
+        $('#label_prestasi').text("Sedang");
+    }
+    else if (nilai_prestasi <= cukup){
+        $('#label_prestasi').text("Cukup");
+    }
+    else if (nilai_prestasi <= baik){
+        $('#label_prestasi').text("Baik");
+    }
+    else if (nilai_prestasi >= good){
+        $('#label_prestasi').text("Sangat Baik");
+    }
+    else{
+        $('#label_prestasi').text("");
+    }
+
+
+  });
+</script>
 @endpush
