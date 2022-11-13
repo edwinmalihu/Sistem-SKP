@@ -214,29 +214,6 @@
                     <td><input type="hidden" name="id_upp" id="id_upp">
                   <p id="label-id-upp"></p></td>
                 </tr>
-                <!-- <tr>
-                    <td></td>
-                    <td>Periode</td>
-                    <td style="text-align: center;">:</td>
-                    <td>
-                      <select class="form-control" name="semester">
-                        <option value="Januari - Desember">Januari - Desember</option>
-                        <option value="Januari - Juni">Januari - Juni</option>
-                        <option value="Juli - Desember">Juli - Desember</option>
-                      </select>
-                    </td>
-                </tr> -->
-                <!-- <tr>
-                    <td></td>
-                    <td>Tahun</td>
-                    <td style="text-align: center;">:</td>
-                    <td>
-                      <select class="form-control" name="tahun">
-                        <option value="2021">2021</option>
-                        <option value="2022">2022</option>
-                      </select>
-                    </td>
-                </tr> -->
             </table>
             <br>
            <button type="submit" class="btn btn-primary col-md-12">Submit</button>

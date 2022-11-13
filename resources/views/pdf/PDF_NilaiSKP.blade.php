@@ -1,9 +1,6 @@
+@extends('pdf.pdf')
+@section('container')
 <div class="col-md-12">
-        <!-- Panel Floating Labels -->
-        <div class="text-right">
-          <button type="submit" class="btn btn-primary col-md-1 wb-download"> PDF</button>   
-        </div>
-        <br>
         <div class="panel">
           <div class="panel-heading">
             <h3 class="panel-title" style="text-align:center">FORMULIR SASARAN KERJA </br> PEGAWAI UNMUS</h3>
@@ -303,3 +300,134 @@
         <!-- End Panel Floating Labels -->
       </div>
     </div>
+    @endsection
+    @push('scripts')
+<script>
+    
+      var id = $('#id_dinilai').attr('value')
+      $.get('/skpform/'+ id, function (data) {
+            $('#label-nip').text(data[0].nip_pegawai)
+            $('#label-nad').text(data[0].nama_pegawai)
+            $('#label-golongan').text(data[0].jenis_pangkat_golongan)
+            $('#label-jabatan').text(data[0].jenis_jabatan)
+            $('#label-unit').text(data[0].nama_units_kerja)
+          });
+
+
+    
+      var id_penilai = $('#id_penilai').attr('value')
+    //   console.log(id_penilai);
+      $.get('/skpform/'+ id_penilai, function (data) {
+            $('#label-nape').text(data[0].nama_pegawai)
+            $('#label-nip-penilai').text(data[0].nip_pegawai)
+            $('#label-id-gope').text(data[0].jenis_pangkat_golongan)
+            $('#label-id-jape').text(data[0].jenis_jabatan)
+            $('#label-id-upe').text(data[0].nama_units_kerja)
+          });
+
+    var id_ka = $('#id_ka').attr('value')
+    $.get('/listkegiatan/'+ id_ka, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#lebel-k-a').text(data.nama_kegiatan)
+    });
+    
+    var id_kb = $('#id_kb').attr('value')
+    $.get('/listkegiatan/'+ id_kb, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-b').text(data.nama_kegiatan)
+    });
+
+    var id_kc = $('#id_kc').attr('value')
+    $.get('/listkegiatan/'+ id_kc, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-c').text(data.nama_kegiatan)
+    });
+
+    var id_kd = $('#id_kd').attr('value')
+    $.get('/listkegiatan/'+ id_kd, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-d').text(data.nama_kegiatan)
+    });
+
+    var id_ke = $('#id_ke').attr('value')
+    $.get('/listkegiatan/'+ id_ke, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-e').text(data.nama_kegiatan)
+    });
+
+    var id_kf = $('#id_kf').attr('value')
+    $.get('/listkegiatan/'+ id_kf, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-f').text(data.nama_kegiatan)
+    });
+
+    var id_kg = $('#id_kg').attr('value')
+    $.get('/listkegiatan/'+ id_kg, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-g').text(data.nama_kegiatan)
+    });
+    
+    var id_kh = $('#id_kh').attr('value')
+    $.get('/listkegiatan/'+ id_kh, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-h').text(data.nama_kegiatan)
+    });
+
+    var id_ki = $('#id_ki').attr('value')
+    $.get('/listkegiatan/'+ id_ki, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-i').text(data.nama_kegiatan)
+    });
+
+    var id_kj = $('#id_kj').attr('value')
+    $.get('/listkegiatan/'+ id_kj, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-j').text(data.nama_kegiatan)
+    });
+
+    var id_kk = $('#id_kk').attr('value')
+    $.get('/listkegiatan/'+ id_kk, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-k').text(data.nama_kegiatan)
+    });
+
+    var id_kl = $('#id_kl').attr('value')
+    $.get('/listkegiatan/'+ id_kl, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-l').text(data.nama_kegiatan)
+    });
+
+    var id_km = $('#id_km').attr('value')
+    $.get('/listkegiatan/'+ id_km, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-m').text(data.nama_kegiatan)
+    });
+
+    var id_kn = $('#id_kn').attr('value')
+    $.get('/listkegiatan/'+ id_kn, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-n').text(data.nama_kegiatan)
+    });
+
+    var id_ko = $('#id_ko').attr('value')
+    $.get('/listkegiatan/'+ id_ko, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-o').text(data.nama_kegiatan)
+    });
+
+    var id_kp = $('#id_kp').attr('value')
+    $.get('/listkegiatan/'+ id_kp, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#label-k-p').text(data.nama_kegiatan)
+    });
+
+    function printData(){
+	window.print();
+    }
+
+    setTimeout(printData, 9000);
+    
+
+
+</script>
+@endpush

@@ -28,45 +28,11 @@
   
   <div class="page-content container-fluid">
         <div class="row">
-          
-        <!-- <div class="col-md-12"> -->
-            <!-- Panel Floating Labels -->
-            <!-- <div class="panel">
-              <div class="panel-body container-fluid">
-                <table>
-                    <tr>
-                        <td>PERIODE</td>
-                        <td> : </td>
-                        <td>
-                            <select class="form-control" id="" name="">
-                                <option value="Januari - Desember">Januari - Desember</option>
-                                <option value="Januari - Juni">Januari - Juni</option>
-                                <option value="Juli - Desember">Juli - Desember</option>
-                            </select>
-                        </td>
-                        <td>&nbsp</td>
-                        <td>&nbsp</td>
-                        <td>&nbsp</td>
-                        <td>TAHUN</td>
-                        <td> : </td>
-                        <td>
-                            <select class="form-control" id="" name="">
-                                <option value="">2020</option>
-                                <option value="">2021</option>
-                                <option value="">2022</option>
-                            </select>
-                        </td>
-                    </tr>
-                </table>
-              </div>
-            </div> -->
-            <!-- End Panel Floating Labels -->
-          <!-- </div> -->
       
     <div class="col-md-12">
         <!-- Panel Floating Labels -->
         <div class="text-right">
-          <button type="submit" class="btn btn-primary col-md-1 wb-download"> PDF</button>   
+        <a href="/pdf-nilai-skp/{{$skp->id_data_skp}}" target="_blank" class="btn btn-primary col-md-1 wb-download"> PDF</a>   
         </div>
         <br>
         <div class="panel">

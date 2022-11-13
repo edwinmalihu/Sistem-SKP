@@ -7,6 +7,7 @@ use App\Models\Kegiatan;
 use App\Models\DataSKP;
 use App\Models\NilaiSKP;
 use App\Models\NilaiTarget;
+use PDF;
 
 class NilaiSKPController extends Controller
 {
@@ -337,8 +338,28 @@ class NilaiSKPController extends Controller
         ]);
     }
 
-    public function pdfNilaiSKP(){
-        return view('pdf_nilaiskp');
+    public function pdfNilaiSKP($id){
+        $skp = DataSKP::find($id);
+        $nilai = NilaiTarget::where('id_skpnt', $id)->first();
+
+        return view('pdf.pdf_nilaiskp', [
+            'skp' => $skp,
+            'nilai' => $nilai
+        ]);
     }
+
+    // public function pdfNilaiSKP($id){
+    //     $skp = DataSKP::find($id);
+    //     $nilai = NilaiTarget::where('id_skpnt', $id)->first();
+
+    //     $all = [
+    //         'skp' => $skp,
+    //         'nilai' => $nilai
+    //     ];
+
+    //     $pdf = PDF::loadView('pdf.pdf_nilaiskp', $all);
+     
+    //     return $pdf->download('Data-Nilai-Target.pdf');
+    // }
 
 }

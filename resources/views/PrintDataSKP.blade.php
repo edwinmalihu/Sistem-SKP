@@ -11,7 +11,8 @@
         <!-- Panel Floating Labels -->
 
         <div class="text-right">
-          <button type="submit" class="btn btn-primary col-md-1 wb-download"> PDF</button>   
+          
+          <a href="/pdfdataskp/{{$data[0]->id_data_skp}}" class="btn btn-primary col-md-1 wb-download">PDF </a>
         </div>
         <br>
 

@@ -1,13 +1,10 @@
+@extends('pdf.pdf')
+@section('container')
 <div class="page-content container-fluid">
     <div class="row">
       
     <div class="col-md-12">
         <!-- Panel Floating Labels -->
-
-        <div class="text-right">
-          <button type="submit" class="btn btn-primary col-md-1 wb-download"> PDF</button>   
-        </div>
-        <br>
 
         <div class="panel">
           <div class="panel-heading">
@@ -124,3 +121,4 @@
       </div>
     </div>
   </div>
+  @endsection

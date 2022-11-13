@@ -9,6 +9,7 @@ use App\Models\Jabatan;
 use App\Models\Unit;
 use App\Models\Pangkat;
 use Illuminate\Http\Response;
+use PDF;
 
 class SKPController extends Controller
 {
@@ -152,8 +153,33 @@ class SKPController extends Controller
             'data' => $data,
             'list' => $list_dosen
         ]);
-        
 
+    }
+
+    public function PrintSKP($id)
+    {
+        $data = DataSKP::join('users as dinilai', 'dinilai.id', '=', 'data_skp.id_dinilai')
+        ->join('users as penilai', 'penilai.id', '=', 'data_skp.id_penilai')
+        ->join('users as pejabat', 'pejabat.id', '=', 'data_skp.id_app')
+        ->join('pangkat_golongan as godi', 'godi.id_pangkat_golongan', '=', 'data_skp.id_godi')
+        ->join('pangkat_golongan as gope', 'gope.id_pangkat_golongan', '=', 'data_skp.id_gope')
+        ->join('pangkat_golongan as gpp', 'gpp.id_pangkat_golongan', '=', 'data_skp.id_gpp')
+        ->join('jabatan as jadi', 'jadi.id_jabatan', '=', 'data_skp.id_jadi')
+        ->join('jabatan as jape', 'jape.id_jabatan', '=', 'data_skp.id_jape')
+        ->join('jabatan as jpp', 'jpp.id_jabatan', '=', 'data_skp.id_jpp')
+        ->join('units as udi', 'udi.id_units', '=', 'data_skp.id_udi')
+        ->join('units as upe', 'upe.id_units', '=', 'data_skp.id_upe')
+        ->join('units as upp', 'upp.id_units', '=', 'data_skp.id_upp')
+        ->where('data_skp.id_data_skp', $id)
+        ->get(['data_skp.*', 'dinilai.nama_pegawai as nama_dinilai', 'penilai.nama_pegawai as nama_penilai', 'pejabat.nama_pegawai as nama_pejabat', 'godi.jenis_pangkat_golongan as jenis_godi', 'jadi.jenis_jabatan as jenis_jadi', 'udi.nama_units_kerja as jenis_udi','gope.jenis_pangkat_golongan as gope', 'gpp.jenis_pangkat_golongan as jenis_gpp', 'jape.jenis_jabatan as jenis_jape', 'jpp.jenis_jabatan as jenis_jpp', 'upe.nama_units_kerja as jenis_upe', 'upp.nama_units_kerja as jenis_upp']);
+
+        $all = [
+            'data' => $data
+        ];
+
+        $pdf = PDF::loadView('pdf.DataSkpPDF', $all);
+     
+        return $pdf->download('Data-SKP.pdf');
     }
 
 }
