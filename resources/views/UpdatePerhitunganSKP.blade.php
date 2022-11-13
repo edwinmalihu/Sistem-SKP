@@ -1816,7 +1816,25 @@
     }else{
         m = 0
     }
-    var sumNilai = a+b+c+d+e+f+g+h+i+j+k+l+m
+        // -----------------
+        if (nilaikun != 0){
+        var n = 1
+    }else{
+        n = 0
+    }
+    // --------------------
+    if (nilaikuo != 0){
+        var o = 1
+    }else{
+        o = 0
+    }
+    // --------------------
+    if (nilaikup != 0){
+        var p = 1
+    }else{
+        p = 0
+    }
+    var sumNilai = a+b+c+d+e+f+g+h+i+j+k+l+m+n+o+p
     console.log("ini nilai Sum Nilai : " + sumNilai);
 
     // ===========================================================

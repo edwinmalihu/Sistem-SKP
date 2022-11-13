@@ -95,6 +95,7 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
     Route::post('/createNilai', [NilaiSKPController::class, 'createNilai']);
     Route::patch('/update-nilai/{id}', [NilaiSKPController::class, 'ActionUpdate']);
 
+
     // SKP PERHITUNGAN
     Route::get('/formperhitunganskp/{id}', [PerhitunganSKPController::class, 'index'])->name('formperhitunganskp');
     Route::post( '/add-realisasi', [PerhitunganSKPController::class, 'add']);
@@ -112,5 +113,10 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
 
     // PENILAIAN
     Route::get('/detailpenilaian/{id}', [PenilaianController::class, 'detailPenilaian'])->name('detailpenilaian');
+
+    // PDF BARU
+    Route::get('/pdfnilaiskp', [NilaiSKPController::class, 'pdfNilaiSKP'])->name('pdfnilaiskp');
+    Route::get('/pdfperilakukerja', [PerilakuKerjaController::class, 'pdfPerilakuKerja'])->name('pdfperilakukerja');
+    Route::get('/pdfpenilaiankerja', [PenilaianController::class, 'pdfPenilaianKerja'])->name('pdfpenilaiankerja');
 
     // });

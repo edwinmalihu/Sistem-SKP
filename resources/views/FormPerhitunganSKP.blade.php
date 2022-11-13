@@ -1841,7 +1841,9 @@
         var sb = "Sangat Baik"
 
         // console.log(skp_1);
-            
+        // console.log("ini nilai skp 14c : " + skp_14);
+        // console.log("ini nilai skp 15c : " + skp_15);
+        // console.log("ini nilai skp 16c : " + skp_16);
         var sumSKP = skp_1+skp_2+skp_3+skp_4+skp_5+skp_6+skp_7+skp_8+skp_9+skp_10+skp_11+skp_12+skp_13+skp_14+skp_15+skp_16
         console.log("ini adalah nilai SUM SKP : " +sumSKP);
         var sumNilaiTambahan = dnta+dntb

@@ -337,4 +337,8 @@ class NilaiSKPController extends Controller
         ]);
     }
 
+    public function pdfNilaiSKP(){
+        return view('pdf_nilaiskp');
+    }
+
 }

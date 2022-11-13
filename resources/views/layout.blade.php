@@ -67,10 +67,10 @@
           <i class="icon wb-more-horizontal" aria-hidden="true"></i>
         </button>
         <a class="navbar-brand navbar-brand-center" href="../index.html">
-          <img class="navbar-brand-logo navbar-brand-logo-normal" src="{{asset('classic/topbar/assets/images/logo.png')}}"
-            title="Remark">
-          <img class="navbar-brand-logo navbar-brand-logo-special" src="{{asset('classic/topbar/assets/images/logo-colored.png')}}"
-            title="Remark">
+          <img class="navbar-brand-logo navbar-brand-logo-normal" src="{{asset('classic/topbar/assets/images/unmus.png')}}"
+            title="Universitas Musamus">
+          <img class="navbar-brand-logo navbar-brand-logo-special" src="{{asset('classic/topbar/assets/images/unmus.png')}}"
+            title="Universitas Musamus">
           <span class="navbar-brand-text hidden-xs-down"> Universitas Musamus</span>
         </a>
         <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search"

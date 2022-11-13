@@ -77,4 +77,9 @@ class PerilakuKerjaController extends Controller
             'perilaku' => $perilaku
         ]);
     }
+
+    public function pdfPerilakuKerja()
+    {
+        return view('pdf_perilakukerja');
+    }
 }

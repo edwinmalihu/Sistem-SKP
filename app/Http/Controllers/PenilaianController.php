@@ -22,4 +22,9 @@ class PenilaianController extends Controller
             'perilaku' => $perilaku
         ]);
     }
+
+    public function pdfPenilaianKerja()
+    {
+        return view('pdf_penilaiankerja');
+    }
 }
