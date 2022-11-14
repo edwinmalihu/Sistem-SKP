@@ -4,8 +4,7 @@
     <div class="col-md-12">
         <!-- Panel Floating Labels -->
 
-        <div class="text-right">
-          <button type="submit" class="btn btn-primary col-md-1 wb-download"> PDF</button>   
+        <div class="text-right">  
         </div>
         <br>
 
