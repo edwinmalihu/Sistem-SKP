@@ -4,11 +4,11 @@
 <!-- Page -->
 <div class="page">
   <div class="page-header">
-    <h1 class="page-title">Form Perilaku Kerja</h1>
+    <h1 class="page-title">Detail Perilaku Kerja</h1>
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
       <li class="breadcrumb-item"><a href="javascript:void(0)">Kategori</a></li>
-      <li class="breadcrumb-item active">Tambah Perilaku Kerja</li>
+      <li class="breadcrumb-item active">Detail Perilaku Kerja</li>
     </ol>
   </div>
 
@@ -17,6 +17,10 @@
       
         <div class="col-md-12">
             <!-- Panel Floating Labels -->
+            <div class="text-right">
+                <a href="" target="_blank" class="btn btn-primary col-md-1 wb-print"> PRINT</a>   
+            </div>
+            <br>
             <div class="panel">
             <div class="panel-heading">
                 <h3 class="panel-title" style="text-align:center">BUKU CATATAN PENILAIAN PERILAKU PEGAWAI UNMUS</h3>

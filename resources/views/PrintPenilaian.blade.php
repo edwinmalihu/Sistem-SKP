@@ -32,7 +32,7 @@
         <div class="col-md-12">
             <!-- Panel Floating Labels -->
             <div class="text-right">
-            <a href="/pdfpenilaiankerja/{{$skp->id_data_skp}}" target="_blank" class="btn btn-primary col-md-1 wb-download"> PDF</a>   
+            <a href="/pdfpenilaiankerja/{{$skp->id_data_skp}}" target="_blank" class="btn btn-primary col-md-1 wb-print"> PRINT </a>   
             </div>
             <br>
             <div class="panel">
