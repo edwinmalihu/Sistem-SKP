@@ -42,7 +42,7 @@
 
           <div class="panel-body container-fluid">
           <h5>Jangka Waktu Penilaian</h5>
-          <h5>{{$periode->periode}} {{$periode->tahun}}</h5>
+          <h5>{{$skp->semester}} {{$skp->tahun}}</h5>
                     <table border="1" class="table table-striped table-bordered">
                         <tr>
                             <td rowspan="2" style="font-weight:bold">NO</td>
@@ -374,7 +374,7 @@
                             <td align="center">14</td>
                             <td align="center" colspan="2">
                             <input type="hidden" value="{{$nilai->id_kn}}" id="id_kn" name="id_kn">
-                                <p id="lebel-k-j"></p>
+                                <p id="lebel-k-n"></p>
                             </td>
                             <td align="center">{{$nilai->akn}}</td>
                             <td align="center">{{$nilai->kun}}</td>
@@ -491,9 +491,8 @@
 
                         <tr>
                             <td rowspan="2" colspan="14" align="center" style="font-weight:bold">Nilai Capaian SKP</td>
-                            <td>{{$realisasi->tnr}}<br> (BELUM TERISI)</td>                        
+                            <td>{{$realisasi->tnr}}<br> {{$realisasi->snr}}</td>                        
                         </tr>
-                        <tr>sadsa</tr>   
                     </table>
             <br>
            <!-- <button type="submit" class="btn btn-primary col-md-12">Submit</button> -->
@@ -512,82 +511,100 @@
   $(document).ready( function () {
     
 
-    var id_ka = $('#id_ka').attr('value')
+    var id_ka = $('#id_ka').val()
     $.get('/listkegiatan/'+ id_ka, function (data) {
         console.log(data.nama_kegiatan);
             $('#lebel-k-a').text(data.nama_kegiatan)
     });
     
-    var id_kb = $('#id_kb').attr('value')
+    var id_kb = $('#id_kb').val()
     $.get('/listkegiatan/'+ id_kb, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-b').text(data.nama_kegiatan)
+            $('#lebel-k-b').text(data.nama_kegiatan)
     });
 
-    var id_kc = $('#id_kc').attr('value')
+    var id_kc = $('#id_kc').val()
     $.get('/listkegiatan/'+ id_kc, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-c').text(data.nama_kegiatan)
+            $('#lebel-k-c').text(data.nama_kegiatan)
     });
 
-    var id_kd = $('#id_kd').attr('value')
+    var id_kd = $('#id_kd').val()
     $.get('/listkegiatan/'+ id_kd, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-d').text(data.nama_kegiatan)
+            $('#lebel-k-d').text(data.nama_kegiatan)
     });
 
-    var id_ke = $('#id_ke').attr('value')
+    var id_ke = $('#id_ke').val()
     $.get('/listkegiatan/'+ id_ke, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-e').text(data.nama_kegiatan)
+            $('#lebel-k-e').text(data.nama_kegiatan)
     });
 
-    var id_kf = $('#id_kf').attr('value')
+    var id_kf = $('#id_kf').val()
     $.get('/listkegiatan/'+ id_kf, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-f').text(data.nama_kegiatan)
+            $('#lebel-k-f').text(data.nama_kegiatan)
     });
 
-    var id_kg = $('#id_kg').attr('value')
+    var id_kg = $('#id_kg').val()
     $.get('/listkegiatan/'+ id_kg, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-g').text(data.nama_kegiatan)
+            $('#lebel-k-g').text(data.nama_kegiatan)
     });
     
-    var id_kh = $('#id_kh').attr('value')
+    var id_kh = $('#id_kh').val()
     $.get('/listkegiatan/'+ id_kh, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-h').text(data.nama_kegiatan)
+            $('#lebel-k-h').text(data.nama_kegiatan)
     });
 
-    var id_ki = $('#id_ki').attr('value')
+    var id_ki = $('#id_ki').val()
     $.get('/listkegiatan/'+ id_ki, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-i').text(data.nama_kegiatan)
+            $('#lebel-k-i').text(data.nama_kegiatan)
     });
 
-    var id_kj = $('#id_kj').attr('value')
+    var id_kj = $('#id_kj').val()
     $.get('/listkegiatan/'+ id_kj, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-j').text(data.nama_kegiatan)
+            $('#lebel-k-j').text(data.nama_kegiatan)
     });
 
-    var id_kk = $('#id_kk').attr('value')
+    var id_kk = $('#id_kk').val()
     $.get('/listkegiatan/'+ id_kk, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-k').text(data.nama_kegiatan)
+            $('#lebel-k-k').text(data.nama_kegiatan)
     });
 
-    var id_kl = $('#id_kl').attr('value')
+    var id_kl = $('#id_kl').val()
     $.get('/listkegiatan/'+ id_kl, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-l').text(data.nama_kegiatan)
+            $('#lebel-k-l').text(data.nama_kegiatan)
     });
 
-    var id_km = $('#id_km').attr('value')
+    var id_km = $('#id_km').val()
     $.get('/listkegiatan/'+ id_km, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-m').text(data.nama_kegiatan)
+            $('#lebel-k-m').text(data.nama_kegiatan)
+    });
+
+    var id_ko = $('#id_ko').val()
+    $.get('/listkegiatan/'+ id_ko, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#lebel-k-o').text(data.nama_kegiatan)
+    });
+
+    var id_kn = $('#id_kn').val()
+    $.get('/listkegiatan/'+ id_kn, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#lebel-k-n').text(data.nama_kegiatan)
+    });
+
+    var id_kp = $('#id_kp').val()
+    $.get('/listkegiatan/'+ id_kp, function (data) {
+        console.log(data.nama_kegiatan);
+            $('#lebel-k-p').text(data.nama_kegiatan)
     });
 
 

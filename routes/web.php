@@ -87,6 +87,8 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
     Route::get('/detail-skp/{id}', [SKPController::class, 'detailSkp']);
     Route::get('/updatedataskp/{id}/edit', [SKPController::class, 'UpdateDataSKP'])->name('updatedataskp');
     Route::patch('/action/{id}/edit', [SKPController::class, 'actionUpdate']);
+    Route::get('/pdfdataskp/{id}', [SKPController::class, 'PrintSKP']);
+
 
     // SKP NILAI
     Route::get('/forminputnilaiskp/{id}', [NilaiSKPController::class, 'FormInputSKP'])->name('forminputnilaiskp');
@@ -115,8 +117,9 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
     Route::get('/detailpenilaian/{id}', [PenilaianController::class, 'detailPenilaian'])->name('detailpenilaian');
 
     // PDF BARU
-    Route::get('/pdfnilaiskp', [NilaiSKPController::class, 'pdfNilaiSKP'])->name('pdfnilaiskp');
+    // Route::get('/pdfdataskp/{id}', [SKPController::class, 'PrintSKP']);
+    Route::get('/pdf-nilai-skp/{id}', [NilaiSKPController::class, 'pdfNilaiSKP']);
     Route::get('/pdfperilakukerja', [PerilakuKerjaController::class, 'pdfPerilakuKerja'])->name('pdfperilakukerja');
-    Route::get('/pdfpenilaiankerja', [PenilaianController::class, 'pdfPenilaianKerja'])->name('pdfpenilaiankerja');
+    Route::get('/pdfpenilaiankerja/{id}', [PenilaianController::class, 'pdfPenilaianKerja'])->name('pdfpenilaiankerja');
 
     // });
