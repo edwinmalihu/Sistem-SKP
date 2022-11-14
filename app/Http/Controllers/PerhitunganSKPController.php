@@ -243,16 +243,12 @@ class PerhitunganSKPController extends Controller
         $periode = NilaiSKP::where('id_skp', $id)->first();
         $skp = DataSKP::find($id);
         $nilai = NilaiTarget::where('id_skpnt', $id)->first();
-        $all = [
+        return view('pdf.PerhitunganSkpPDF', [
             'data' => $data,
             'skp' => $skp,
             'nilai' => $nilai,
             'realisasi' => $realisasi,
             'periode' => $periode
-        ];
-
-        $pdf = PDF::loadView('PerhitunganSkpPDF', $all);
-     
-        return $pdf->download('Nilai-SKP.pdf');
+        ]);
     }
 }

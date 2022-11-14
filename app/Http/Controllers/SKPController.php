@@ -173,13 +173,9 @@ class SKPController extends Controller
         ->where('data_skp.id_data_skp', $id)
         ->get(['data_skp.*', 'dinilai.nama_pegawai as nama_dinilai', 'penilai.nama_pegawai as nama_penilai', 'pejabat.nama_pegawai as nama_pejabat', 'godi.jenis_pangkat_golongan as jenis_godi', 'jadi.jenis_jabatan as jenis_jadi', 'udi.nama_units_kerja as jenis_udi','gope.jenis_pangkat_golongan as gope', 'gpp.jenis_pangkat_golongan as jenis_gpp', 'jape.jenis_jabatan as jenis_jape', 'jpp.jenis_jabatan as jenis_jpp', 'upe.nama_units_kerja as jenis_upe', 'upp.nama_units_kerja as jenis_upp']);
 
-        $all = [
+        return view('pdf.DataSkpPDF', [
             'data' => $data
-        ];
-
-        $pdf = PDF::loadView('pdf.DataSkpPDF', $all);
-     
-        return $pdf->download('Data-SKP.pdf');
+        ]);
     }
 
 }

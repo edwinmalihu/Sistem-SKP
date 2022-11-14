@@ -1,3 +1,5 @@
+@extends('pdf.pdf')
+@section('container')
 <div class="page-content container-fluid">
         <div class="row">
       
@@ -429,89 +431,97 @@
       </div>
     </div>
   </div>
-
+  @push('scripts')
 <script>
+    
   $(document).ready( function () {
     
 
-    var id_ka = $('#id_ka').attr('value')
+    var id_ka = $('#id_ka').val()
     $.get('/listkegiatan/'+ id_ka, function (data) {
         console.log(data.nama_kegiatan);
             $('#lebel-k-a').text(data.nama_kegiatan)
     });
     
-    var id_kb = $('#id_kb').attr('value')
+    var id_kb = $('#id_kb').val()
     $.get('/listkegiatan/'+ id_kb, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-b').text(data.nama_kegiatan)
+            $('#lebel-k-b').text(data.nama_kegiatan)
     });
 
-    var id_kc = $('#id_kc').attr('value')
+    var id_kc = $('#id_kc').val()
     $.get('/listkegiatan/'+ id_kc, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-c').text(data.nama_kegiatan)
+            $('#lebel-k-c').text(data.nama_kegiatan)
     });
 
-    var id_kd = $('#id_kd').attr('value')
+    var id_kd = $('#id_kd').val()
     $.get('/listkegiatan/'+ id_kd, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-d').text(data.nama_kegiatan)
+            $('#lebel-k-d').text(data.nama_kegiatan)
     });
 
-    var id_ke = $('#id_ke').attr('value')
+    var id_ke = $('#id_ke').val()
     $.get('/listkegiatan/'+ id_ke, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-e').text(data.nama_kegiatan)
+            $('#lebel-k-e').text(data.nama_kegiatan)
     });
 
-    var id_kf = $('#id_kf').attr('value')
+    var id_kf = $('#id_kf').val()
     $.get('/listkegiatan/'+ id_kf, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-f').text(data.nama_kegiatan)
+            $('#lebel-k-f').text(data.nama_kegiatan)
     });
 
-    var id_kg = $('#id_kg').attr('value')
+    var id_kg = $('#id_kg').val()
     $.get('/listkegiatan/'+ id_kg, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-g').text(data.nama_kegiatan)
+            $('#lebel-k-g').text(data.nama_kegiatan)
     });
     
-    var id_kh = $('#id_kh').attr('value')
+    var id_kh = $('#id_kh').val()
     $.get('/listkegiatan/'+ id_kh, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-h').text(data.nama_kegiatan)
+            $('#lebel-k-h').text(data.nama_kegiatan)
     });
 
-    var id_ki = $('#id_ki').attr('value')
+    var id_ki = $('#id_ki').val()
     $.get('/listkegiatan/'+ id_ki, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-i').text(data.nama_kegiatan)
+            $('#lebel-k-i').text(data.nama_kegiatan)
     });
 
-    var id_kj = $('#id_kj').attr('value')
+    var id_kj = $('#id_kj').val()
     $.get('/listkegiatan/'+ id_kj, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-j').text(data.nama_kegiatan)
+            $('#lebel-k-j').text(data.nama_kegiatan)
     });
 
-    var id_kk = $('#id_kk').attr('value')
+    var id_kk = $('#id_kk').val()
     $.get('/listkegiatan/'+ id_kk, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-k').text(data.nama_kegiatan)
+            $('#lebel-k-k').text(data.nama_kegiatan)
     });
 
-    var id_kl = $('#id_kl').attr('value')
+    var id_kl = $('#id_kl').val()
     $.get('/listkegiatan/'+ id_kl, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-l').text(data.nama_kegiatan)
+            $('#lebel-k-l').text(data.nama_kegiatan)
     });
 
-    var id_km = $('#id_km').attr('value')
+    var id_km = $('#id_km').val()
     $.get('/listkegiatan/'+ id_km, function (data) {
         console.log(data.nama_kegiatan);
-            $('#label-k-m').text(data.nama_kegiatan)
+            $('#lebel-k-m').text(data.nama_kegiatan)
     });
+
+    function printData(){
+	    window.print();
+        }
+
+        setTimeout(printData, 9000);
 
 });
 
 </script>
+@endpush

@@ -6,13 +6,10 @@
     <div class="col-md-12">
         <!-- Panel Floating Labels -->
 
-<<<<<<< HEAD:resources/views/DataSkpPDF.blade.php
         <div class="text-right">  
         </div>
         <br>
 
-=======
->>>>>>> fcdbe5bf4187a87bca8a576efdf78046482697e2:resources/views/pdf/DataSkpPDF.blade.php
         <div class="panel">
           <div class="panel-heading">
             <h3 class="panel-title" style="text-align:center">DATA SASARAN KERJA PEGAWAI</h3>
@@ -129,3 +126,12 @@
     </div>
   </div>
   @endsection
+  @push('scripts')
+    <script>
+        function printData(){
+	    window.print();
+        }
+
+        setTimeout(printData, 3000);
+    </script>
+  @endpush

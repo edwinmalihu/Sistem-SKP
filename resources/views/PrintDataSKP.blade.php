@@ -12,7 +12,7 @@
 
         <div class="text-right">
           
-          <a href="/pdfdataskp/{{$data[0]->id_data_skp}}" class="btn btn-primary col-md-1 wb-download">PDF </a>
+          <a href="/pdfdataskp/{{$data[0]->id_data_skp}}" target="_blank" class="btn btn-primary col-md-1 wb-download">PDF </a>
         </div>
         <br>
 

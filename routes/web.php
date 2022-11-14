@@ -87,7 +87,7 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
     Route::get('/detail-skp/{id}', [SKPController::class, 'detailSkp']);
     Route::get('/updatedataskp/{id}/edit', [SKPController::class, 'UpdateDataSKP'])->name('updatedataskp');
     Route::patch('/action/{id}/edit', [SKPController::class, 'actionUpdate']);
-    Route::get('/pdfdataskp/{id}', [SKPController::class, 'PrintSKP']);
+    
 
 
     // SKP NILAI
@@ -104,8 +104,7 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
     Route::get('/updateperhitunganskp/{id}', [PerhitunganSKPController::class, 'updatePerhitungan'])->name('updateerhitunganskp');
     Route::patch('/update-realisasi/{id}', [PerhitunganSKPController::class, 'updateRealisasi']);
     Route::get('/printperhitunganskp/{id}', [PerhitunganSKPController::class, 'detailPerhitungan'])->name('printperhitunganskp'); 
-    Route::get('/perhitunganskppdf/{id}', [PerhitunganSKPController::class, 'PDFPerhitungan'])->name('perhitunganskppdf');
-
+   
     // SKP PERILAKU KERJA
     Route::get('/formperilakukerja/{id}', [PerilakuKerjaController::class, 'index'])->name('formperilakukerja');
     Route::post('/action-perilaku', [PerilakuKerjaController::class, 'AddPerilaku']);
@@ -117,8 +116,9 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
     Route::get('/detailpenilaian/{id}', [PenilaianController::class, 'detailPenilaian'])->name('detailpenilaian');
 
     // PDF BARU
-    // Route::get('/pdfdataskp/{id}', [SKPController::class, 'PrintSKP']);
+    Route::get('/pdfdataskp/{id}', [SKPController::class, 'PrintSKP']);
     Route::get('/pdf-nilai-skp/{id}', [NilaiSKPController::class, 'pdfNilaiSKP']);
+    Route::get('/perhitunganskppdf/{id}', [PerhitunganSKPController::class, 'PDFPerhitungan'])->name('perhitunganskppdf');
     Route::get('/pdfperilakukerja', [PerilakuKerjaController::class, 'pdfPerilakuKerja'])->name('pdfperilakukerja');
     Route::get('/pdfpenilaiankerja/{id}', [PenilaianController::class, 'pdfPenilaianKerja'])->name('pdfpenilaiankerja');
 
