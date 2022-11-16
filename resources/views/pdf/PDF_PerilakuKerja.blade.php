@@ -1,3 +1,5 @@
+@extends('pdf.pdf')
+@section('container')
 <div class="page-content container-fluid">
     <div class="row">
       
@@ -127,3 +129,31 @@
       </div>
     </div>
   </div>
+  @endsection
+
+@push('scripts')
+
+<script>
+    $(document).ready( function () {
+        var id_dinilai = $('#id_dinilai').val()
+        $.get('/listuser/'+ id_dinilai, function (data) {
+            console.log(data.nama_pegawai);
+            $('#nama-dinilai').text(data.nama_pegawai)
+        });
+
+        var id_penilai = $('#id_penilai').val()
+        $.get('/listuser/'+ id_penilai, function (data) {
+            console.log(data.nama_pegawai);
+            $('#nama-penilai').text(data.nama_pegawai)
+        });
+
+        function printData(){
+	    window.print();
+        }
+
+        setTimeout(printData, 5000);
+
+
+    })
+</script>
+@endpush

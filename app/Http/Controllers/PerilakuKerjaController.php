@@ -78,8 +78,15 @@ class PerilakuKerjaController extends Controller
         ]);
     }
 
-    public function pdfPerilakuKerja()
+    public function pdfPerilakuKerja($id)
     {
-        return view('pdf_perilakukerja');
+        $skp = DataSKP::find($id);
+        $nilaiverikal = NilaiRealisasi::where('id_skpnr', $id)->first();
+        $perilaku = PerilakuKerja::where('id_skp', $id)->first();
+        return view('pdf.pdf_perilakukerja', [
+            'skp' => $skp,
+            'nilai_r' => $nilaiverikal,
+            'perilaku' => $perilaku
+        ]);
     }
 }

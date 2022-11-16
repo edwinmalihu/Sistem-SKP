@@ -119,7 +119,7 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
     Route::get('/pdfdataskp/{id}', [SKPController::class, 'PrintSKP']);
     Route::get('/pdf-nilai-skp/{id}', [NilaiSKPController::class, 'pdfNilaiSKP']);
     Route::get('/perhitunganskppdf/{id}', [PerhitunganSKPController::class, 'PDFPerhitungan'])->name('perhitunganskppdf');
-    Route::get('/pdfperilakukerja', [PerilakuKerjaController::class, 'pdfPerilakuKerja'])->name('pdfperilakukerja');
+    Route::get('/pdfperilakukerja/{id}', [PerilakuKerjaController::class, 'pdfPerilakuKerja'])->name('pdfperilakukerja');
     Route::get('/pdfpenilaiankerja/{id}', [PenilaianController::class, 'pdfPenilaianKerja'])->name('pdfpenilaiankerja');
 
     // });
