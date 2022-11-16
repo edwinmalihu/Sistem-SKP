@@ -171,7 +171,7 @@
                 </tr>
                 <tr>
                     <td>3. Komitmen</td>
-                    <<td style="text-align:center">{{$perilaku->n_k}}</td>
+                    <td style="text-align:center">{{$perilaku->n_k}}</td>
                     <td style="text-align:center">{{$perilaku->s_k}}</td>
                 </tr>
                 <tr>

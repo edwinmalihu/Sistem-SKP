@@ -122,7 +122,7 @@
                     <td></td>
                     <td>e. Unit Kerja</td>
                     <td style="text-align: center;">:</td>
-                    <<td>{{$data[0]->jenis_upp}}</td>
+                    <td>{{$data[0]->jenis_upp}}</td>
                 </tr>
             </table>
           </div>

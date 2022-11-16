@@ -74,51 +74,51 @@
                 </td> 
                 <tr>
                     <td>Orientasi Pelayanan</td>
-                    <td>=</td>
-                    <td><input type="text" class="form-control" name="n_op" id="n_op" value="{{$perilaku->n_op}}" readonly/></td>
-                    <td><input type="text" class="form-control" name="s_op" id="s_op" value="{{$perilaku->s_op}}" readonly></td>
+                    <td style="text-align:center">=</td>
+                    <td style="text-align:center">{{$perilaku->n_op}}</td>
+                    <td style="text-align:center">{{$perilaku->s_op}}</td>
                 </tr>
                 <tr>
                     <td>Integritas</td>
-                    <td>=</td>
-                    <td><input type="text" class="form-control" name="n_i" id="n_i" value="{{$perilaku->n_i}}" readonly/></td>
-                    <td><input type="text" class="form-control" name="s_i" id="s_i" value="{{$perilaku->s_i}}" readonly></td>
+                    <td style="text-align:center">=</td>
+                    <td style="text-align:center">{{$perilaku->n_i}}</td>
+                    <td style="text-align:center">{{$perilaku->s_i}}</td>
                 </tr>
                 <tr>
                     <td>Komitmen</td>
-                    <td>=</td>
-                    <td><input type="text" class="form-control" name="n_k" id="n_k" value="{{$perilaku->n_k}}" readonly/></td>
-                    <td><input type="text" class="form-control" name="s_k" id="s_k" value="{{$perilaku->s_k}}" readonly></td>
+                    <td style="text-align:center">=</td>
+                    <td style="text-align:center">{{$perilaku->n_k}}</td>
+                    <td style="text-align:center">{{$perilaku->s_k}}</td>
                 </tr>
                 <tr>
                     <td>Disiplin</td>
-                    <td>=</td>
-                    <td><input type="text" class="form-control" name="n_d" id="n_d" value="{{$perilaku->n_d}}" readonly/></td>
-                    <td><input type="text" class="form-control" name="s_d" id="s_d" value="{{$perilaku->s_d}}" readonly></td>
+                    <td style="text-align:center">=</td>
+                    <td style="text-align:center">{{$perilaku->n_d}}</td>
+                    <td style="text-align:center" style="text-align:center">{{$perilaku->s_d}}</td>
                 </tr>
                 <tr>
                     <td>Kerjasama</td>
-                    <td>=</td>
-                    <td><input type="text" class="form-control" name="n_ks" id="n_ks" value="{{$perilaku->n_ks}}" readonly/></td>
-                    <td><input type="text" class="form-control" name="s_ks" id="s_ks" value="{{$perilaku->s_ks}}" readonly></td>
+                    <td style="text-align:center">=</td>
+                    <td style="text-align:center">{{$perilaku->n_ks}}</td>
+                    <td style="text-align:center">{{$perilaku->s_ks}}</td>
                 </tr>
                 <tr>
                     <td>Kepemimpinan</td>
-                    <td>=</td>
-                    <td><input type="text" class="form-control" name="n_kp" id="n_kp" value="{{$perilaku->n_kp}}" readonly/></td>
-                    <td><input type="text" class="form-control" name="s_kp" id="s_kp" value="{{$perilaku->s_kp}}" readonly></td>
+                    <td style="text-align:center">=</td>
+                    <td style="text-align:center">{{$perilaku->n_kp}}</td>
+                    <td style="text-align:center">{{$perilaku->s_kp}}</td>
                 </tr>
                 <tr>
                     <td>Jumlah</td>
-                    <td>=</td>
-                    <td><input type="text" class="form-control" name="n_jml" id="n_jml" value="{{$perilaku->n_jml}}" readonly/></td>
-                    <td><input type="hidden" class="form-control" name="s_jml" value="-"></td>
+                    <td style="text-align:center">=</td>
+                    <td style="text-align:center">{{$perilaku->n_jml}}</td>
+                    <td style="text-align:center"></td>
                 </tr>
                 <tr>
                     <td>Nilai Rata-rata</td>
-                    <td>=</td>
-                    <td><input type="text" class="form-control" name="n_rr" id="n_rr" value="{{$perilaku->n_rr}}" readonly/></td>
-                    <td><input type="text" class="form-control" name="s_rr" id="s_rr" value="{{$perilaku->s_rr}}" readonly></td>
+                    <td style="text-align:center">=</td>
+                    <td style="text-align:center">{{$perilaku->n_rr}}</td>
+                    <td style="text-align:center">{{$perilaku->s_rr}}</td>
                 </tr>
             </tr>
         </table>

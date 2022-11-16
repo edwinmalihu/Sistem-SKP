@@ -5,9 +5,6 @@
       
         <div class="col-md-12">
             <!-- Panel Floating Labels -->
-            <div class="text-right">
-                <a href="" class="btn btn-primary col-md-1 wb-download">PDF</a>  
-            </div>
             <br>
             <div class="panel">
             <div class="panel-heading">
@@ -33,7 +30,7 @@
             <br>
     <form action="/" method="post">
     @csrf   
-            <table border="1" class="table table-striped table-bordered">
+            <table border="1" class="table table-striped table-bordered" style="margin: 10px 50px 0 60px">
             <!-- <table border="1" style="margin: 10px 50px 0 275px"> -->
                 <tr>
                     <td style=" text-align: center;">1</td>
@@ -145,7 +142,7 @@
                 </tr>
                 <tr>
                     <td>3. Komitmen</td>
-                    <<td style="text-align:center">{{$perilaku->n_k}}</td>
+                    <td style="text-align:center">{{$perilaku->n_k}}</td>
                     <td style="text-align:center">{{$perilaku->s_k}}</td>
                 </tr>
                 <tr>

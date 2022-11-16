@@ -7,7 +7,7 @@
         </div>
 
           <div class="panel-body container-fluid">
-            <table border="1" class="table table-striped table-bordered">
+          <table border="1" class="table table-striped table-bordered">
                 <tr>
                     <td style="font-weight:bold">NO</td>
                     <td colspan="2" style="font-weight:bold">I. NAMA PEJABAT PENILAI</td>
@@ -87,11 +87,11 @@
                         <input type="hidden" value="{{$nilai->id_ka}}" id="id_ka">
                         <p id="lebel-k-a"></p>
                     </td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->aka}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->kua}}" /><input type="text" class="form-control" value="{{$nilai->outa}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->muta}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->timea}}" /><input type="text" class="form-control" value="{{$nilai->tmda}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->biayaa}}" /></td>
+                    <td align="center">{{$nilai->aka}}</td>
+                    <td align="center">{{$nilai->kua}} {{$nilai->outa}}</td>
+                    <td align="center">{{$nilai->muta}}</td>
+                    <td align="center">{{$nilai->timea}} {{$nilai->tmda}} </td>
+                    <td align="center">{{$nilai->biayaa}}</td>
                 </tr>
                 <tr>
                     <td align="center">2</td>
@@ -99,11 +99,11 @@
                        <input type="hidden" value="{{$nilai->id_kb}}" id="id_kb">
                        <p id="label-k-b"></p>
                     </td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->akb}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->kub}}" /><input type="text" class="form-control" value="{{$nilai->outb}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->mutb}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->timeb}}" /><input type="text" class="form-control" value="{{$nilai->tmdb}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->biayab}}" /></td>
+                    <td align="center">{{$nilai->akb}}</td>
+                    <td align="center">{{$nilai->kub}} {{$nilai->outb}}</td>
+                    <td align="center">{{$nilai->mutb}}</td>
+                    <td align="center">{{$nilai->timeb}} {{$nilai->tmdb}}</td>
+                    <td align="center">{{$nilai->biayab}}</td>
                 </tr>
                 <tr>
                     <td align="center">3</td>
@@ -111,11 +111,11 @@
                     <input type="hidden" value="{{$nilai->id_kc}}" id="id_kc">
                        <p id="label-k-c"></p>
                     </td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->akc}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->kuc}}" /><input type="text" class="form-control" value="{{$nilai->outc}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->mutc}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->timec}}" /><input type="text" class="form-control" value="{{$nilai->tmdc}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->biayac}}" /></td>
+                    <td align="center">{{$nilai->akc}}</td>
+                    <td align="center">{{$nilai->kuc}} {{$nilai->outc}}</td>
+                    <td align="center">{{$nilai->mutc}}</td>
+                    <td align="center">{{$nilai->timec}} {{$nilai->tmdc}}</td>
+                    <td align="center">{{$nilai->biayac}}</td>
                 </tr>
                 <tr>
                     <td align="center">4</td>
@@ -123,11 +123,11 @@
                     <input type="hidden" value="{{$nilai->id_kd}}" id="id_kd">
                        <p id="label-k-d"></p>
                     </td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->akd}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->kud}}" /><input type="text" class="form-control" value="{{$nilai->outd}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->mutd}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->timed}}" /><input type="text" class="form-control" value="{{$nilai->tmdd}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->biayad}}" /></td>
+                    <td align="center">{{$nilai->akd}}</td>
+                    <td align="center">{{$nilai->kud}} {{$nilai->outd}}</td>
+                    <td align="center">{{$nilai->mutd}}</td>
+                    <td align="center">{{$nilai->timed}} {{$nilai->tmdd}}</td>
+                    <td align="center">{{$nilai->biayad}}</td>
                 </tr>
                 <tr>
                     <td align="center">5</td>
@@ -135,11 +135,11 @@
                     <input type="hidden" value="{{$nilai->id_ke}}" id="id_ke">
                        <p id="label-k-e"></p>
                     </td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->ake}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->kue}}" /><input type="text" class="form-control" value="{{$nilai->oute}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->mute}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->timee}}" /><input type="text" class="form-control" value="{{$nilai->tmde}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->biayae}}" /></td>
+                    <td align="center">{{$nilai->ake}}</td>
+                    <td align="center">{{$nilai->kue}} {{$nilai->oute}}</td>
+                    <td align="center">{{$nilai->mute}}</td>
+                    <td align="center">{{$nilai->timee}} {{$nilai->tmde}}</td>
+                    <td align="center">{{$nilai->biayae}}</td>
                 </tr>
                 <tr>
                     <td align="center">6</td>
@@ -147,11 +147,11 @@
                     <input type="hidden" value="{{$nilai->id_kf}}" id="id_kf">
                        <p id="label-k-f"></p>
                     </td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->akf}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->kuf}}" /><input type="text" class="form-control" value="{{$nilai->outf}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->mutf}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->timef}}" /><input type="text" class="form-control" value="{{$nilai->tmdf}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->biayaf}}" /></td>
+                    <td align="center">{{$nilai->akf}}</td>
+                    <td align="center">{{$nilai->kuf}} {{$nilai->outf}}</td>
+                    <td align="center">{{$nilai->mutf}}</td>
+                    <td align="center">{{$nilai->timef}} {{$nilai->tmdf}}</td>
+                    <td align="center">{{$nilai->biayaf}}</td>
                 </tr>
                 <tr>
                     <td align="center">7</td>
@@ -159,11 +159,11 @@
                     <input type="hidden" value="{{$nilai->id_kg}}" id="id_kg">
                        <p id="label-k-g"></p>
                     </td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->akg}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->kug}}" /><input type="text" class="form-control" value="{{$nilai->outg}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->mutg}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->timeg}}" /><input type="text" class="form-control" value="{{$nilai->tmdg}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->biayag}}" /></td>
+                    <td align="center">{{$nilai->akg}}</td>
+                    <td align="center">{{$nilai->kug}} {{$nilai->outg}}</td>
+                    <td align="center">{{$nilai->mutg}}</td>
+                    <td align="center">{{$nilai->timeg}} {{$nilai->tmdg}}</td>
+                    <td align="center">{{$nilai->biayag}}</td>
                 </tr>
                 <tr>
                     <td align="center">8</td>
@@ -171,11 +171,11 @@
                     <input type="hidden" value="{{$nilai->id_kh}}" id="id_kh">
                        <p id="label-k-h"></p>
                     </td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->akh}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->kuh}}" /><input type="text" class="form-control" value="{{$nilai->outh}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->muth}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->timeh}}" /><input type="text" class="form-control" value="{{$nilai->tmdh}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->biayah}}" /></td>
+                    <td align="center">{{$nilai->akh}}</td>
+                    <td align="center">{{$nilai->kuh}} {{$nilai->outh}}</td>
+                    <td align="center">{{$nilai->muth}}</td>
+                    <td align="center">{{$nilai->timeh}} {{$nilai->tmdh}}</td>
+                    <td align="center">{{$nilai->biayah}}</td>
                 </tr>
                 <tr>
                     <td align="center">9</td>
@@ -183,11 +183,11 @@
                     <input type="hidden" value="{{$nilai->id_ki}}" id="id_ki">
                        <p id="label-k-i"></p>
                     </td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->aki}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->kui}}" /><input type="text" class="form-control" value="{{$nilai->outi}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->muti}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->timei}}" /><input type="text" class="form-control" value="{{$nilai->tmdi}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->biayai}}" /></td>
+                    <td align="center">{{$nilai->aki}}</td>
+                    <td align="center">{{$nilai->kui}} {{$nilai->outi}}</td>
+                    <td align="center">{{$nilai->muti}}</td>
+                    <td align="center">{{$nilai->timei}} {{$nilai->tmdi}}</td>
+                    <td align="center">{{$nilai->biayai}}</td>
                 </tr>
                 <tr>
                     <td align="center">10</td>
@@ -195,11 +195,11 @@
                     <input type="hidden" value="{{$nilai->id_kj}}" id="id_kj">
                        <p id="label-k-j"></p>
                     </td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->akj}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->kuj}}" /><input type="text" class="form-control" value="{{$nilai->outj}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->mutj}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->timej}}" /><input type="text" class="form-control" value="{{$nilai->tmdj}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->biayaj}}" /></td>
+                    <td align="center">{{$nilai->akj}}</td>
+                    <td align="center">{{$nilai->kuj}} {{$nilai->outj}}</td>
+                    <td align="center">{{$nilai->mutj}}</td>
+                    <td align="center">{{$nilai->timej}} {{$nilai->tmdj}}</td>
+                    <td align="center">{{$nilai->biayaj}}</td>
                 </tr>
                 <tr>
                     <td align="center">11</td>
@@ -207,11 +207,11 @@
                     <input type="hidden" value="{{$nilai->id_kk}}" id="id_kk">
                        <p id="label-k-k"></p>
                     </td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->akk}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->kuk}}" /><input type="text" class="form-control" value="{{$nilai->outk}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->mutk}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->timek}}" /><input type="text" class="form-control" value="{{$nilai->tmdk}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->biayak}}" /></td>
+                    <td align="center">{{$nilai->akk}}</td>
+                    <td align="center">{{$nilai->kuk}} {{$nilai->outk}}</td>
+                    <td align="center">{{$nilai->mutk}}</td>
+                    <td align="center">{{$nilai->timek}} {{$nilai->tmdk}}</td>
+                    <td align="center">{{$nilai->biayak}}</td>
                 </tr>
                 <tr>
                     <td align="center"></td>
@@ -228,11 +228,11 @@
                     <input type="hidden" value="{{$nilai->id_kl}}" id="id_kl">
                        <p id="label-k-l"></p>
                     </td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->akl}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->kul}}" /><input type="text" class="form-control" value="{{$nilai->outl}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->mutl}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->timel}}" /><input type="text" class="form-control" value="{{$nilai->tmdl}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->biayal}}" /></td>
+                    <td align="center">{{$nilai->akl}}</td>
+                    <td align="center">{{$nilai->kul}} {{$nilai->outl}}</td>
+                    <td align="center">{{$nilai->mutl}}</td>
+                    <td align="center">{{$nilai->timel}} {{$nilai->tmdl}}</td>
+                    <td align="center">{{$nilai->biayal}}</td>
                 </tr>
                 <tr>
                     <td align="center">13</td>
@@ -240,11 +240,11 @@
                     <input type="hidden" value="{{$nilai->id_km}}" id="id_km">
                        <p id="label-k-m"></p>
                     </td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->akm}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->kum}}" /><input type="text" class="form-control" value="{{$nilai->outm}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->mutm}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->timem}}" /><input type="text" class="form-control" value="{{$nilai->tmdm}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->biayam}}" /></td>
+                    <td align="center">{{$nilai->akm}}</td>
+                    <td align="center">{{$nilai->kum}} {{$nilai->outm}}</td>
+                    <td align="center">{{$nilai->mutm}}</td>
+                    <td align="center">{{$nilai->timem}} {{$nilai->tmdm}}</td>
+                    <td align="center">{{$nilai->biayam}}</td>
                 </tr>
                 <tr>
                     <td align="center"></td>
@@ -261,11 +261,11 @@
                     <input type="hidden" value="{{$nilai->id_kn}}" id="id_kn">
                        <p id="label-k-n"></p>
                     </td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->akn}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->kun}}" /><input type="text" class="form-control" value="{{$nilai->outn}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->mutn}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->timen}}" /><input type="text" class="form-control" value="{{$nilai->tmdn}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->biayan}}" /></td>
+                    <td align="center">{{$nilai->akn}}</td>
+                    <td align="center">{{$nilai->kun}} {{$nilai->outn}}</td>
+                    <td align="center">{{$nilai->mutn}}</td>
+                    <td align="center">{{$nilai->timen}} {{$nilai->tmdn}}</td>
+                    <td align="center">{{$nilai->biayan}}</td>
                 </tr>
                 <tr>
                     <td align="center">15</td>
@@ -273,11 +273,11 @@
                     <input type="hidden" value="{{$nilai->id_ko}}" id="id_ko">
                        <p id="label-k-o"></p>
                     </td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->ako}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->kuo}}" /><input type="text" class="form-control" value="{{$nilai->auto}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->muto}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->timeo}}" /><input type="text" class="form-control" value="{{$nilai->tmdo}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->biayao}}" /></td>
+                    <td align="center">{{$nilai->ako}}</td>
+                    <td align="center">{{$nilai->kuo}} {{$nilai->auto}}</td>
+                    <td align="center">{{$nilai->muto}}</td>
+                    <td align="center">{{$nilai->timeo}} {{$nilai->tmdo}}</td>
+                    <td align="center">{{$nilai->biayao}}</td>
                 </tr>
                 <tr>
                     <td align="center">16</td>
@@ -285,11 +285,11 @@
                     <input type="hidden" value="{{$nilai->id_kp}}" id="id_kp">
                        <p id="label-k-p"></p>
                     </td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->akp}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->kup}}" /><input type="text" class="form-control" value="{{$nilai->autp}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->mutp}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->timep}}" /><input type="text" class="form-control" value="{{$nilai->tmdp}}" /></td>
-                    <td align="center"><input type="text" class="form-control" value="{{$nilai->biayap}}" /></td>
+                    <td align="center">{{$nilai->akp}}</td>
+                    <td align="center">{{$nilai->kup}} {{$nilai->autp}}</td>
+                    <td align="center">{{$nilai->mutp}}</td>
+                    <td align="center">{{$nilai->timep}} {{$nilai->tmdp}}</td>
+                    <td align="center">{{$nilai->biayap}}</td>
                 </tr>
             </table>
             <br>

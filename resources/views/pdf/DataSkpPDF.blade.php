@@ -6,15 +6,15 @@
     <div class="col-md-12">
         <!-- Panel Floating Labels -->
 
-        <div class="text-right">  
+        <!-- <div class="text-right">  
         </div>
-        <br>
+        <br> -->
 
         <div class="panel">
           <div class="panel-heading">
             <h3 class="panel-title" style="text-align:center">DATA SASARAN KERJA PEGAWAI</h3>
           </div>
-          <div class="panel-body container-fluid">
+          <div class="panel-body container-fluid" style="margin: 0 0 0 100px;">
             <table border="1" class="table table-striped table-bordered">
                 <tr>
                     <td style="font-weight:bold; text-align: center;">1</td>
@@ -116,7 +116,7 @@
                     <td></td>
                     <td>e. Unit Kerja</td>
                     <td style="text-align: center;">:</td>
-                    <<td>{{$data[0]->jenis_upp}}</td>
+                    <td>{{$data[0]->jenis_upp}}</td>
                 </tr>
             </table>
           </div>
