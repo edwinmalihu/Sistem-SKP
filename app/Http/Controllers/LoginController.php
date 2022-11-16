@@ -14,15 +14,19 @@ class LoginController extends Controller
         return view('login');
     }
 
-    public function authenticate(Request $request)
+    public function authenticate(Request $request, User $user)
     {
            
             $nip = $request->nip_pegawai;
             $password = $request->password;
+
     
-            if (Auth::attempt(['nip_pegawai'=> $nip, 'password'=> $password])) {
+            if (Auth::attempt(['nip_pegawai'=> $nip, 'password'=> $password, 'status'=> 'pegawai'])) {
                 $request->session()->regenerate();
-    
+                return redirect()->intended('/tabeldataskp');
+            }
+            else if (Auth::attempt(['nip_pegawai'=> $nip, 'password'=> $password, 'status'=> 'admin'])) {
+                $request->session()->regenerate();
                 return redirect()->intended('/tabelpegawai');
             }
         

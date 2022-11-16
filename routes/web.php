@@ -32,8 +32,8 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
 
 
 
-// Route::group(['middleware' => 'auth'], function ()
-// {
+Route::group(['middleware' => 'auth'], function ()
+{
     
     Route::post('/logout', [LoginController::class, 'logout']);
     // Layout
@@ -122,4 +122,4 @@ Route::post('/auth', [LoginController::class, 'authenticate']);
     Route::get('/pdfperilakukerja/{id}', [PerilakuKerjaController::class, 'pdfPerilakuKerja'])->name('pdfperilakukerja');
     Route::get('/pdfpenilaiankerja/{id}', [PenilaianController::class, 'pdfPenilaianKerja'])->name('pdfpenilaiankerja');
 
-    // });
+    });
