@@ -1815,7 +1815,7 @@
 
     // ===========================================================
 
-    $('#rka, #rkb, #rkc, #rkd, #rkd, #rke, #rkf, #rkg, #rkh, #rki, #rkj, #rkk, #rkl, #rkm, #rkn, #rko, #rkp, #rbiayap').keyup(function(){
+    $('#rka, #rkb, #rkc, #rkd, #rkd, #rke, #rkf, #rkg, #rkh, #rki, #rkj, #rkk, #rkl, #rkm, #rkn, #rko, #rbiayao, #rkp, #rbiayap').keyup(function(){
         var skp_1 = $('#skp_a').val() * 1
         var skp_2 = $('#skp_b').val() * 1
         var skp_3 = $('#skp_c').val() * 1
@@ -1849,7 +1849,7 @@
         var sumNilaiTambahan = dnta+dntb
 
         var nilaiTotal = (sumSKP/sumNilai) + sumNilaiTambahan
-        $('#tnr').val(nilaiTotal)
+        $('#tnr').val(nilaiTotal.toFixed(2))
 
         if (nilaiTotal <= 50){
             $('#snr').val(buruk)

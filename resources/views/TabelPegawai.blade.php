@@ -14,9 +14,11 @@
 
   <div class="page-content">
         <!-- Panel Table Tools -->
+        @can('admin')
         <div>
             <a class="btn btn-primary" href="/formpegawai" role="button">Tambah Pegawai</a>
         </div>
+        @endcan
         <br>
 
         <div class="panel">
@@ -34,7 +36,9 @@
                 <th>Pangkat / Golongan</th>
                 <th>Unit Kerja</th>
                 <th>Hak Akses</th>
+                @can('admin')
                 <th>Action</th>
+                @endcan
             </tr>
         </thead>
         <tbody>
@@ -50,10 +54,12 @@
                 @else
                 <td>Penilai</td>
                 @endif
+                @can('admin')
                 <td class="actions">
                     <a href="update/{{$p->id}}/pegawai" class="btn btn-sm btn-icon btn-pure btn-default on-default edit-row"
                       data-toggle="tooltip" data-original-title="Edit"><i class="icon wb-edit" aria-hidden="true"></i></a>
                 </td>
+                @endcan
             </tr>
         @endforeach
         </tbody>

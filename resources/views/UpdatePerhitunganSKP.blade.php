@@ -180,7 +180,7 @@
                             <p id="label-k-e"></p>
                             </td>
                             <td align="center" id="nilalike">{{$nilai->ake}}</td>
-                            <td align="center" id="nilaikuv">{{$nilai->kue}}</td>
+                            <td align="center" id="nilaikue">{{$nilai->kue}}</td>
                             <td align="center" id="nilaimute">{{$nilai->mute}}</td>
                             <td align="center" id="nilaitimee">{{$nilai->timee}}</td>
                             <td align="center" id="nilaibiayae">{{$nilai->biayae}}</td>
@@ -433,9 +433,9 @@
                             
                             <!-- REALISASI -->
                             <td align="center"><input type="text" class="form-control" name="rakp" value="{{$realisasi->rakp}}"/></td>
-                            <td align="center"><input type="text" class="form-control" name="rkup" id="rkp" value="{{$realisasi->rkup}}"/><input type="text" class="form-control" name="routp" value="{{$realisasi->routo}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rkup" id="rkp" value="{{$realisasi->rkup}}"/><input type="text" class="form-control" name="routp" value="{{$realisasi->routp}}"/></td>
                             <td align="center"><input type="text" class="form-control" name="rmutp" id="rmutp" value="{{$realisasi->rmutp}}" /></td>
-                            <td align="center"><input type="text" class="form-control" name="rtimep" id="rtimep" value="{{$realisasi->rtimep}}" /><input type="text" class="form-control" name="rtmdp"  value="{{$realisasi->rtmdo}}"/></td>
+                            <td align="center"><input type="text" class="form-control" name="rtimep" id="rtimep" value="{{$realisasi->rtimep}}" /><input type="text" class="form-control" name="rtmdp"  value="{{$realisasi->rtmdp}}"/></td>
                             <td align="center"><input type="text" class="form-control" name="rbiayap" id="rbiayap" value="{{$realisasi->rbiayap}}" /></td>
                             <td align="center"> <input type="text" class="form-control" name="perhitungan_p"  value="{{$realisasi->perhitungan_p}}" id="perhitungan_p" readonly /></td>
                             <td align="center"><input type="text" class="form-control" name="skp_p" value="{{$realisasi->skp_p}}" id="skp_p" readonly/></td>
@@ -1835,11 +1835,27 @@
         p = 0
     }
     var sumNilai = a+b+c+d+e+f+g+h+i+j+k+l+m+n+o+p
+    console.log("ini nilai a : " + a);
+    console.log("ini nilai b : " + b);
+    console.log("ini nilai c : " + c);
+    console.log("ini nilai d : " + d);
+    console.log("ini nilai e : " + e);
+    console.log("ini nilai f : " + f);
+    console.log("ini nilai g : " + g);
+    console.log("ini nilai h : " + h);
+    console.log("ini nilai i : " + i);
+    console.log("ini nilai j : " + j);
+    console.log("ini nilai k : " + k);
+    console.log("ini nilai l : " + l);
+    console.log("ini nilai m : " + m);
+    console.log("ini nilai n : " + n);
+    console.log("ini nilai o : " + o);
+    console.log("ini nilai p : " + p);
     console.log("ini nilai Sum Nilai : " + sumNilai);
 
     // ===========================================================
 
-    $('#rka, #rkb, #rkc, #rkd, #rkd, #rke, #rkf, #rkg, #rkh, #rki, #rkj, #rkk, #rkl, #rkm, #rkn, #rko, #rkp, #rbiayap').keyup(function(){
+    $('#rka, #rkb, #rkc, #rkd, #rkd, #rke, #rkf, #rkg, #rkh, #rki, #rkj, #rkk, #rkl, #rkm, #rkn, #rko, #rbiayao, #rkp, #rbiayap').keyup(function(){
         var skp_1 = $('#skp_a').val() * 1
         var skp_2 = $('#skp_b').val() * 1
         var skp_3 = $('#skp_c').val() * 1
@@ -1865,6 +1881,21 @@
         var sb = "Sangat Baik"
 
         console.log(skp_1);
+        console.log(skp_2);
+        console.log(skp_3);
+        console.log(skp_4);
+        console.log(skp_5);
+        console.log(skp_6);
+        console.log(skp_7);
+        console.log(skp_8);
+        console.log(skp_9);
+        console.log(skp_10);
+        console.log(skp_11);
+        console.log(skp_12);
+        console.log(skp_13);
+        console.log(skp_14);
+        console.log(skp_15);
+        console.log(skp_16);
             
         var sumSKP = skp_1+skp_2+skp_3+skp_4+skp_5+skp_6+skp_7+skp_8+skp_9+skp_10+skp_11+skp_12+skp_13+skp_14+skp_15+skp_16
         var sumNilaiTambahan = dnta+dntb
@@ -1873,7 +1904,7 @@
 
         console.log('nilaiTotal' + nilaiTotal);
         
-        $('#tnr').val(nilaiTotal)
+        $('#tnr').val(nilaiTotal.toFixed(2))
 
         if (nilaiTotal <= 50){
             $('#snr').val(buruk)

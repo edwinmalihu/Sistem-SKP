@@ -21,11 +21,11 @@ class LoginController extends Controller
             $password = $request->password;
 
     
-            if (Auth::attempt(['nip_pegawai'=> $nip, 'password'=> $password, 'status'=> 'pegawai'])) {
+            if (Auth::attempt(['nip_pegawai'=> $nip, 'password'=> $password, 'jenis_pegawai'=> 'Dosen'])) {
                 $request->session()->regenerate();
                 return redirect()->intended('/tabeldataskp');
             }
-            else if (Auth::attempt(['nip_pegawai'=> $nip, 'password'=> $password, 'status'=> 'admin'])) {
+            else if (Auth::attempt(['nip_pegawai'=> $nip, 'password'=> $password, 'jenis_pegawai'=> 'Dekan', 'jenis_pegawai'=> 'Kajur'])) {
                 $request->session()->regenerate();
                 return redirect()->intended('/tabelpegawai');
             }
