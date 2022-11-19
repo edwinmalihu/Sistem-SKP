@@ -1870,6 +1870,9 @@
         var sumNilaiTambahan = dnta+dntb
 
         var nilaiTotal = (sumSKP/sumNilai) + sumNilaiTambahan
+
+        console.log('nilaiTotal' + nilaiTotal);
+        
         $('#tnr').val(nilaiTotal)
 
         if (nilaiTotal <= 50){

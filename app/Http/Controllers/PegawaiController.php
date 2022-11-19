@@ -40,6 +40,7 @@ class PegawaiController extends Controller
             'id_jabatan' => 'required',
             'id_unit_kerja' => 'required',
             'jenis_pegawai' => 'required',
+            'status' => 'required',
             'hak_akses' => 'required',
             'name' => 'required',
             'password' => 'required',
@@ -95,6 +96,7 @@ class PegawaiController extends Controller
             'id_jabatan' => 'required',
             'id_unit_kerja' => 'required',
             'jenis_pegawai' => 'required',
+            'status' => 'required',
             'hak_akses' => 'required',
         ]);
 

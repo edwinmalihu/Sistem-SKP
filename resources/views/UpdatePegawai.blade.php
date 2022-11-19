@@ -81,14 +81,21 @@
               <div class="form-group form-material" data-plugin="formMaterial">
                     <label class="form-control-label" for="select">Jenis User / Pegawai</label>
                     <select class="form-control" id="select" name="jenis_pegawai">
-                      <option value="admin" {{ $pegawai->jenis_pegawai == 'admin' ? 'selected' : '' }}>Admin</option>
+                      <!-- <option value="admin" {{ $pegawai->jenis_pegawai == 'admin' ? 'selected' : '' }}>Admin</option> -->
                       <option value="Dosen" {{ $pegawai->jenis_pegawai == 'Dosen' ? 'selected' : '' }}>Dosen</option>
                       <option value="Kajur" {{ $pegawai->jenis_pegawai == 'Kajur' ? 'selected' : '' }}>Ketua Jurusan</option>
                       <option value="Dekan" {{ $pegawai->jenis_pegawai == 'Dekan' ? 'selected' : '' }}>Dekan</option>
                     </select>
               </div>
               <div class="form-group form-material" data-plugin="formMaterial">
-                    <label class="form-control-label" for="select">Hak Akses</label>
+                    <label class="form-control-label" for="select">Status</label>
+                    <select class="form-control" id="select" name="status">
+                      <option value="pegawai" {{ $pegawai->status == 'pegawai' ? 'selected' : '' }}>Pegawai</option>
+                      <option value="admin" {{ $pegawai->status == 'admin' ? 'selected' : '' }}>Admin</option>
+                    </select>
+              </div>
+              <div class="form-group form-material" data-plugin="formMaterial">
+                    <label class="form-control-label" for="select">Hak Pegawai</label>
                     <select class="form-control" id="select" name="hak_akses">
                       <option value="1" {{ $pegawai->hak_akses == 1 ? 'selected' : '' }}>Dinilai</option>
                       <option value="2" {{ $pegawai->hak_akses == 2 ? 'selected' : '' }}>Penilai</option>

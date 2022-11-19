@@ -81,14 +81,23 @@
                     <label class="form-control-label" for="select">Jenis User / Pegawai</label>
                     <select class="form-control" id="select" name="jenis_pegawai">
                       <option value="">- Pilih -</option>
-                      <option value="admin">Admin</option>
+                      <!-- <option value="admin">Admin</option> -->
                       <option value="Dosen">Dosen</option>
                       <option value="Kajur">Ketua Jurusan</option>
                       <option value="Dekan">Dekan</option>
                     </select>
               </div>
               <div class="form-group form-material" data-plugin="formMaterial">
-                    <label class="form-control-label" for="select">Hak Akses</label>
+                    <label class="form-control-label" for="select">Status</label>
+                    <select class="form-control" id="select" name="status">
+                      <option value="">- Pilih -</option>
+                      <!-- <option value="admin">Admin</option> -->
+                      <option value="pegawai">Pegawai</option>
+                      <option value="admin">Admin</option>
+                    </select>
+              </div>
+              <div class="form-group form-material" data-plugin="formMaterial">
+                    <label class="form-control-label" for="select">Hak Pegawai</label>
                     <select class="form-control" id="select" name="hak_akses">
                       <option value="">- Pilih -</option>
                       <option value="1">Dinilai</option>
