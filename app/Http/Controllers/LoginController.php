@@ -25,7 +25,7 @@ class LoginController extends Controller
                 $request->session()->regenerate();
                 return redirect()->intended('/tabeldataskp');
             }
-            else if (Auth::attempt(['nip_pegawai'=> $nip, 'password'=> $password, 'jenis_pegawai'=> 'Dekan', 'jenis_pegawai'=> 'Kajur'])) {
+            else if (Auth::attempt(['nip_pegawai'=> $nip, 'password'=> $password, 'jenis_pegawai'=> 'Dekan']) || Auth::attempt(['nip_pegawai'=> $nip, 'password'=> $password, 'jenis_pegawai'=> 'Kajur'])) {
                 $request->session()->regenerate();
                 return redirect()->intended('/tabelpegawai');
             }
